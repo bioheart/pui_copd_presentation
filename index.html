@@ -3,65 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>กายภาพบำบัดสำหรับผู้ป่วย COPD (โรคปอดอุดกั้นเรื้อรัง)</title>
+  <title>กายภาพบำบัดสำหรับผู้ป่วย COPD (โรคปอดอุดกั้นเรื้อรัง) - ฉบับสำหรับผู้สูงอายุ</title>
   
   <!-- Google Fonts: Prompt, Sarabun, Kanit -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Prompt:wght@300;400;500;600;700&family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700;800&family=Prompt:wght@400;500;600;700;800&family=Sarabun:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --primary: #0284c7;
-      --primary-dark: #0369a1;
+      --primary: #0369a1;
+      --primary-dark: #075985;
       --primary-light: #e0f2fe;
-      --accent: #0d9488;
+      --accent: #0f766e;
       --accent-light: #ccfbf1;
-      --warning: #f59e0b;
+      --warning: #d97706;
       --warning-light: #fef3c7;
-      --danger: #ef4444;
+      --danger: #dc2626;
       --danger-light: #fee2e2;
-      --success: #10b981;
+      --success: #059669;
       --success-light: #d1fae5;
       
       --bg-gradient-start: #f8fafc;
-      --bg-gradient-end: #f0f9ff;
-      --card-bg: rgba(255, 255, 255, 0.94);
-      --card-border: rgba(226, 232, 240, 0.85);
+      --bg-gradient-end: #e0f2fe;
+      --card-bg: rgba(255, 255, 255, 0.98);
+      --card-border: #cbd5e1;
       --text-main: #0f172a;
-      --text-muted: #334155;
-      --text-light: #64748b;
-      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
-      --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.08);
-      --shadow-lg: 0 16px 36px rgba(15, 23, 42, 0.12);
-      --radius-sm: 8px;
-      --radius-md: 14px;
-      --radius-lg: 20px;
+      --text-muted: #1e293b;
+      --text-light: #475569;
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+      --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.1);
+      --shadow-lg: 0 16px 36px rgba(15, 23, 42, 0.15);
+      --radius-sm: 10px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+
+      /* Senior-friendly base typography scale */
+      --font-scale: 1;
+    }
+
+    /* Extra large font mode for seniors */
+    body.font-xl {
+      --font-scale: 1.15;
+    }
+    body.font-xxl {
+      --font-scale: 1.28;
     }
 
     [data-theme="dark"] {
       --primary: #38bdf8;
       --primary-dark: #0284c7;
-      --primary-light: rgba(56, 189, 248, 0.15);
+      --primary-light: rgba(56, 189, 248, 0.2);
       --accent: #2dd4bf;
-      --accent-light: rgba(45, 212, 191, 0.15);
+      --accent-light: rgba(45, 212, 191, 0.2);
       --warning: #fbbf24;
-      --warning-light: rgba(251, 191, 36, 0.15);
+      --warning-light: rgba(251, 191, 36, 0.2);
       --danger: #f87171;
-      --danger-light: rgba(248, 113, 113, 0.15);
+      --danger-light: rgba(248, 113, 113, 0.2);
       --success: #34d399;
-      --success-light: rgba(52, 211, 153, 0.15);
+      --success-light: rgba(52, 211, 153, 0.2);
 
       --bg-gradient-start: #0f172a;
       --bg-gradient-end: #032030;
-      --card-bg: rgba(30, 41, 59, 0.88);
-      --card-border: rgba(51, 65, 85, 0.7);
-      --text-main: #f8fafc;
-      --text-muted: #cbd5e1;
-      --text-light: #94a3b8;
-      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
-      --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.35);
-      --shadow-lg: 0 16px 36px rgba(0, 0, 0, 0.5);
+      --card-bg: rgba(24, 34, 50, 0.95);
+      --card-border: #334155;
+      --text-main: #ffffff;
+      --text-muted: #f1f5f9;
+      --text-light: #cbd5e1;
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+      --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.45);
+      --shadow-lg: 0 16px 36px rgba(0, 0, 0, 0.6);
     }
 
     * {
@@ -72,7 +83,7 @@
     }
 
     body {
-      font-family: 'Prompt', 'Sarabun', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: 'Prompt', 'Kanit', 'Sarabun', sans-serif;
       background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
       color: var(--text-main);
       min-height: 100vh;
@@ -81,18 +92,19 @@
       overflow: hidden;
       user-select: none;
       transition: background 0.3s ease, color 0.3s ease;
+      font-size: calc(17px * var(--font-scale));
     }
 
     /* Top Header Bar */
     header.deck-header {
-      height: 54px;
+      height: 56px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 0 24px;
       background: var(--card-bg);
       backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--card-border);
+      border-bottom: 2px solid var(--card-border);
       z-index: 50;
       box-shadow: var(--shadow-sm);
     }
@@ -100,22 +112,49 @@
     .brand {
       display: flex;
       align-items: center;
-      gap: 10px;
-      font-size: 16px;
-      font-weight: 600;
+      gap: 12px;
+      font-size: 17px;
+      font-weight: 700;
       color: var(--primary);
     }
 
     .brand svg {
-      width: 24px;
-      height: 24px;
+      width: 26px;
+      height: 26px;
       stroke: currentColor;
     }
 
     .header-controls {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
+    }
+
+    .font-control-group {
+      display: flex;
+      align-items: center;
+      background: var(--primary-light);
+      border-radius: var(--radius-sm);
+      padding: 2px 6px;
+      gap: 4px;
+      border: 1px solid var(--card-border);
+    }
+
+    .btn-font {
+      background: none;
+      border: none;
+      font-weight: 700;
+      color: var(--primary);
+      cursor: pointer;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 14px;
+      transition: all 0.15s ease;
+    }
+
+    .btn-font:hover {
+      background: var(--primary);
+      color: #fff;
     }
 
     .btn-icon {
@@ -140,8 +179,8 @@
     }
 
     .btn-icon svg {
-      width: 18px;
-      height: 18px;
+      width: 20px;
+      height: 20px;
     }
 
     /* Main Presentation Stage */
@@ -151,7 +190,7 @@
       align-items: center;
       justify-content: center;
       position: relative;
-      padding: 16px 20px;
+      padding: 10px 18px;
       perspective: 1200px;
       overflow: hidden;
     }
@@ -160,7 +199,7 @@
     .slide-wrapper {
       position: relative;
       width: 100%;
-      max-width: 1280px;
+      max-width: 1360px;
       aspect-ratio: 16 / 9;
       max-height: calc(100vh - 126px);
       display: flex;
@@ -173,10 +212,10 @@
       inset: 0;
       background: var(--card-bg);
       backdrop-filter: blur(16px);
-      border: 1px solid var(--card-border);
+      border: 2px solid var(--card-border);
       border-radius: var(--radius-lg);
       box-shadow: var(--shadow-lg);
-      padding: 38px 48px;
+      padding: 28px 38px;
       display: flex;
       flex-direction: column;
       opacity: 0;
@@ -201,50 +240,42 @@
       transform: scale(1.02) translateY(-12px);
     }
 
-    /* Slide Content Typography & Layout */
+    /* Slide Typography - LARGE & CLEAR FOR SENIORS */
+    .slide-header {
+      margin-bottom: 12px;
+    }
+
     .slide-tag {
       display: inline-flex;
       align-items: center;
       gap: 6px;
       padding: 4px 14px;
       border-radius: 999px;
-      font-size: 13px;
-      font-weight: 600;
+      font-size: calc(14.5px * var(--font-scale));
+      font-weight: 700;
       background: var(--primary-light);
       color: var(--primary);
       width: fit-content;
-      margin-bottom: 8px;
+      margin-bottom: 4px;
       letter-spacing: 0.3px;
     }
 
-    .slide-tag.accent {
-      background: var(--accent-light);
-      color: var(--accent);
-    }
-
-    .slide-tag.warning {
-      background: var(--warning-light);
-      color: var(--warning);
-    }
-
-    .slide-tag.danger {
-      background: var(--danger-light);
-      color: var(--danger);
-    }
+    .slide-tag.accent { background: var(--accent-light); color: var(--accent); }
+    .slide-tag.warning { background: var(--warning-light); color: var(--warning); }
+    .slide-tag.danger { background: var(--danger-light); color: var(--danger); }
 
     .slide-title {
-      font-size: 30px;
-      font-weight: 700;
+      font-size: calc(30px * var(--font-scale));
+      font-weight: 800;
       line-height: 1.25;
       color: var(--text-main);
-      margin-bottom: 6px;
+      margin-bottom: 3px;
     }
 
     .slide-subtitle {
-      font-size: 16px;
-      color: var(--text-muted);
-      margin-bottom: 18px;
-      font-weight: 400;
+      font-size: calc(17px * var(--font-scale));
+      color: var(--text-light);
+      font-weight: 500;
     }
 
     .slide-body {
@@ -252,60 +283,32 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: 16px;
     }
 
-    /* Grid Layouts */
-    .grid-2 {
+    /* Split 2-Column Layout (Content Left, Image Right) */
+    .slide-layout-split {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-      align-items: stretch;
-    }
-
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-      align-items: stretch;
-    }
-
-    .grid-4 {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-      align-items: stretch;
-    }
-
-    .grid-2-1 {
-      display: grid;
-      grid-template-columns: 1.25fr 0.75fr;
-      gap: 24px;
+      grid-template-columns: 1.18fr 0.82fr;
+      gap: 22px;
       align-items: center;
+      height: 100%;
     }
 
-    .grid-1-1-img {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-      align-items: center;
-    }
-
-    /* Cards */
+    /* Senior-friendly Big Cards */
     .feature-card {
-      background: rgba(255, 255, 255, 0.65);
-      border: 1px solid var(--card-border);
+      background: rgba(255, 255, 255, 0.7);
+      border: 2px solid var(--card-border);
       border-radius: var(--radius-md);
-      padding: 18px 22px;
+      padding: 14px 18px;
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 6px;
       transition: all 0.25s ease;
       box-shadow: var(--shadow-sm);
     }
 
     [data-theme="dark"] .feature-card {
-      background: rgba(15, 23, 42, 0.55);
+      background: rgba(15, 23, 42, 0.65);
     }
 
     .feature-card:hover {
@@ -315,22 +318,22 @@
     }
 
     .feature-card.highlight {
-      border-left: 5px solid var(--primary);
+      border-left: 6px solid var(--primary);
       background: linear-gradient(to right, var(--primary-light), transparent);
     }
 
     .feature-card.accent-card {
-      border-left: 5px solid var(--accent);
+      border-left: 6px solid var(--accent);
       background: linear-gradient(to right, var(--accent-light), transparent);
     }
 
     .feature-card.danger-card {
-      border-left: 5px solid var(--danger);
+      border-left: 6px solid var(--danger);
       background: linear-gradient(to right, var(--danger-light), transparent);
     }
 
     .feature-card.warning-card {
-      border-left: 5px solid var(--warning);
+      border-left: 6px solid var(--warning);
       background: linear-gradient(to right, var(--warning-light), transparent);
     }
 
@@ -349,77 +352,69 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      font-size: 22px;
       flex-shrink: 0;
     }
 
-    .card-icon.accent {
-      background: var(--accent-light);
-      color: var(--accent);
-    }
-
-    .card-icon.warning {
-      background: var(--warning-light);
-      color: var(--warning);
-    }
-
-    .card-icon.danger {
-      background: var(--danger-light);
-      color: var(--danger);
-    }
+    .card-icon.accent { background: var(--accent-light); color: var(--accent); }
+    .card-icon.warning { background: var(--warning-light); color: var(--warning); }
+    .card-icon.danger { background: var(--danger-light); color: var(--danger); }
 
     .card-title {
-      font-size: 18px;
-      font-weight: 600;
+      font-size: calc(18.5px * var(--font-scale));
+      font-weight: 700;
       color: var(--text-main);
+      line-height: 1.3;
     }
 
     .card-list {
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 7px;
+      gap: 8px;
     }
 
     .card-list li {
-      font-size: 14.5px;
+      font-size: calc(16px * var(--font-scale));
       color: var(--text-muted);
       line-height: 1.45;
       display: flex;
       align-items: flex-start;
       gap: 8px;
+      font-weight: 500;
     }
 
     .card-list li svg {
-      width: 17px;
-      height: 17px;
+      width: 20px;
+      height: 20px;
       flex-shrink: 0;
-      margin-top: 3px;
+      margin-top: 2px;
       color: var(--primary);
     }
 
-    /* Step Badge Numbers */
+    /* Big Step Badge Numbers for Clear Visual Flow */
     .step-item {
       display: flex;
       gap: 12px;
-      align-items: flex-start;
-      background: rgba(255, 255, 255, 0.55);
-      border: 1px solid var(--card-border);
-      padding: 10px 14px;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.7);
+      border: 1.5px solid var(--card-border);
+      padding: 9px 14px;
       border-radius: var(--radius-sm);
     }
 
     [data-theme="dark"] .step-item {
-      background: rgba(15, 23, 42, 0.45);
+      background: rgba(15, 23, 42, 0.55);
     }
 
     .step-number {
-      width: 26px;
-      height: 26px;
+      width: 28px;
+      height: 28px;
       border-radius: 50%;
       background: var(--primary);
       color: #fff;
-      font-weight: 700;
-      font-size: 13px;
+      font-weight: 800;
+      font-size: calc(14px * var(--font-scale));
       display: flex;
       align-items: center;
       justify-content: center;
@@ -435,49 +430,56 @@
     }
 
     .step-title {
-      font-size: 15px;
-      font-weight: 600;
+      font-size: calc(16.5px * var(--font-scale));
+      font-weight: 700;
       color: var(--text-main);
-      margin-bottom: 2px;
+      line-height: 1.3;
     }
 
     .step-desc {
-      font-size: 13.5px;
+      font-size: calc(15px * var(--font-scale));
       color: var(--text-muted);
       line-height: 1.4;
+      font-weight: 500;
     }
 
-    /* Images & Media Showcase */
+    /* Images & Media Card */
     .media-card {
-      background: rgba(255, 255, 255, 0.7);
-      border: 1px solid var(--card-border);
+      background: rgba(255, 255, 255, 0.95);
+      border: 2px solid var(--card-border);
       border-radius: var(--radius-md);
       overflow: hidden;
-      box-shadow: var(--shadow-sm);
+      box-shadow: var(--shadow-md);
       display: flex;
       flex-direction: column;
       transition: all 0.25s ease;
       cursor: pointer;
       position: relative;
+      width: 100%;
     }
 
     [data-theme="dark"] .media-card {
-      background: rgba(15, 23, 42, 0.6);
+      background: rgba(15, 23, 42, 0.85);
     }
 
     .media-card:hover {
       transform: translateY(-3px);
-      box-shadow: var(--shadow-md);
+      box-shadow: var(--shadow-lg);
       border-color: var(--primary);
     }
 
     .media-card img {
       width: 100%;
-      height: 200px;
+      height: 310px;
+      object-fit: cover;
+      background: #f8fafc;
+      transition: transform 0.3s ease;
+    }
+
+    .media-card.contain-mode img {
       object-fit: contain;
       background: #f1f5f9;
       padding: 6px;
-      transition: transform 0.3s ease;
     }
 
     [data-theme="dark"] .media-card img {
@@ -490,32 +492,34 @@
 
     .media-caption {
       padding: 10px 14px;
-      font-size: 13.5px;
-      font-weight: 600;
+      font-size: calc(15px * var(--font-scale));
+      font-weight: 700;
       color: var(--text-main);
       text-align: center;
       background: var(--card-bg);
-      border-top: 1px solid var(--card-border);
+      border-top: 2px solid var(--card-border);
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 6px;
+      gap: 8px;
     }
 
     .zoom-hint {
       position: absolute;
-      top: 8px;
-      right: 8px;
-      background: rgba(15, 23, 42, 0.75);
+      top: 10px;
+      right: 10px;
+      background: rgba(15, 23, 42, 0.85);
       color: #fff;
-      padding: 3px 8px;
+      padding: 4px 10px;
       border-radius: 6px;
-      font-size: 11px;
+      font-size: calc(12.5px * var(--font-scale));
+      font-weight: 600;
       display: flex;
       align-items: center;
       gap: 4px;
       opacity: 0;
       transition: opacity 0.2s ease;
+      z-index: 5;
     }
 
     .media-card:hover .zoom-hint {
@@ -527,9 +531,6 @@
       background: radial-gradient(circle at 80% 20%, rgba(56, 189, 248, 0.15), transparent 50%),
                   radial-gradient(circle at 20% 80%, rgba(13, 148, 136, 0.12), transparent 50%),
                   var(--card-bg);
-      text-align: center;
-      align-items: center;
-      justify-content: center;
     }
 
     .cover-badge {
@@ -538,115 +539,85 @@
       gap: 8px;
       padding: 6px 18px;
       border-radius: 999px;
-      font-size: 14px;
-      font-weight: 600;
+      font-size: calc(15px * var(--font-scale));
+      font-weight: 700;
       background: var(--primary-light);
       color: var(--primary-dark);
-      margin-bottom: 16px;
-      border: 1px solid rgba(2, 132, 199, 0.2);
+      margin-bottom: 10px;
+      border: 1.5px solid rgba(2, 132, 199, 0.25);
     }
 
-    .cover-title {
-      font-size: 38px;
-      font-weight: 700;
-      line-height: 1.25;
-      color: var(--text-main);
-      max-width: 960px;
-      margin-bottom: 12px;
-    }
-
-    .cover-subtitle {
-      font-size: 18px;
-      color: var(--text-muted);
-      max-width: 800px;
-      margin-bottom: 30px;
-      line-height: 1.5;
-    }
-
-    .goal-grid {
+    .goal-grid-compact {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
-      max-width: 1000px;
-      width: 100%;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 14px;
     }
 
-    .goal-item {
-      background: rgba(255, 255, 255, 0.7);
-      border: 1px solid var(--card-border);
-      border-radius: var(--radius-md);
-      padding: 16px 12px;
+    .goal-item-compact {
+      background: rgba(255, 255, 255, 0.8);
+      border: 1.5px solid var(--card-border);
+      border-radius: var(--radius-sm);
+      padding: 10px 14px;
       display: flex;
-      flex-direction: column;
       align-items: center;
-      text-align: center;
-      gap: 6px;
+      gap: 12px;
       box-shadow: var(--shadow-sm);
     }
 
-    [data-theme="dark"] .goal-item {
-      background: rgba(15, 23, 42, 0.6);
+    [data-theme="dark"] .goal-item-compact {
+      background: rgba(15, 23, 42, 0.7);
     }
 
-    .goal-icon {
-      width: 42px;
-      height: 42px;
+    .goal-icon-compact {
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
       background: var(--primary-light);
       color: var(--primary);
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 4px;
+      font-size: 20px;
+      flex-shrink: 0;
     }
 
-    .goal-title {
-      font-size: 14.5px;
-      font-weight: 600;
-      color: var(--text-main);
-    }
-
-    .goal-desc {
-      font-size: 12px;
-      color: var(--text-light);
-    }
-
-    /* Interactive Breathing Trainer */
+    /* Interactive Breathing Trainer - Large for elderly */
     .breathing-box {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       background: radial-gradient(circle, var(--primary-light) 0%, transparent 70%);
-      border: 1px dashed var(--primary);
+      border: 2px dashed var(--primary);
       border-radius: var(--radius-md);
-      padding: 20px;
+      padding: 12px;
       text-align: center;
-      position: relative;
+      margin-top: 8px;
     }
 
     .breath-circle-container {
       position: relative;
-      width: 130px;
-      height: 130px;
+      width: 76px;
+      height: 76px;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 10px 0;
+      margin: 4px 0;
     }
 
     .breath-circle {
-      width: 100px;
-      height: 100px;
+      width: 64px;
+      height: 64px;
       border-radius: 50%;
       background: linear-gradient(135deg, var(--primary), var(--accent));
-      box-shadow: 0 0 25px rgba(2, 132, 199, 0.4);
+      box-shadow: 0 0 20px rgba(2, 132, 199, 0.45);
       display: flex;
       align-items: center;
       justify-content: center;
       color: #fff;
-      font-size: 18px;
-      font-weight: 700;
+      font-size: 17px;
+      font-weight: 800;
       transition: transform 0.2s linear;
     }
 
@@ -660,30 +631,30 @@
 
     @keyframes inhaleAnim {
       0% { transform: scale(0.75); }
-      100% { transform: scale(1.25); }
+      100% { transform: scale(1.22); }
     }
 
     @keyframes exhaleAnim {
-      0% { transform: scale(1.25); }
+      0% { transform: scale(1.22); }
       100% { transform: scale(0.75); }
     }
 
     .breath-instruction {
-      font-size: 16px;
-      font-weight: 600;
+      font-size: calc(15px * var(--font-scale));
+      font-weight: 700;
       color: var(--primary-dark);
-      min-height: 24px;
+      min-height: 22px;
     }
 
     .breath-btn {
-      margin-top: 10px;
+      margin-top: 4px;
       padding: 8px 18px;
       background: var(--primary);
       color: #fff;
       border: none;
       border-radius: var(--radius-sm);
-      font-size: 13.5px;
-      font-weight: 600;
+      font-size: calc(14.5px * var(--font-scale));
+      font-weight: 700;
       cursor: pointer;
       transition: all 0.2s ease;
       display: inline-flex;
@@ -705,30 +676,30 @@
       padding: 0 24px;
       background: var(--card-bg);
       backdrop-filter: blur(12px);
-      border-top: 1px solid var(--card-border);
+      border-top: 2px solid var(--card-border);
       z-index: 50;
     }
 
     .footer-left, .footer-right {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
     }
 
     .slide-counter {
-      font-size: 13.5px;
-      font-weight: 600;
+      font-size: 15px;
+      font-weight: 700;
       color: var(--text-muted);
       font-variant-numeric: tabular-nums;
       background: var(--primary-light);
-      padding: 4px 12px;
+      padding: 4px 14px;
       border-radius: 999px;
     }
 
     .progress-bar-container {
       flex: 1;
-      max-width: 400px;
-      height: 6px;
+      max-width: 420px;
+      height: 8px;
       background: var(--card-border);
       border-radius: 999px;
       overflow: hidden;
@@ -745,14 +716,14 @@
     .nav-btn {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      padding: 8px 16px;
+      gap: 8px;
+      padding: 8px 18px;
       border-radius: var(--radius-sm);
-      border: 1px solid var(--card-border);
+      border: 1.5px solid var(--card-border);
       background: var(--card-bg);
       color: var(--text-main);
-      font-size: 14px;
-      font-weight: 600;
+      font-size: 15px;
+      font-weight: 700;
       cursor: pointer;
       transition: all 0.2s ease;
     }
@@ -764,7 +735,7 @@
     }
 
     .nav-btn:disabled {
-      opacity: 0.4;
+      opacity: 0.35;
       cursor: not-allowed;
     }
 
@@ -772,12 +743,12 @@
     .overview-modal {
       position: fixed;
       inset: 0;
-      background: rgba(15, 23, 42, 0.85);
+      background: rgba(15, 23, 42, 0.88);
       backdrop-filter: blur(8px);
       z-index: 100;
       display: none;
       flex-direction: column;
-      padding: 30px;
+      padding: 26px;
       overflow-y: auto;
     }
 
@@ -790,7 +761,7 @@
       justify-content: space-between;
       align-items: center;
       color: #fff;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
     }
 
     .overview-grid {
@@ -801,7 +772,7 @@
 
     .overview-thumb {
       background: var(--card-bg);
-      border: 2px solid transparent;
+      border: 2.5px solid transparent;
       border-radius: var(--radius-md);
       padding: 14px;
       cursor: pointer;
@@ -823,28 +794,28 @@
     }
 
     .thumb-num {
-      font-size: 12px;
-      font-weight: 700;
+      font-size: 13px;
+      font-weight: 800;
       color: var(--primary);
     }
 
     .thumb-title {
-      font-size: 13.5px;
-      font-weight: 600;
+      font-size: 15px;
+      font-weight: 700;
       color: var(--text-main);
-      line-height: 1.3;
+      line-height: 1.35;
     }
 
-    /* Lightbox Modal for Images */
+    /* Lightbox Modal for Fullscreen Images */
     .lightbox-modal {
       position: fixed;
       inset: 0;
-      background: rgba(0, 0, 0, 0.88);
-      z-index: 120;
+      background: rgba(0, 0, 0, 0.94);
+      z-index: 150;
       display: none;
       align-items: center;
       justify-content: center;
-      padding: 30px;
+      padding: 12px;
     }
 
     .lightbox-modal.open {
@@ -853,49 +824,69 @@
 
     .lightbox-content {
       position: relative;
-      max-width: 90vw;
-      max-height: 90vh;
+      width: 96vw;
+      height: 94vh;
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
     }
 
     .lightbox-img {
-      max-width: 100%;
-      max-height: 80vh;
+      width: auto;
+      height: auto;
+      max-width: 95vw;
+      max-height: 84vh;
       object-fit: contain;
       border-radius: var(--radius-md);
-      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+      box-shadow: 0 25px 60px rgba(0,0,0,0.8);
+      background: #ffffff;
     }
 
     .lightbox-caption {
       color: #fff;
-      margin-top: 14px;
-      font-size: 16px;
-      font-weight: 500;
+      margin-top: 10px;
+      font-size: calc(17px * var(--font-scale));
+      font-weight: 700;
       text-align: center;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.8);
     }
 
     .lightbox-close {
       position: absolute;
-      top: -38px;
-      right: 0;
-      background: none;
-      border: none;
+      top: -10px;
+      right: 10px;
+      background: rgba(255, 255, 255, 0.2);
+      border: 2px solid rgba(255, 255, 255, 0.6);
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       color: #fff;
-      font-size: 32px;
+      font-size: 26px;
+      font-weight: 800;
       cursor: pointer;
+      transition: all 0.2s ease;
+      z-index: 160;
     }
 
-    /* Speaker Notes Box (Hotkey 'N') */
+    .lightbox-close:hover {
+      background: var(--danger);
+      border-color: var(--danger);
+      transform: scale(1.1);
+    }
+
+    /* Speaker Notes Box */
     .speaker-notes-drawer {
       position: fixed;
       bottom: 64px;
       right: 20px;
-      width: 360px;
+      width: 380px;
       max-height: 260px;
       background: var(--card-bg);
-      border: 1px solid var(--card-border);
+      border: 2px solid var(--card-border);
       border-radius: var(--radius-md);
       padding: 16px;
       box-shadow: var(--shadow-lg);
@@ -909,8 +900,8 @@
     }
 
     .notes-title {
-      font-size: 13px;
-      font-weight: 700;
+      font-size: 14px;
+      font-weight: 800;
       color: var(--primary);
       text-transform: uppercase;
       margin-bottom: 8px;
@@ -920,7 +911,7 @@
     }
 
     .notes-content {
-      font-size: 13px;
+      font-size: 14.5px;
       color: var(--text-muted);
       line-height: 1.5;
     }
@@ -958,16 +949,15 @@
       }
     }
 
-    /* Responsive Adjustments */
-    @media (max-width: 960px) {
-      .slide { padding: 20px; }
-      .slide-title { font-size: 22px; }
-      .grid-2, .grid-3, .grid-4, .grid-2-1, .grid-1-1-img {
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .slide-layout-split {
         grid-template-columns: 1fr;
-        gap: 12px;
+        gap: 14px;
       }
-      .cover-title { font-size: 26px; }
-      .goal-grid { grid-template-columns: 1fr 1fr; }
+      .media-card img { height: 220px; }
+      .slide { padding: 20px; }
+      .slide-title { font-size: 24px; }
     }
   </style>
 </head>
@@ -983,6 +973,14 @@
     </div>
 
     <div class="header-controls">
+      <!-- Font Size Scaler for Elderly -->
+      <div class="font-control-group" title="ปรับขนาดตัวอักษรสำหรับผู้สูงอายุ">
+        <span style="font-size: 13px; font-weight: 700; color: var(--primary); padding-left: 4px;">ขนาดตัวหนังสือ:</span>
+        <button class="btn-font" id="btnFontNormal" title="ขนาดมาตรฐาน (100%)">ปกติ</button>
+        <button class="btn-font" id="btnFontLarge" style="background: var(--primary); color: #fff;" title="ขนาดใหญ่พิเศษสำหรับผู้สูงอายุ (115%)">ใหญ่</button>
+        <button class="btn-font" id="btnFontXLarge" title="ขนาดใหญ่มาก (128%)">ใหญ่มาก</button>
+      </div>
+
       <button class="btn-icon" id="btnNotes" title="Speaker Notes (กด 'N')">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
@@ -1020,345 +1018,247 @@
   <main class="stage">
     <div class="slide-wrapper">
 
-      <!-- SLIDE 1: Title / Cover -->
+      <!-- SLIDE 1: Cover / Introduction -->
       <section class="slide cover-slide active" data-slide="1" data-notes="ยินดีต้อนรับสู่การนำเสนอเรื่องกายภาพบำบัดสำหรับผู้ป่วย COPD เน้น 4 เป้าหมายหลัก: ลดหอบ, เพิ่มสมรรถภาพการทำกิจวัตร, ระบายเสมหะ และเพิ่มคุณภาพชีวิต">
-        <div class="cover-badge">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 7.65l.77.78L12 20.66l7.65-7.65.77-.78a5.4 5.4 0 0 0 0-7.65z"></path>
-          </svg>
-          Pulmonary Rehabilitation & Physical Therapy
-        </div>
-        <h1 class="cover-title">กายภาพบำบัดสำหรับผู้ป่วย COPD<br><span style="font-size: 26px; color: var(--primary); font-weight: 500;">(โรคปอดอุดกั้นเรื้อรัง - Chronic Obstructive Pulmonary Disease)</span></h1>
-        <p class="cover-subtitle">คู่มือแนวทางการฟื้นฟูสมรรถภาพปอด การฝึกหายใจ การขับเสมหะ การออกกำลังกาย และการจัดท่าลดอาการเหนื่อยหอบอย่างถูกวิธี</p>
-
-        <div class="goal-grid">
-          <div class="goal-item">
-            <div class="goal-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"></path>
-                <path d="M12 6v6l4 2"></path>
+        <div class="slide-layout-split">
+          <div>
+            <div class="cover-badge">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 7.65l.77.78L12 20.66l7.65-7.65.77-.78a5.4 5.4 0 0 0 0-7.65z"></path>
               </svg>
+              การฟื้นฟูสมรรถภาพปอด (Pulmonary Rehabilitation)
             </div>
-            <div class="goal-title">ลดอาการหอบเหนื่อย</div>
-            <div class="goal-desc">ฟื้นฟูระบบการหายใจและกล้ามเนื้อ</div>
+            <h1 class="slide-title" style="font-size: calc(34px * var(--font-scale));">กายภาพบำบัดสำหรับผู้ป่วย COPD</h1>
+            <p style="font-size: calc(18px * var(--font-scale)); color: var(--primary); font-weight: 700; margin-bottom: 6px;">(โรคปอดอุดกั้นเรื้อรัง)</p>
+            <p class="slide-subtitle">แนวทางดูแลปอด ฝึกหายใจ ออกกำลังกาย และจัดท่าพักลดเหนื่อย</p>
+
+            <div class="goal-grid-compact">
+              <div class="goal-item-compact">
+                <div class="goal-icon-compact">🫁</div>
+                <div>
+                  <div style="font-size: calc(16px * var(--font-scale)); font-weight: 700;">1. ลดอาการหอบเหนื่อย</div>
+                  <div style="font-size: calc(13.5px * var(--font-scale)); color: var(--text-light);">ฝึกหายใจให้ถูกวิธี</div>
+                </div>
+              </div>
+
+              <div class="goal-item-compact">
+                <div class="goal-icon-compact">🚶</div>
+                <div>
+                  <div style="font-size: calc(16px * var(--font-scale)); font-weight: 700;">2. เพิ่มกิจวัตรประจำวัน</div>
+                  <div style="font-size: calc(13.5px * var(--text-scale, 1)); color: var(--text-light);">ทำกิจกรรมได้คล่องตัว</div>
+                </div>
+              </div>
+
+              <div class="goal-item-compact">
+                <div class="goal-icon-compact">💧</div>
+                <div>
+                  <div style="font-size: calc(16px * var(--font-scale)); font-weight: 700;">3. ลดการคั่งของเสมหะ</div>
+                  <div style="font-size: calc(13.5px * var(--font-scale)); color: var(--text-light);">ขับเสมหะออกง่าย ปอดโล่ง</div>
+                </div>
+              </div>
+
+              <div class="goal-item-compact">
+                <div class="goal-icon-compact">✨</div>
+                <div>
+                  <div style="font-size: calc(16px * var(--font-scale)); font-weight: 700;">4. เพิ่มคุณภาพชีวิต</div>
+                  <div style="font-size: calc(13.5px * var(--font-scale)); color: var(--text-light);">สุขภาพแข็งแรงยืนยาว</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Author Profile Card -->
+            <div style="margin-top: 12px; background: linear-gradient(135deg, rgba(3, 105, 161, 0.1), rgba(15, 118, 110, 0.1)); border: 1.5px solid var(--primary); border-radius: var(--radius-sm); padding: 8px 14px; display: flex; align-items: center; gap: 12px;">
+              <div style="width: 38px; height: 38px; border-radius: 50%; background: var(--primary); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; box-shadow: 0 2px 6px rgba(3, 105, 161, 0.3);">👩‍⚕️</div>
+              <div>
+                <div style="font-size: calc(15px * var(--font-scale)); font-weight: 800; color: var(--primary-dark);">จัดทำโดย: นางสาวกานต์ชนิต อินยะบุตร</div>
+                <div style="font-size: calc(13px * var(--font-scale)); color: var(--text-muted); font-weight: 600;">นักกายภาพบำบัดปฏิบัติการ • โรงพยาบาลแม่ทะ</div>
+              </div>
+            </div>
           </div>
 
-          <div class="goal-item">
-            <div class="goal-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-                <circle cx="9" cy="7" r="4"></circle>
-                <polyline points="16 11 18 13 22 9"></polyline>
-              </svg>
+          <!-- Image Right -->
+          <div>
+            <div class="media-card" onclick="openLightbox('assets/slide1_cover_lung.jpg', 'โครงสร้างระบบทางเดินหายใจและปอดในการฟื้นฟู COPD')">
+              <img src="assets/slide1_cover_lung.jpg" alt="COPD Healthy Lungs Anatomy" style="height: 320px;">
+              <div class="zoom-hint">🔍 คลิกเพื่อขยาย</div>
+              <div class="media-caption">
+                <span>โครงสร้างระบบทางเดินหายใจ & การฟื้นฟูสมรรถภาพปอด</span>
+              </div>
             </div>
-            <div class="goal-title">เพิ่มกิจวัตรประจำวัน</div>
-            <div class="goal-desc">ทำกิจกรรมและพึ่งพาตนเองได้ดีขึ้น</div>
-          </div>
-
-          <div class="goal-item">
-            <div class="goal-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 2v8M12 18v4M4.93 4.93l5.66 5.66M13.41 13.41l5.66 5.66M2 12h8M18 12h4M4.93 19.07l5.66-5.66M13.41 10.59l5.66-5.66"></path>
-              </svg>
-            </div>
-            <div class="goal-title">ลดการคั่งของเสมหะ</div>
-            <div class="goal-desc">ขับเสมหะออกง่าย ปอดโล่งสบาย</div>
-          </div>
-
-          <div class="goal-item">
-            <div class="goal-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10"></circle>
-                <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
-                <line x1="9" y1="9" x2="9.01" y2="9"></line>
-                <line x1="15" y1="9" x2="15.01" y2="9"></line>
-              </svg>
-            </div>
-            <div class="goal-title">เพิ่มคุณภาพชีวิต</div>
-            <div class="goal-desc">สุขภาพจิตและร่างกายแข็งแรงยืนยาว</div>
           </div>
         </div>
       </section>
 
-      <!-- SLIDE 2: 1. การฝึกการหายใจ (Breathing Exercises) + Interactive Trainer -->
-      <section class="slide" data-slide="2" data-notes="การฝึกหายใจมี 2 ท่าสำคัญ: Pursed-lip ช่วยสร้าง positive expiratory pressure ป้องกันหลอดลมยุบตัว, Diaphragmatic ช่วยเพิ่มการทำงานของกระบังลมและลดการใช้กล้ามเนื้อคอ-ไหล่">
-        <span class="slide-tag">หัวข้อที่ 1</span>
-        <h2 class="slide-title">1. การฝึกการหายใจ (Breathing Exercises)</h2>
-        <p class="slide-subtitle">เทคนิคสำคัญในการควบคุมลมหายใจ เพิ่มปริมาณออกซิเจน และลดอาการหอบเหนื่อย</p>
+      <!-- SLIDE 2: 1. การฝึกการหายใจ (Breathing Exercises) -->
+      <section class="slide" data-slide="2" data-notes="การฝึกหายใจมี 2 ท่าสำคัญ: Pursed-lip ช่วยสร้าง positive expiratory pressure ป้องกันหลอดลมยุบตัว, Diaphragmatic ช่วยเพิ่มการทำงานของกระบังลม">
+        <div class="slide-header">
+          <span class="slide-tag">หัวข้อที่ 1</span>
+          <h2 class="slide-title">1. การฝึกการหายใจ (Breathing Exercises)</h2>
+          <p class="slide-subtitle">เทคนิคสำคัญในการควบคุมลมหายใจ เพิ่มออกซิเจน และลดอาการหอบเหนื่อย</p>
+        </div>
 
-        <div class="grid-2-1">
-          <div style="display: flex; flex-direction: column; gap: 14px;">
+        <div class="slide-layout-split">
+          <div style="display: flex; flex-direction: column; gap: 10px;">
             <div class="feature-card highlight">
               <div class="card-header">
-                <div class="card-icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <path d="M8 12h8"></path>
-                  </svg>
-                </div>
+                <div class="card-icon">🌬️</div>
                 <div>
-                  <div class="card-title">Pursed-lip Breathing (หายใจเม้มปาก)</div>
-                  <span style="font-size: 13px; color: var(--primary); font-weight: 500;">อัตราส่วน เข้า 2 : ออก 4 วินาที</span>
+                  <div class="card-title">Pursed-lip breathing (หายใจเม้มปาก)</div>
+                  <span style="font-size: calc(14px * var(--font-scale)); color: var(--primary); font-weight: 700;">เข้าทางจมูก 2 วินาที : เม้มปากออกช้า ๆ 4 วินาที</span>
                 </div>
               </div>
               <ul class="card-list">
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span><strong>หายใจเข้าทางจมูก:</strong> นับช้า ๆ 2 วินาที (ให้ลมเข้าเต็มที่)</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span><strong>เม้มปากแล้วหายใจออกช้า ๆ:</strong> ประมาณ 4 วินาที (เหมือนเป่าเทียนเบา ๆ)</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span style="color: var(--primary-dark);"><strong>ประโยชน์:</strong> ช่วยลดอาการหอบ และสร้างแรงดันบวกป้องกันทางเดินหายใจยุบตัว</span>
-                </li>
+                <li><span>• <strong>หายใจเข้าทางจมูก:</strong> นับช้า ๆ 2 วินาที (สูดเข้าเต็มที่)</span></li>
+                <li><span>• <strong>เม้มปากแล้วหายใจออกช้า ๆ:</strong> ประมาณ 4 วินาที (เหมือนเป่าเทียนเบา ๆ)</span></li>
+                <li><span style="color: var(--primary-dark);">• <strong>ประโยชน์:</strong> ช่วยลดอาการหอบ และป้องกันทางเดินหายใจยุบตัว</span></li>
               </ul>
             </div>
 
             <div class="feature-card accent-card">
               <div class="card-header">
-                <div class="card-icon accent">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-                  </svg>
-                </div>
+                <div class="card-icon accent">🫁</div>
                 <div>
-                  <div class="card-title">Diaphragmatic Breathing (หายใจด้วยกระบังลม)</div>
-                  <span style="font-size: 13px; color: var(--accent); font-weight: 500;">เข้าท้องป่อง ออกท้องแฟบ</span>
+                  <div class="card-title">Diaphragmatic breathing (หายใจด้วยกระบังลม)</div>
+                  <span style="font-size: calc(14px * var(--font-scale)); color: var(--accent); font-weight: 700;">เข้าท้องป่อง : ออกท้องแฟบ</span>
                 </div>
               </div>
               <ul class="card-list">
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span><strong>วางมือบนหน้าท้อง:</strong> เพื่อรับรู้การเคลื่อนไหวของกระบังลม</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span><strong>หายใจเข้า:</strong> หน้าท้องป่องขึ้น (กระบังลมเลื่อนต่ำลง)</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span><strong>หายใจออก:</strong> หน้าท้องแฟบลง</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span style="color: var(--accent);"><strong>ประโยชน์:</strong> ลดการใช้กล้ามเนื้อคอและไหล่ในการดึงหายใจ</span>
-                </li>
+                <li><span>• วางมือบนหน้าท้องเพื่อรับรู้การเคลื่อนไหว</span></li>
+                <li><span>• <strong>หายใจเข้าท้องป่อง</strong> | <strong>หายใจออกท้องแฟบ</strong></span></li>
+                <li><span style="color: var(--accent);">• <strong>ประโยชน์:</strong> ลดการใช้กล้ามเนื้อคอและไหล่ในการดึงหายใจ</span></li>
               </ul>
+            </div>
+
+            <!-- Breathing Pacer Tool -->
+            <div class="breathing-box">
+              <div style="display: flex; align-items: center; justify-content: space-between; width: 100%; padding: 0 10px;">
+                <div>
+                  <div style="font-size: calc(15px * var(--font-scale)); font-weight: 700; color: var(--text-main);">เครื่องช่วยฝึกจังหวะ (Pacer)</div>
+                  <div class="breath-instruction" id="breathText">กดเริ่มเพื่อฝึก (เข้า 2 วิ : ออก 4 วิ)</div>
+                </div>
+                <div class="breath-circle-container">
+                  <div class="breath-circle" id="breathCircle">
+                    <span id="breathTimer">พร้อม</span>
+                  </div>
+                </div>
+                <button class="breath-btn" id="btnToggleBreath">
+                  <span id="btnBreathLabel">เริ่มฝึก (Start)</span>
+                </button>
+              </div>
             </div>
           </div>
 
-          <!-- Interactive Breathing Visualizer -->
-          <div class="breathing-box">
-            <div style="font-size: 14px; font-weight: 700; color: var(--text-main); margin-bottom: 2px;">เครื่องมือฝึกจังหวะหายใจ (Pacer)</div>
-            <div style="font-size: 12px; color: var(--text-light);">กดปุ่มเพื่อเริ่มฝึกหายใจแบบเม้มปาก</div>
-
-            <div class="breath-circle-container">
-              <div class="breath-circle" id="breathCircle">
-                <span id="breathTimer">พร้อม</span>
+          <!-- Image Right -->
+          <div>
+            <div class="media-card contain-mode" onclick="openLightbox('assets/slide2_pursed_lip.jpg', 'ขั้นตอนการฝึกหายใจแบบเม้มปาก (Pursed-Lip Breathing Technique)')">
+              <img src="assets/slide2_pursed_lip.jpg" alt="Pursed Lip Breathing Guide" style="height: 320px; object-fit: contain;">
+              <div class="zoom-hint">🔍 คลิกเพื่อขยาย</div>
+              <div class="media-caption">
+                <span>ขั้นตอนการฝึก Pursed-Lip Breathing เข้า 2s / ออก 4s</span>
               </div>
             </div>
-
-            <div class="breath-instruction" id="breathText">กดปุ่มเริ่มเพื่อฝึก</div>
-            
-            <button class="breath-btn" id="btnToggleBreath">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                <polygon points="5 3 19 12 5 21 5 3"></polygon>
-              </svg>
-              <span id="btnBreathLabel">เริ่มฝึกหายใจ (Start)</span>
-            </button>
           </div>
         </div>
       </section>
 
       <!-- SLIDE 3: 2. การระบายเสมหะ (Airway Clearance Techniques) -->
       <section class="slide" data-slide="3" data-notes="การระบายเสมหะช่วยลดการอุดกั้นและป้องกันการติดเชื้อในปอด เทคนิค ACBT ประกอบด้วย Breathing Control, Thoracic Expansion, และ FET (Huffing)">
-        <span class="slide-tag">หัวข้อที่ 2</span>
-        <h2 class="slide-title">2. การระบายเสมหะ (Airway Clearance Techniques)</h2>
-        <p class="slide-subtitle">หากมีเสมหะมาก ควรเลือกใช้เทคนิคที่เหมาะสมเพื่อขับเสมหะออกโดยไม่เหนื่อยล้า</p>
+        <div class="slide-header">
+          <span class="slide-tag">หัวข้อที่ 2</span>
+          <h2 class="slide-title">2. การระบายเสมหะ (Airway Clearance Techniques)</h2>
+          <p class="slide-subtitle">หากมีเสมหะมาก ควรเลือกใช้เทคนิคที่เหมาะสมเพื่อขับเสมหะออกโดยไม่เหนื่อยล้า</p>
+        </div>
 
-        <div class="grid-2">
-          <div class="feature-card highlight">
-            <div class="card-header">
-              <div class="card-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
-                </svg>
-              </div>
-              <div>
-                <div class="card-title">ACBT (Active Cycle of Breathing Technique)</div>
-                <div style="font-size: 13px; color: var(--text-light);">วงจรการหายใจเพื่อระบายเสมหะ</div>
+        <div class="slide-layout-split">
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <div class="feature-card highlight">
+              <div class="card-title" style="color: var(--primary);">1. Active Cycle of Breathing Technique (ACBT)</div>
+              <div style="font-size: calc(14.5px * var(--font-scale)); color: var(--text-muted); line-height: 1.4;">
+                • <strong>ควบคุมการหายใจ:</strong> หายใจเข้า-ออกระดับปกติอย่างผ่อนคลาย<br>
+                • <strong>ขยายทรวงอก:</strong> สูดเข้าลึกค้างไว้ 2–3 วินาทีแล้วผ่อนออก<br>
+                • <strong>ขับเสมหะ (Huffing):</strong> เปล่งเสียงฮัฟดันเสมหะขึ้นมา
               </div>
             </div>
-            <ul class="card-list">
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span><strong>1. ควบคุมการหายใจ (Breathing Control):</strong> หายใจผ่อนคลายระดับปกติ</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span><strong>2. ขยายทรวงอก (Thoracic Expansion):</strong> สูดหายใจเข้าลึก ๆ ช้า ๆ ค้างไว้ 2-3 วินาที แล้วหายใจออก</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span><strong>3. เทคนิคขับเสมหะ (FET - Huffing):</strong> เปล่งเสียงฮัฟเพื่อดันเสมหะ</span>
-              </li>
-            </ul>
+
+            <div class="feature-card accent-card">
+              <div class="card-title" style="color: var(--accent);">2. Huff coughing (ไอแบบฮัฟ)</div>
+              <div style="font-size: calc(14.5px * var(--font-scale)); color: var(--text-muted); line-height: 1.4;">
+                อ้าปากพ่นลมหายใจออกแรง ๆ เปล่งเสียง <strong>"ฮัฟ"</strong> (คล้ายเป่ากระจกให้เกิดฝ้า) ใช้แรงน้อย หลอดลมไม่ตีบแฟบ
+              </div>
+            </div>
+
+            <div class="feature-card">
+              <div class="card-title">3. การจัดท่าระบายเสมหะ (Postural drainage)</div>
+              <div style="font-size: calc(14.5px * var(--font-scale)); color: var(--text-muted);">
+                ใช้แรงโน้มถ่วงช่วยให้เสมหะไหลลงสู่หลอดลมใหญ่ ในผู้ป่วยที่เหมาะสม
+              </div>
+            </div>
+
+            <div class="feature-card warning-card">
+              <div class="card-title" style="color: var(--warning);">4. การเคาะปอดและสั่นทรวงอก</div>
+              <div style="font-size: calc(14.5px * var(--font-scale)); color: var(--text-muted);">
+                ทำโดยผู้เชี่ยวชาญ/นักกายภาพบำบัดเมื่อมีข้อบ่งชี้ เพื่อให้เสมหะหลุดร่อน
+              </div>
+            </div>
           </div>
 
-          <div class="feature-card accent-card">
-            <div class="card-header">
-              <div class="card-icon accent">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path>
-                </svg>
-              </div>
-              <div>
-                <div class="card-title">Huff Coughing (ไอแบบฮัฟ)</div>
-                <div style="font-size: 13px; color: var(--text-light);">การพ่นลมเพื่อเคลื่อนเสมหะ</div>
+          <!-- Image Right -->
+          <div>
+            <div class="media-card" onclick="openLightbox('assets/slide3_acbt_clearance.jpg', 'วงจรการหายใจและเทคนิคระบายเสมหะ ACBT & Chest PT')">
+              <img src="assets/slide3_acbt_clearance.jpg" alt="ACBT and Airway Clearance" style="height: 320px;">
+              <div class="zoom-hint">🔍 คลิกเพื่อขยาย</div>
+              <div class="media-caption">
+                <span>แผนภาพวงจร ACBT & เทคนิคการระบายเสมหะ</span>
               </div>
             </div>
-            <ul class="card-list">
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>ใช้แรงน้อยกว่าการไอปกติ ช่วยป้องกันหลอดลมยุบตัว</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>อ้าปากแล้วพ่นลมหายใจออกแรง ๆ เปล่งเสียง <strong>"ฮัฟ"</strong> (คล้ายเป่ากระจกให้เกิดฝ้า)</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>ช่วยไล่เสมหะจากหลอดลมส่วนลึกขึ้นมาสู่ส่วนบน</span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="feature-card">
-            <div class="card-header">
-              <div class="card-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M2 17l10 5 10-5M2 12l10 5 10-5M2 7l10 5 10-5"></path>
-                </svg>
-              </div>
-              <div>
-                <div class="card-title">การจัดท่าระบายเสมหะ (Postural Drainage)</div>
-                <div style="font-size: 13px; color: var(--text-light);">ใช้แรงโน้มถ่วงช่วย</div>
-              </div>
-            </div>
-            <ul class="card-list">
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>จัดท่าให้ปอดส่วนที่มีเสมหะอยู่สูงกว่าหลอดลมใหญ่ เพื่อให้เสมหะไหลตามแรงโน้มถ่วง</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>ใช้ในผู้ป่วยที่มีข้อบ่งชี้และเหมาะสมเท่านั้น (ระวังในผู้มีภาวะกรดไหลย้อนหรือหอบรุนแรง)</span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="feature-card">
-            <div class="card-header">
-              <div class="card-icon warning">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                </svg>
-              </div>
-              <div>
-                <div class="card-title">การเคาะปอดและสั่นทรวงอก (Percussion & Vibration)</div>
-                <div style="font-size: 13px; color: var(--text-light);">ทำโดยผู้เชี่ยวชาญ</div>
-              </div>
-            </div>
-            <ul class="card-list">
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>ทำโดยนักกายภาพบำบัดหรือบุคลากรทางการแพทย์ผู้เชี่ยวชาญ</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>ช่วยให้เสมหะที่เกาะตามผนังหลอดลมหลุดร่อนออกมาได้ง่ายขึ้น</span>
-              </li>
-            </ul>
           </div>
         </div>
       </section>
 
-      <!-- SLIDE 4: 3. การออกกำลังกาย & ความหนัก (Aerobic Exercise) -->
+      <!-- SLIDE 4: 3. การออกกำลังกายแบบแอโรบิก (Aerobic Exercise) -->
       <section class="slide" data-slide="4" data-notes="การออกกำลังกายแบบแอโรบิกช่วยเพิ่มประสิทธิภาพของหัวใจและปอด แนะนำให้ทำอย่างสม่ำเสมอ 3-5 วันต่อสัปดาห์ ครั้งละ 20-30 นาที เริ่มต้นเบาๆ">
-        <span class="slide-tag">หัวข้อที่ 3</span>
-        <h2 class="slide-title">3. การออกกำลังกายแบบแอโรบิก (Aerobic Exercise)</h2>
-        <p class="slide-subtitle">ควรทำอย่างสม่ำเสมอ เพื่อพัฒนาสมรรถภาพปอดและกล้ามเนื้อโดยรวม</p>
+        <div class="slide-header">
+          <span class="slide-tag">หัวข้อที่ 3</span>
+          <h2 class="slide-title">3. การออกกำลังกายแบบแอโรบิก (Aerobic Exercise)</h2>
+          <p class="slide-subtitle">ควรทำอย่างสม่ำเสมอ เพื่อพัฒนาสมรรถภาพปอดและกล้ามเนื้อโดยรวม</p>
+        </div>
 
-        <div class="grid-2">
-          <!-- Left: Activity Types -->
-          <div class="feature-card highlight" style="height: 100%;">
-            <div class="card-header">
-              <div class="card-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-                </svg>
-              </div>
-              <div class="card-title">รูปแบบกิจกรรมที่แนะนำ</div>
+        <div class="slide-layout-split">
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <div class="feature-card highlight">
+              <div class="card-title" style="color: var(--primary);">🏃 กิจกรรมที่แนะนำสำหรับผู้สูงอายุ</div>
+              <ul class="card-list" style="margin-top: 4px;">
+                <li><span>• <strong>การเดิน (Walking):</strong> บนพื้นราบ เดินก้าวสม่ำเสมอ กำหนดลมหายใจ</span></li>
+                <li><span>• <strong>ปั่นจักรยานอยู่กับที่ (Stationary Cycling):</strong> ปลอดภัย ลดแรงกระแทกข้อเข่า</span></li>
+                <li><span>• <strong>ออกกำลังกายแขนและขา:</strong> แกว่งแขน ย่ำเท้าอยู่กับที่</span></li>
+              </ul>
             </div>
 
-            <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 6px;">
-              <div class="step-item">
-                <div class="step-number">1</div>
-                <div class="step-text">
-                  <div class="step-title">การเดิน (Walking)</div>
-                  <div class="step-desc">เดินบนพื้นราบ หรือบนลู่วิ่งไฟฟ้า ก้าวเท้าอย่างมั่นคง กำหนดลมหายใจร่วมด้วย</div>
+            <div class="feature-card accent-card">
+              <div class="card-title" style="color: var(--accent);">⏱️ ความหนักและระยะเวลาที่เหมาะสม</div>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 6px;">
+                <div style="background: rgba(255,255,255,0.8); padding: 10px 14px; border-radius: var(--radius-sm); border: 1.5px solid var(--card-border);">
+                  <div style="font-size: calc(13px * var(--font-scale)); color: var(--text-light); font-weight: 600;">ระยะเวลาต่อครั้ง</div>
+                  <div style="font-size: calc(20px * var(--font-scale)); font-weight: 800; color: var(--primary);">20 – 30 นาที</div>
+                </div>
+                <div style="background: rgba(255,255,255,0.8); padding: 10px 14px; border-radius: var(--radius-sm); border: 1.5px solid var(--card-border);">
+                  <div style="font-size: calc(13px * var(--font-scale)); color: var(--text-light); font-weight: 600;">ความถี่ในการฝึก</div>
+                  <div style="font-size: calc(20px * var(--font-scale)); font-weight: 800; color: var(--accent);">3 – 5 วัน/สัปดาห์</div>
                 </div>
               </div>
-
-              <div class="step-item">
-                <div class="step-number">2</div>
-                <div class="step-text">
-                  <div class="step-title">ปั่นจักรยานอยู่กับที่ (Stationary Cycling)</div>
-                  <div class="step-desc">ปลอดภัย ลดแรงกระแทกข้อต่อ สามารถปรับระดับแรงต้านได้อย่างเหมาะสม</div>
-                </div>
-              </div>
-
-              <div class="step-item">
-                <div class="step-number">3</div>
-                <div class="step-text">
-                  <div class="step-title">ออกกำลังกายแขนและขา (Arm & Leg Exercises)</div>
-                  <div class="step-desc">แกว่งแขน ย่ำเท้าอยู่กับที่ ช่วยให้กล้ามเนื้อทุกส่วนทำงานสัมพันธ์กัน</div>
-                </div>
+              <div style="font-size: calc(14.5px * var(--font-scale)); color: var(--text-muted); margin-top: 8px; font-weight: 600;">
+                💡 <em>เริ่มจากเบา ๆ แล้วค่อยเพิ่มตามความสามารถ ไม่หักโหม</em>
               </div>
             </div>
           </div>
 
-          <!-- Right: Intensity & Frequency -->
-          <div class="feature-card accent-card" style="height: 100%;">
-            <div class="card-header">
-              <div class="card-icon accent">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <polyline points="12 6 12 12 16 14"></polyline>
-                </svg>
-              </div>
-              <div class="card-title">ความหนักและระยะเวลา (Intensity & Duration)</div>
-            </div>
-
-            <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 6px;">
-              <div style="background: rgba(255,255,255,0.7); border: 1px solid var(--card-border); padding: 12px 14px; border-radius: var(--radius-sm);">
-                <div style="font-size: 13px; color: var(--text-light); font-weight: 500;">ระยะเวลาต่อครั้ง</div>
-                <div style="font-size: 22px; font-weight: 700; color: var(--primary);">20 – 30 นาที / ครั้ง</div>
-                <div style="font-size: 12px; color: var(--text-muted); margin-top: 2px;">(หากเหนื่อยง่าย สามารถแบ่งเป็นรอบละ 10 นาที รวมกันได้)</div>
-              </div>
-
-              <div style="background: rgba(255,255,255,0.7); border: 1px solid var(--card-border); padding: 12px 14px; border-radius: var(--radius-sm);">
-                <div style="font-size: 13px; color: var(--text-light); font-weight: 500;">ความถี่ในการฝึก</div>
-                <div style="font-size: 22px; font-weight: 700; color: var(--accent);">3 – 5 วัน / สัปดาห์</div>
-                <div style="font-size: 12px; color: var(--text-muted); margin-top: 2px;">ฝึกให้สม่ำเสมอเพื่อสร้างความแข็งแรงของระบบหัวใจและหลอดเลือด</div>
-              </div>
-
-              <div style="background: var(--primary-light); padding: 10px 14px; border-radius: var(--radius-sm); border-left: 4px solid var(--primary);">
-                <div style="font-size: 13.5px; font-weight: 600; color: var(--primary-dark);">หลักการสำคัญ:</div>
-                <div style="font-size: 12.5px; color: var(--text-muted);">เริ่มจากระดับเบา ๆ แล้วค่อยเพิ่มตามความสามารถ ห้ามหักโหม</div>
+          <!-- Image Right -->
+          <div>
+            <div class="media-card" onclick="openLightbox('assets/slide4_aerobic_exercise.jpg', 'โปรแกรมการออกกำลังกายแบบแอโรบิกสำหรับผู้ป่วย COPD (เดินและปั่นจักรยาน)')">
+              <img src="assets/slide4_aerobic_exercise.jpg" alt="Aerobic Exercise Program" style="height: 320px;">
+              <div class="zoom-hint">🔍 คลิกเพื่อขยาย</div>
+              <div class="media-caption">
+                <span>การเดินบนพื้นราบ & ปั่นจักรยานอยู่กับที่อย่างปลอดภัย</span>
               </div>
             </div>
           </div>
@@ -1367,414 +1267,426 @@
 
       <!-- SLIDE 5: 4. ฝึกกล้ามเนื้อ & 5. ความทนทาน -->
       <section class="slide" data-slide="5" data-notes="การฝึกความแข็งแรงกล้ามเนื้อเน้น sit-to-stand สำหรับขา และดัมเบลเบา/ยางยืดสำหรับแขน สัปดาห์ละ 2-3 วัน ควบคู่กับการฝึกความทนทาน">
-        <span class="slide-tag">หัวข้อที่ 4 & 5</span>
-        <h2 class="slide-title">4. การฝึกกล้ามเนื้อ & 5. การฝึกความทนทาน</h2>
-        <p class="slide-subtitle">เพิ่มความแข็งแรงของกล้ามเนื้อมัดใหญ่ เพื่อให้ทำกิจกรรมในชีวิตประจำวันได้ไม่เหนื่อยง่าย</p>
-
-        <div class="grid-2">
-          <!-- Muscle Strength -->
-          <div class="feature-card highlight">
-            <div class="card-header">
-              <div class="card-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M6 16.326A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 .5 8.973"></path>
-                </svg>
-              </div>
-              <div>
-                <div class="card-title">4. ฝึกกล้ามเนื้อ (Strength Training)</div>
-                <span style="font-size: 13px; color: var(--primary); font-weight: 600;">ความถี่ 2 – 3 วัน / สัปดาห์</span>
-              </div>
-            </div>
-
-            <div style="display: flex; flex-direction: column; gap: 10px;">
-              <div class="step-item">
-                <div class="step-number">🦵</div>
-                <div class="step-text">
-                  <div class="step-title">กล้ามเนื้อขา (Lower Body)</div>
-                  <div class="step-desc">เช่น ฝึกการลุก-นั่งจากเก้าอี้ (Sit-to-stand), เตะขาเหยียดตรง ช่วยให้เดินมั่นคง ขึ้นบันไดสะดวก</div>
-                </div>
-              </div>
-
-              <div class="step-item">
-                <div class="step-number">💪</div>
-                <div class="step-text">
-                  <div class="step-title">กล้ามเนื้อแขน (Upper Body)</div>
-                  <div class="step-desc">ใช้ดัมเบลน้ำหนักเบา (0.5-1 กก.) หรือยางยืดออกกำลังกาย (Resistance band) ช่วยยกของ อาบน้ำ แต่งตัว</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Endurance Training -->
-          <div class="feature-card accent-card">
-            <div class="card-header">
-              <div class="card-icon accent">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <path d="M8 12l3 3 5-5"></path>
-                </svg>
-              </div>
-              <div>
-                <div class="card-title">5. การฝึกความทนทาน (Endurance Training)</div>
-                <span style="font-size: 13px; color: var(--accent); font-weight: 600;">เพิ่มประสิทธิภาพการใช้ออกซิเจน</span>
-              </div>
-            </div>
-
-            <ul class="card-list" style="margin-top: 4px;">
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span><strong>ค่อย ๆ เพิ่มระยะเวลา:</strong> เช่น จากเดิน 5 นาที ขยับเป็น 10, 15 จนถึง 30 นาที</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span><strong>ร่างกายใช้ออกซิเจนมีประสิทธิภาพขึ้น:</strong> ช่วยให้กล้ามเนื้อดึงออกซิเจนไปใช้ได้ดีขึ้น หัวใจเต้นช้าลงขณะทำกิจกรรม</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span><strong>ลดอาการหอบเหนื่อยสะสม:</strong> ช่วยให้ผู้ป่วยทำกิจกรรมต่อเนื่องได้ยาวนานขึ้น</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- SLIDE 6: สัญญาณเตือนที่ควรหยุดออกกำลังกาย -->
-      <section class="slide" data-slide="6" data-notes="Safety First: ให้ผู้ป่วยและญาติสังเกตอาการเตือน 5 ข้อ หาก SpO2 ต่ำกว่า 88% ระหว่างออกกำลังกาย หรือมีอาการเหนื่อยมาก เจ็บหน้าอก ให้หยุดทันที">
-        <span class="slide-tag danger">ข้อควรระวัง & ความปลอดภัย</span>
-        <h2 class="slide-title">ควรหยุดออกกำลังกายและพบแพทย์ทันทีหากมีอาการ</h2>
-        <p class="slide-subtitle">หากพบสัญญาณเตือนเหล่านี้ ให้หยุดพักทันที และประเมินอาการอย่างใกล้ชิด</p>
-
-        <div class="grid-3" style="gap: 14px;">
-          <div class="feature-card danger-card">
-            <div class="card-header">
-              <div class="card-icon danger">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
-                  <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
-                </svg>
-              </div>
-              <div class="card-title" style="font-size: 16px; color: var(--danger);">หอบเหนื่อยมากผิดปกติ</div>
-            </div>
-            <p style="font-size: 13.5px; color: var(--text-muted); line-height: 1.4;">
-              หายใจไม่ทัน พูดเป็นคำไม่ได้ เหนื่อยรุนแรงกว่าปกติที่เคยเป็น
-            </p>
-          </div>
-
-          <div class="feature-card danger-card">
-            <div class="card-header">
-              <div class="card-icon danger">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 7.65l.77.78L12 20.66l7.65-7.65.77-.78a5.4 5.4 0 0 0 0-7.65z"></path>
-                </svg>
-              </div>
-              <div class="card-title" style="font-size: 16px; color: var(--danger);">เจ็บแน่นหน้าอก</div>
-            </div>
-            <p style="font-size: 13.5px; color: var(--text-muted); line-height: 1.4;">
-              รู้สึกแน่น อึดอัด บีบรัดบริเวณหน้าอก หรือปวดร้าวไปที่ไหล่และแขน
-            </p>
-          </div>
-
-          <div class="feature-card danger-card">
-            <div class="card-header">
-              <div class="card-icon danger">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <path d="M12 8v4M12 16h.01"></path>
-                </svg>
-              </div>
-              <div class="card-title" style="font-size: 16px; color: var(--danger);">เวียนศีรษะ หน้ามืด</div>
-            </div>
-            <p style="font-size: 13.5px; color: var(--text-muted); line-height: 1.4;">
-              รู้สึกโคลงเคลง ทรงตัวไม่อยู่ ตาพร่ามัว คล้ายจะเป็นลม
-            </p>
-          </div>
+        <div class="slide-header">
+          <span class="slide-tag">หัวข้อที่ 4 & 5</span>
+          <h2 class="slide-title">4. การฝึกกล้ามเนื้อ & 5. การฝึกความทนทาน</h2>
+          <p class="slide-subtitle">เพิ่มความแข็งแรงของกล้ามเนื้อมัดใหญ่ เพื่อให้ทำกิจกรรมในชีวิตประจำวันได้ไม่เหนื่อยง่าย</p>
         </div>
 
-        <div class="grid-2" style="margin-top: 14px;">
-          <div class="feature-card danger-card">
-            <div class="card-header">
-              <div class="card-icon danger">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <line x1="12" y1="8" x2="12" y2="12"></line>
-                  <line x1="12" y1="16" x2="12.01" y2="16"></line>
-                </svg>
-              </div>
-              <div class="card-title" style="font-size: 16px; color: var(--danger);">ริมฝีปากหรือปลายนิ้วเขียว (Cyanosis)</div>
-            </div>
-            <p style="font-size: 13.5px; color: var(--text-muted);">
-              สัญญาณบ่งบอกถึงภาวะขาดออกซิเจนในกระแสเลือดขั้นวิกฤต
-            </p>
-          </div>
-
-          <div class="feature-card danger-card" style="background: linear-gradient(135deg, var(--danger-light), transparent); border-left: 6px solid var(--danger);">
-            <div class="card-header">
-              <div class="card-icon danger">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                </svg>
-              </div>
-              <div class="card-title" style="font-size: 16px; color: var(--danger);">ค่าออกซิเจนปลายนิ้ว (SpO₂) ต่ำกว่าปกติ</div>
-            </div>
-            <p style="font-size: 13.5px; color: var(--text-muted);">
-              โดยทั่วไป <strong>ต่ำกว่า 88%</strong> ระหว่างออกกำลังกาย (หากไม่ได้อยู่ในแผนการรักษาที่แพทย์กำหนดเฉพาะบุคคล)
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- SLIDE 7: การไอที่ถูกต้อง 2 วิธี (Effective Cough vs Huff Cough) -->
-      <section class="slide" data-slide="7" data-notes="เปรียบเทียบ Effective Cough (ผู้มีแรงไอ) กับ Huff Cough (เหมาะกับ COPD เพราะใช้แรงน้อย หลอดลมไม่ตีบแฟบ)">
-        <span class="slide-tag">เทคนิคการขับเสมหะ</span>
-        <h2 class="slide-title">การไอที่ถูกต้องเพื่อขับเสมหะอย่างมีประสิทธิภาพ</h2>
-        <p class="slide-subtitle">ช่วยขับเสมหะได้ง่ายขึ้น ลดความเหนื่อยล้า และลดการระคายเคืองของทางเดินหายใจ</p>
-
-        <div class="grid-2">
-          <!-- Effective Cough -->
-          <div class="feature-card highlight">
-            <div class="card-header">
-              <div class="card-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                </svg>
-              </div>
-              <div>
-                <div class="card-title">1. การไออย่างมีประสิทธิภาพ (Effective Cough)</div>
-                <span style="font-size: 12px; color: var(--primary); font-weight: 600;">เหมาะสำหรับผู้ที่ยังมีกำลังไอเพียงพอ</span>
-              </div>
-            </div>
-
-            <div style="display: flex; flex-direction: column; gap: 6px; font-size: 13px;">
-              <div class="step-item" style="padding: 5px 10px;">
-                <div class="step-number" style="width: 20px; height: 20px; font-size: 11px;">1</div>
-                <div class="step-text"><span class="step-desc">นั่งตัวตรงหรือเอนตัวประมาณ 45–90 องศา</span></div>
-              </div>
-              <div class="step-item" style="padding: 5px 10px;">
-                <div class="step-number" style="width: 20px; height: 20px; font-size: 11px;">2</div>
-                <div class="step-text"><span class="step-desc">หายใจเข้าลึก ๆ ทางจมูก</span></div>
-              </div>
-              <div class="step-item" style="padding: 5px 10px;">
-                <div class="step-number" style="width: 20px; height: 20px; font-size: 11px;">3</div>
-                <div class="step-text"><span class="step-desc">กลั้นหายใจไว้ประมาณ 2–3 วินาที</span></div>
-              </div>
-              <div class="step-item" style="padding: 5px 10px;">
-                <div class="step-number" style="width: 20px; height: 20px; font-size: 11px;">4</div>
-                <div class="step-text"><span class="step-desc">เกร็งกล้ามเนื้อหน้าท้อง</span></div>
-              </div>
-              <div class="step-item" style="padding: 5px 10px;">
-                <div class="step-number" style="width: 20px; height: 20px; font-size: 11px;">5</div>
-                <div class="step-text"><span class="step-desc"><strong>ไอแรง ๆ 2 ครั้งติดต่อกัน:</strong> ครั้งที่ 1 หลุดจากหลอดลม | ครั้งที่ 2 ขับเสมหะออกมา</span></div>
-              </div>
-              <div class="step-item" style="padding: 5px 10px;">
-                <div class="step-number" style="width: 20px; height: 20px; font-size: 11px;">6</div>
-                <div class="step-text"><span class="step-desc">บ้วนเสมหะลงในภาชนะหรือกระดาษทิชชูทิ้ง</span></div>
-              </div>
-            </div>
-
-            <div style="background: var(--warning-light); border-left: 3px solid var(--warning); padding: 5px 8px; border-radius: 4px; font-size: 11.5px; color: var(--text-main); margin-top: 3px;">
-              ⚠️ <strong>ข้อควรระวัง:</strong> ไม่ควรไอติดต่อกันหลายครั้งจนเวียนหัว หากเหนื่อยให้พักและใช้การหายใจเม้มปาก
-            </div>
-          </div>
-
-          <!-- Huff Cough -->
-          <div class="feature-card accent-card">
-            <div class="card-header">
-              <div class="card-icon accent">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"></path>
-                </svg>
-              </div>
-              <div>
-                <div class="card-title">2. การไอแบบฮัฟ (Huff Cough)</div>
-                <span style="font-size: 12px; color: var(--accent); font-weight: 600;">เทคนิคที่เหมาะกับผู้ป่วย COPD มากที่สุด</span>
-              </div>
-            </div>
-
-            <div style="display: flex; flex-direction: column; gap: 6px; font-size: 13px;">
-              <div class="step-item" style="padding: 5px 10px;">
-                <div class="step-number accent" style="width: 20px; height: 20px; font-size: 11px;">1</div>
-                <div class="step-text"><span class="step-desc">นั่งตัวตรงในท่าที่สบาย</span></div>
-              </div>
-              <div class="step-item" style="padding: 5px 10px;">
-                <div class="step-number accent" style="width: 20px; height: 20px; font-size: 11px;">2</div>
-                <div class="step-text"><span class="step-desc">หายใจเข้าลึกปานกลาง</span></div>
-              </div>
-              <div class="step-item" style="padding: 5px 10px;">
-                <div class="step-number accent" style="width: 20px; height: 20px; font-size: 11px;">3</div>
-                <div class="step-text"><span class="step-desc">อ้าปากกว้างเล็กน้อย</span></div>
-              </div>
-              <div class="step-item" style="padding: 5px 10px;">
-                <div class="step-number accent" style="width: 20px; height: 20px; font-size: 11px;">4</div>
-                <div class="step-text"><span class="step-desc">หายใจออกแรง ๆ พร้อมเปล่งเสียง <strong>“ฮัฟ”</strong> (เหมือนเป่ากระจกให้เป็นฝ้า) 1–2 ครั้ง</span></div>
-              </div>
-              <div class="step-item" style="padding: 5px 10px;">
-                <div class="step-number accent" style="width: 20px; height: 20px; font-size: 11px;">5</div>
-                <div class="step-text"><span class="step-desc">เมื่อเสมหะขึ้นมาที่คอ จึงไอขับออกเบา ๆ 1–2 ครั้ง</span></div>
-              </div>
-            </div>
-
-            <div style="background: var(--accent-light); border-left: 3px solid var(--accent); padding: 6px 8px; border-radius: 4px; font-size: 11.5px; color: var(--text-main); margin-top: 3px;">
-              ⭐ <strong>ข้อดีของ Huff Cough:</strong> ลดอาการเหนื่อย, ลดการตีบ/ยุบตัวของหลอดลม และช่วยเคลื่อนเสมหะจากหลอดลมส่วนลึก
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SLIDE 8: การจัดท่าลดอาการเหนื่อยหอบ (1) ท่า Tripod พร้อมรูปภาพ -->
-      <section class="slide" data-slide="8" data-notes="ท่า Tripod เป็น Gold Standard ท่าพักเมื่อเหนื่อยหอบ การโน้มตัว 15-30 องศาช่วยให้กระบังลมอยู่ในแนวโค้งที่เหมาะสม ลดการทำงานของ accessory muscles">
-        <span class="slide-tag accent">การจัดท่าเพื่อลดอาการเหนื่อยหอบ</span>
-        <h2 class="slide-title">1. ท่า Tripod (ท่าที่แนะนำมากที่สุด)</h2>
-        <p class="slide-subtitle">ช่วยให้กระบังลมทำงานมีประสิทธิภาพสูงสุด ลดการใช้พลังงานและกล้ามเนื้อคอ-ไหล่</p>
-
-        <div class="grid-2-1">
-          <!-- Text and benefits -->
-          <div style="display: flex; flex-direction: column; gap: 14px;">
+        <div class="slide-layout-split">
+          <div style="display: flex; flex-direction: column; gap: 10px;">
             <div class="feature-card highlight">
-              <div class="card-header">
-                <div class="card-icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <polyline points="12 6 12 12 16 14"></polyline>
-                  </svg>
+              <div class="card-title" style="color: var(--primary);">4. ฝึกความแข็งแรงกล้ามเนื้อ • 2–3 วัน/สัปดาห์</div>
+              <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 4px;">
+                <div class="step-item">
+                  <div class="step-number" style="font-size: 16px;">🦵</div>
+                  <div class="step-text">
+                    <div class="step-title">กล้ามเนื้อขา: ลุกนั่งจากเก้าอี้ (Sit-to-stand)</div>
+                    <div class="step-desc">เสริมความแข็งแรงต้นขา ช่วยให้เดินมั่นคง ลุกยืนง่าย</div>
+                  </div>
                 </div>
-                <div class="card-title">ขั้นตอนการปฏิบัติท่า Tripod</div>
+                <div class="step-item">
+                  <div class="step-number" style="font-size: 16px;">💪</div>
+                  <div class="step-text">
+                    <div class="step-title">กล้ามเนื้อแขน: ดัมเบลเบา (0.5–1 กก.) หรือ ยางยืด</div>
+                    <div class="step-desc">ช่วยยกของ ถือของ ทำงานบ้าน อาบน้ำ แต่งตัวสะดวก</div>
+                  </div>
+                </div>
               </div>
-              <ul class="card-list">
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>นั่งบนเก้าอี้ เท้าวางราบกับพื้น</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span><strong>โน้มตัวไปข้างหน้าเล็กน้อย</strong> (ประมาณ 15 – 30 องศา)</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span><strong>วางข้อศอกหรือมือบนต้นขา หรือบนโต๊ะข้างหน้า</strong></span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>ปล่อยหัวไหล่และคอให้ผ่อนคลาย ไม่เกร็งยกไหล่</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>หายใจแบบเม้มปาก (Pursed-lip breathing) ควบคู่ไปด้วย</span>
-                </li>
-              </ul>
             </div>
 
             <div class="feature-card accent-card">
-              <div class="card-title" style="font-size: 15px; color: var(--accent); margin-bottom: 4px;">✨ ข้อดีของท่า Tripod</div>
-              <div style="font-size: 13.5px; color: var(--text-muted); line-height: 1.45;">
-                • กระบังลมสามารถหดตัวและขยายตัวได้เต็มประสิทธิภาพ<br>
-                • ยึดไหล่ให้นิ่ง เพื่อลดภาระการดึงหายใจของกล้ามเนื้อคอและอก<br>
-                • บรรเทาความรู้สึกหอบเหนื่อยได้อย่างรวดเร็ว
+              <div class="card-title" style="color: var(--accent);">5. การฝึกความทนทาน (Endurance Training)</div>
+              <div style="font-size: calc(15px * var(--font-scale)); color: var(--text-muted); line-height: 1.45; margin-top: 4px;">
+                • ค่อย ๆ เพิ่มระยะเวลาเดินหรือออกกำลังกายทีละน้อย<br>
+                • ช่วยให้ร่างกายใช้ออกซิเจนได้อย่างมีประสิทธิภาพมากขึ้น<br>
+                • ลดอาการเหนื่อยสะสม ทำกิจกรรมต่อเนื่องได้ดีขึ้น
               </div>
-            </div>
-          </div>
-
-          <!-- Images for Tripod (Illustration on knees + Real Table Photo) -->
-          <div style="display: flex; flex-direction: column; gap: 12px;">
-            <div class="media-card" onclick="openLightbox('assets/posture_tripod_knees.png', 'ท่า Tripod: นั่งโน้มตัวไปข้างหน้า วางข้อศอก/มือบนเข่า')">
-              <img src="assets/posture_tripod_knees.png" alt="Tripod Posture on Knees" style="height: 155px;">
-              <div class="zoom-hint">🔍 คลิกเพื่อขยาย</div>
-              <div class="media-caption">
-                <span>ท่า Tripod: โน้มตัววางมือ/ศอกบนเข่า</span>
-              </div>
-            </div>
-
-            <div class="media-card" onclick="openLightbox('assets/posture_table_photo.png', 'ท่า Tripod / Forward Lean: นั่งโน้มตัววางข้อศอกและแขนบนโต๊ะ')">
-              <img src="assets/posture_table_photo.png" alt="Tripod Posture with Table" style="height: 155px;">
-              <div class="zoom-hint">🔍 คลิกเพื่อขยาย</div>
-              <div class="media-caption">
-                <span>ท่าโน้มตัววางข้อศอกบนโต๊ะ</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SLIDE 9: การจัดท่าลดอาการเหนื่อยหอบ (2 & 3) ท่าพิงโต๊ะ และ ท่านั่งพิงพนัก -->
-      <section class="slide" data-slide="9" data-notes="ท่าพิงโต๊ะเหมาะมากสำหรับผู้ป่วยที่เพิ่งเดินมาเหนื่อยๆ หรือเหนื่อยมาก ส่วนท่านั่งพิงพนักเหมาะกับช่วงพักผ่อนสบายๆ">
-        <span class="slide-tag accent">การจัดท่าเพื่อลดอาการเหนื่อยหอบ</span>
-        <h2 class="slide-title">2. นั่งพิงโต๊ะ & 3. นั่งพิงพนักเก้าอี้</h2>
-        <p class="slide-subtitle">การเลือกท่าพักที่เหมาะสมกับระดับความเหนื่อยและสภาพแวดล้อม</p>
-
-        <div class="grid-2-1">
-          <!-- Text Left -->
-          <div style="display: flex; flex-direction: column; gap: 14px;">
-            <!-- Forward Lean Sitting -->
-            <div class="feature-card highlight">
-              <div class="card-header">
-                <div class="card-icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-                  </svg>
-                </div>
-                <div>
-                  <div class="card-title">2. นั่งพิงโต๊ะ (Forward Lean Sitting)</div>
-                  <span style="font-size: 13px; color: var(--primary); font-weight: 500;">เหมาะสำหรับผู้ป่วยที่เหนื่อยมาก</span>
-                </div>
-              </div>
-              <ul class="card-list">
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>นั่งบนเก้าอี้ หันหน้าเข้าหาโต๊ะ</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span><strong>วางหมอนบนโต๊ะ</strong> เพื่อรองรับศีรษะและแขน</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>ก้มตัวเล็กน้อย วางแขนและศีรษะบนหมอนอย่างสบาย</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span><strong>ช่วงเวลาที่เหมาะสม:</strong> พักฟื้นหลังเดินหรือทำกิจกรรมหนัก</span>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Supported Chair Sitting -->
-            <div class="feature-card accent-card">
-              <div class="card-header">
-                <div class="card-icon accent">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M7 18v-6a5 5 0 1 1 10 0v6"></path>
-                    <path d="M5 21h14"></path>
-                  </svg>
-                </div>
-                <div>
-                  <div class="card-title">3. นั่งพิงพนักเก้าอี้ (Supported Back Sitting)</div>
-                  <span style="font-size: 13px; color: var(--accent); font-weight: 500;">เหมาะสำหรับผู้ที่เหนื่อยเล็กน้อย</span>
-                </div>
-              </div>
-              <ul class="card-list">
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>พิงหลังกับพนักเก้าอี้ ประมาณ <strong>60 – 90 องศา</strong></span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>วางแขนบนที่วางแขนของเก้าอี้ หรือวางบนหมอนหนุน</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>เท้าวางราบกับพื้น ผ่อนคลายร่างกายส่วนบน</span>
-                </li>
-              </ul>
             </div>
           </div>
 
           <!-- Image Right -->
-          <div style="display: flex; flex-direction: column; justify-content: center;">
-            <div class="media-card" onclick="openLightbox('assets/posture_table_illustration.png', 'ภาพวาดจำลอง: ท่านั่งพิงโต๊ะ (Forward Lean Sitting) โน้มตัววางแขนบนโต๊ะ')">
-              <img src="assets/posture_table_illustration.png" alt="Forward Lean on Table Illustration" style="height: 330px;">
+          <div>
+            <div class="media-card" onclick="openLightbox('assets/slide5_strength_training.jpg', 'การฝึกกล้ามเนื้อขา (Chair Sit-to-Stand) และแขน (Dumbbells/Bands)')">
+              <img src="assets/slide5_strength_training.jpg" alt="Strength Training for COPD" style="height: 320px;">
               <div class="zoom-hint">🔍 คลิกเพื่อขยาย</div>
               <div class="media-caption">
-                <span>ท่านั่งโน้มตัวพิงโต๊ะ (Forward Lean Sitting)</span>
+                <span>การลุกนั่งจากเก้าอี้ & บริหารแขนด้วยดัมเบล/ยางยืด</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 6: ข้อควรระวังขณะออกกำลังกาย (Warning Signs) -->
+      <section class="slide" data-slide="6" data-notes="Safety First: ให้ผู้ป่วยและญาติสังเกตอาการเตือน 5 ข้อ หาก SpO2 ต่ำกว่า 88% ระหว่างออกกำลังกาย หรือมีอาการเหนื่อยมาก เจ็บหน้าอก ให้หยุดทันที">
+        <div class="slide-header">
+          <span class="slide-tag danger">ข้อควรระวัง & ความปลอดภัย</span>
+          <h2 class="slide-title">ควรหยุดออกกำลังกายและพบแพทย์หากมีอาการ</h2>
+          <p class="slide-subtitle">หากพบสัญญาณเตือนเหล่านี้ ให้หยุดพักทันที และประเมินอาการอย่างใกล้ชิด</p>
+        </div>
+
+        <div class="slide-layout-split">
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <div class="step-item" style="border-left: 5px solid var(--danger);">
+              <div class="step-number danger">1</div>
+              <div class="step-text">
+                <div class="step-title" style="color: var(--danger);">หอบเหนื่อยมากผิดปกติ</div>
+                <div class="step-desc">หายใจไม่ทัน พูดเป็นคำไม่ได้ เหนื่อยรุนแรง</div>
+              </div>
+            </div>
+
+            <div class="step-item" style="border-left: 5px solid var(--danger);">
+              <div class="step-number danger">2</div>
+              <div class="step-text">
+                <div class="step-title" style="color: var(--danger);">เจ็บแน่นหน้าอก</div>
+                <div class="step-desc">รู้สึกแน่น อึดอัด บีบรัดบริเวณหน้าอก</div>
+              </div>
+            </div>
+
+            <div class="step-item" style="border-left: 5px solid var(--danger);">
+              <div class="step-number danger">3</div>
+              <div class="step-text">
+                <div class="step-title" style="color: var(--danger);">เวียนศีรษะหรือหน้ามืด</div>
+                <div class="step-desc">ทรงตัวไม่อยู่ ตาพร่ามัว คล้ายจะเป็นลม</div>
+              </div>
+            </div>
+
+            <div class="step-item" style="border-left: 5px solid var(--danger);">
+              <div class="step-number danger">4</div>
+              <div class="step-text">
+                <div class="step-title" style="color: var(--danger);">ริมฝีปากหรือปลายนิ้วเขียว (Cyanosis)</div>
+                <div class="step-desc">สัญญาณเตือนว่าร่างกายขาดออกซิเจนวิกฤต</div>
+              </div>
+            </div>
+
+            <div class="step-item" style="border-left: 6px solid var(--danger); background: linear-gradient(135deg, var(--danger-light), transparent);">
+              <div class="step-number danger">5</div>
+              <div class="step-text">
+                <div class="step-title" style="color: var(--danger);">ค่าออกซิเจน (SpO₂) ต่ำกว่า 88%</div>
+                <div class="step-desc">ต่ำกว่าปกติขณะออกกำลังกาย ต้องหยุดพักทันที</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image Right -->
+          <div>
+            <div class="media-card contain-mode" onclick="openLightbox('assets/slide6_warning_signs.jpg', 'สัญญาณเตือนที่ต้องหยุดออกกำลังกาย และค่าออกซิเจนปลายนิ้ว SpO2 < 88%')">
+              <img src="assets/slide6_warning_signs.jpg" alt="Exercise Warning Signs and Pulse Oximeter" style="height: 320px; object-fit: contain;">
+              <div class="zoom-hint">🔍 คลิกเพื่อขยาย</div>
+              <div class="media-caption">
+                <span>เครื่องวัด SpO₂ ปลายนิ้ว & 5 สัญญาณอันตรายขณะออกกำลังกาย</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 7: เทคนิคการไอขับเสมหะ 2 วิธี -->
+      <section class="slide" data-slide="7" data-notes="เปรียบเทียบ Effective Cough (ผู้มีแรงไอ) กับ Huff Cough (เหมาะกับ COPD เพราะใช้แรงน้อย หลอดลมไม่ตีบแฟบ)">
+        <div class="slide-header" style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 8px; margin-bottom: 12px;">
+          <div>
+            <span class="slide-tag">เทคนิคการขับเสมหะ</span>
+            <h2 class="slide-title">เทคนิคการไอที่ถูกต้องเพื่อขับเสมหะ</h2>
+            <p class="slide-subtitle">ช่วยขับเสมหะได้ง่ายขึ้น ลดความเหนื่อยล้า และลดการระคายเคืองทางเดินหายใจ</p>
+          </div>
+          <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
+            <span style="font-size: calc(13px * var(--font-scale)); font-weight: 700; color: var(--primary);">เลือกสื่อการสอน:</span>
+            <button id="btnVidChonburi" onclick="switchSlide7Media('video')" style="padding: 6px 14px; font-size: calc(13px * var(--font-scale)); font-weight: 700; border-radius: 6px; border: 1.5px solid var(--primary); background: var(--primary); color: #fff; cursor: pointer; transition: all 0.2s;">
+              📺 วิดีโอ (รพ.ชลบุรี)
+            </button>
+            <button id="btnShowEffective" onclick="switchSlide7Media('effective')" style="padding: 6px 14px; font-size: calc(13px * var(--font-scale)); font-weight: 700; border-radius: 6px; border: 1.5px solid var(--card-border); background: var(--card-bg); color: var(--text-muted); cursor: pointer; transition: all 0.2s; box-shadow: 0 2px 8px rgba(2, 132, 199, 0.2);">
+              🖼️ ภาพสอน: Effective Cough (ใหญ่เต็มจอ)
+            </button>
+            <button id="btnShowHuff" onclick="switchSlide7Media('huff')" style="padding: 6px 14px; font-size: calc(13px * var(--font-scale)); font-weight: 700; border-radius: 6px; border: 1.5px solid var(--card-border); background: var(--card-bg); color: var(--text-muted); cursor: pointer; transition: all 0.2s;">
+              🖼️ ภาพสอน: Huff Cough
+            </button>
+          </div>
+        </div>
+
+        <div class="slide-layout-split" id="slide7LayoutContainer">
+          <!-- Left Column (Hidden when viewing full-width Effective Cough) -->
+          <div id="slide7LeftCol" style="display: flex; flex-direction: column; gap: 10px;">
+            <!-- Effective Cough -->
+            <div class="feature-card highlight">
+              <div class="card-title" style="color: var(--primary);">1. การไออย่างมีประสิทธิภาพ (Effective Cough)</div>
+              <div style="font-size: calc(13.5px * var(--font-scale)); color: var(--text-light); margin-bottom: 2px; font-weight: 600;">เหมาะสำหรับผู้ที่ยังมีกำลังไอเพียงพอ</div>
+              <div style="font-size: calc(14.5px * var(--font-scale)); color: var(--text-muted); line-height: 1.4;">
+                1. นั่งตัวตรง/เอน 45–90° ➔ 2. สูดหายใจเข้าลึกทางจมูก ➔ 3. กลั้น 2–3 วิ<br>
+                4. เกร็งหน้าท้อง ➔ 5. <strong>ไอแรง ๆ 2 ครั้งติดกัน</strong> (ครั้ง 1 หลุด, ครั้ง 2 ขับออก) ➔ 6. บ้วนทิ้ง<br>
+                <span style="color: var(--danger); font-weight: 600;">⚠️ <em>ข้อควรระวัง: ไม่ควรไอติดต่อกันหลายครั้งจนเวียนหัว</em></span>
+              </div>
+            </div>
+
+            <!-- Huff Cough -->
+            <div class="feature-card accent-card">
+              <div class="card-title" style="color: var(--accent);">2. การไอแบบฮัฟ (Huff Cough) ⭐ แนะนำสำหรับ COPD</div>
+              <div style="font-size: calc(13.5px * var(--font-scale)); color: var(--text-light); margin-bottom: 2px; font-weight: 600;">ใช้แรงน้อยกว่า ลดการยุบตัวของหลอดลม</div>
+              <div style="font-size: calc(14.5px * var(--font-scale)); color: var(--text-muted); line-height: 1.4;">
+                1. นั่งตรง ➔ 2. สูดเข้าลึกปานกลาง ➔ 3. อ้าปาก ➔ 4. พ่นลมแรงเสียง <strong>"ฮัฟ"</strong> (คล้ายเป่ากระจกฝ้า) 1–2 ครั้ง ➔ 5. เสมหะขึ้นคอแล้วไอออกเบา ๆ<br>
+                <span style="color: var(--accent); font-weight: 700;">✨ <em>ข้อดี: เหนื่อยน้อย หลอดลมไม่ตีบ ไล่เสมหะจากปอดลึกได้ดี</em></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Media Display Right Column -->
+          <div id="slide7RightCol" style="display: flex; flex-direction: column; gap: 8px;">
+            <!-- YouTube Video View (Chonburi Hospital) -->
+            <div id="slide7VideoWrapper" style="display: block;">
+              <div style="border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-md); border: 2px solid var(--card-border); background: #000; position: relative; height: 300px;">
+                <iframe 
+                  id="slide7Iframe"
+                  src="https://www.youtube-nocookie.com/embed/WGnTVtr192s?rel=0&modestbranding=1" 
+                  title="ไออย่างมีประสิทธิภาพ โดยนักกายภาพบำบัด Coughing VS Huffing (กายภาพบำบัด รพ.ชลบุรี)" 
+                  style="width: 100%; height: 100%; border: none;" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allowfullscreen>
+                </iframe>
+              </div>
+              <div class="media-caption" style="border: 2px solid var(--card-border); border-top: none; border-radius: 0 0 var(--radius-md) var(--radius-md); font-size: calc(13.5px * var(--font-scale)); font-weight: 700; padding: 6px 12px; display: flex; justify-content: space-between; align-items: center;">
+                <span>▶️ ไออย่างมีประสิทธิภาพ: Coughing VS Huffing (รพ.ชลบุรี)</span>
+                <a href="https://www.youtube.com/watch?v=WGnTVtr192s" target="_blank" rel="noopener noreferrer" style="font-size: 12.5px; color: var(--primary); text-decoration: underline; font-weight: 700;">เปิด YouTube ↗</a>
+              </div>
+            </div>
+
+            <!-- Effective Cough Diagram Image View (Extra Large Full-Width Mode) -->
+            <div id="slide7EffectiveWrapper" style="display: none; width: 100%;">
+              <div style="background: linear-gradient(135deg, rgba(2, 132, 199, 0.06), rgba(15, 118, 110, 0.06)); border: 2.5px solid var(--primary); border-radius: var(--radius-md); padding: 12px; box-shadow: var(--shadow-md);">
+                <!-- Header Banner of Teaching Board -->
+                <div style="display: flex; justify-content: space-between; align-items: center; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); padding: 8px 16px; border-radius: var(--radius-sm); color: #fff; margin-bottom: 10px; flex-wrap: wrap; gap: 8px;">
+                  <div>
+                    <div style="font-size: calc(18px * var(--font-scale)); font-weight: 800; display: flex; align-items: center; gap: 8px;">
+                      <span>🗣️</span> สื่อการสอน: 6 ขั้นตอนการไออย่างมีประสิทธิภาพ (Effective Coughing)
+                    </div>
+                    <div style="font-size: calc(13px * var(--font-scale)); opacity: 0.92; font-weight: 500;">
+                      สำหรับผู้ที่มีแรงไอเพียงพอ เพื่อขับเสมหะออกจากทางเดินหายใจส่วนบนอย่างถูกวิธี
+                    </div>
+                  </div>
+                  <button class="nav-btn" style="background: #ffffff; color: var(--primary-dark); border: none; padding: 5px 14px; font-size: calc(13px * var(--font-scale)); font-weight: 800; box-shadow: 0 2px 6px rgba(0,0,0,0.25);" onclick="openLightbox('assets/slide7_effective_cough.svg', 'เทคนิคการไออย่างมีประสิทธิภาพ 6 ขั้นตอน (Effective Coughing Guide)')">
+                    ⛶ ดูภาพเวกเตอร์เต็มจอ (Fullscreen)
+                  </button>
+                </div>
+
+                <!-- 6 Step Cards Grid (2 rows x 3 cols) -->
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 10px;">
+                  <!-- Card 1 -->
+                  <div style="background: var(--card-bg); border: 2px solid var(--primary-light); border-radius: var(--radius-sm); padding: 12px; display: flex; flex-direction: column; gap: 6px; box-shadow: var(--shadow-sm);">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                      <div style="width: 38px; height: 38px; border-radius: 50%; background: var(--primary); color: #fff; font-size: calc(17px * var(--font-scale)); font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+                      <div>
+                        <div style="font-size: calc(17.5px * var(--font-scale)); font-weight: 800; color: var(--primary);">1. จัดท่านั่งตัวตรง</div>
+                        <div style="font-size: calc(12px * var(--font-scale)); color: var(--text-light); font-weight: 700;">เอนพนัก 60–90°</div>
+                      </div>
+                    </div>
+                    <div style="font-size: calc(15px * var(--font-scale)); color: var(--text-main); font-weight: 600; line-height: 1.45; padding-left: 2px;">
+                      • นั่งตัวตรงบนเก้าอี้ เท้าแตะพื้นราบ<br>
+                      • หรือเอนพนัก 45–90 องศา<br>
+                      • เพื่อให้กระบังลมและปอดขยายเต็มที่
+                    </div>
+                  </div>
+
+                  <!-- Card 2 -->
+                  <div style="background: var(--card-bg); border: 2px solid var(--primary-light); border-radius: var(--radius-sm); padding: 12px; display: flex; flex-direction: column; gap: 6px; box-shadow: var(--shadow-sm);">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                      <div style="width: 38px; height: 38px; border-radius: 50%; background: var(--primary); color: #fff; font-size: calc(17px * var(--font-scale)); font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+                      <div>
+                        <div style="font-size: calc(17.5px * var(--font-scale)); font-weight: 800; color: var(--primary);">2. สูดหายใจเข้าลึก</div>
+                        <div style="font-size: calc(12px * var(--font-scale)); color: var(--text-light); font-weight: 700;">ทางจมูก (ท้องป่อง)</div>
+                      </div>
+                    </div>
+                    <div style="font-size: calc(15px * var(--font-scale)); color: var(--text-main); font-weight: 600; line-height: 1.45; padding-left: 2px;">
+                      • สูดลมเข้าลึกทางจมูกช้า ๆ<br>
+                      • สังเกตหน้าท้องป่องขยาย (ท้องป่อง)<br>
+                      • ให้อากาศเข้าไปอยู่หลังก้อนเสมหะ
+                    </div>
+                  </div>
+
+                  <!-- Card 3 -->
+                  <div style="background: var(--card-bg); border: 2px solid var(--primary-light); border-radius: var(--radius-sm); padding: 12px; display: flex; flex-direction: column; gap: 6px; box-shadow: var(--shadow-sm);">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                      <div style="width: 38px; height: 38px; border-radius: 50%; background: var(--primary); color: #fff; font-size: calc(17px * var(--font-scale)); font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+                      <div>
+                        <div style="font-size: calc(17.5px * var(--font-scale)); font-weight: 800; color: var(--primary);">3. กลั้นหายใจ 2–3 วิ</div>
+                        <div style="font-size: calc(12px * var(--font-scale)); color: var(--text-light); font-weight: 700;">กักลมสร้างแรงดัน</div>
+                      </div>
+                    </div>
+                    <div style="font-size: calc(15px * var(--font-scale)); color: var(--text-main); font-weight: 600; line-height: 1.45; padding-left: 2px;">
+                      • กลั้นลมหายใจไว้ 2 ถึง 3 วินาที<br>
+                      • ให้อากาศกระจายทั่วถุงลมในปอด<br>
+                      • สร้างแรงดันในช่องอกเตรียมพร้อมไอ
+                    </div>
+                  </div>
+
+                  <!-- Card 4 -->
+                  <div style="background: var(--card-bg); border: 2px solid var(--accent-light); border-radius: var(--radius-sm); padding: 12px; display: flex; flex-direction: column; gap: 6px; box-shadow: var(--shadow-sm);">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                      <div style="width: 38px; height: 38px; border-radius: 50%; background: var(--accent); color: #fff; font-size: calc(17px * var(--font-scale)); font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">4</div>
+                      <div>
+                        <div style="font-size: calc(17.5px * var(--font-scale)); font-weight: 800; color: var(--accent);">4. เกร็งหน้าท้อง</div>
+                        <div style="font-size: calc(12px * var(--font-scale)); color: var(--text-light); font-weight: 700;">ใช้มือประคองท้อง</div>
+                      </div>
+                    </div>
+                    <div style="font-size: calc(15px * var(--font-scale)); color: var(--text-main); font-weight: 600; line-height: 1.45; padding-left: 2px;">
+                      • เกร็งกล้ามเนื้อหน้าท้องแน่น<br>
+                      • อาจใช้มือหรือหมอนช่วยประคองหน้าท้อง<br>
+                      • ช่วยเพิ่มพลังดันเสมหะพุ่งขึ้นมา
+                    </div>
+                  </div>
+
+                  <!-- Card 5 -->
+                  <div style="background: var(--card-bg); border: 2px solid var(--warning); border-radius: var(--radius-sm); padding: 12px; display: flex; flex-direction: column; gap: 6px; box-shadow: var(--shadow-sm);">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                      <div style="width: 38px; height: 38px; border-radius: 50%; background: var(--warning); color: #fff; font-size: calc(17px * var(--font-scale)); font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">5</div>
+                      <div>
+                        <div style="font-size: calc(17.5px * var(--font-scale)); font-weight: 800; color: #c2410c;">5. ไอแรง 2 ครั้งติดกัน</div>
+                        <div style="font-size: calc(12px * var(--font-scale)); color: var(--text-light); font-weight: 700;">Double Cough</div>
+                      </div>
+                    </div>
+                    <div style="font-size: calc(15px * var(--font-scale)); color: var(--text-main); font-weight: 600; line-height: 1.45; padding-left: 2px;">
+                      • <strong style="color: #b91c1c;">ครั้งที่ 1:</strong> ไอแรงให้เสมหะหลุดผนัง<br>
+                      • <strong style="color: #15803d;">ครั้งที่ 2:</strong> ไอซ้ำทันทีขับเสมหะขึ้นคอ<br>
+                      • ขับเสมหะได้หมด ไม่ต้องเค้นไอซ้ำ
+                    </div>
+                  </div>
+
+                  <!-- Card 6 -->
+                  <div style="background: var(--card-bg); border: 2px solid var(--accent-light); border-radius: var(--radius-sm); padding: 12px; display: flex; flex-direction: column; gap: 6px; box-shadow: var(--shadow-sm);">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                      <div style="width: 38px; height: 38px; border-radius: 50%; background: var(--accent); color: #fff; font-size: calc(17px * var(--font-scale)); font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">6</div>
+                      <div>
+                        <div style="font-size: calc(17.5px * var(--font-scale)); font-weight: 800; color: var(--accent);">6. บ้วนเสมหะลงทิชชู</div>
+                        <div style="font-size: calc(12px * var(--font-scale)); color: var(--text-light); font-weight: 700;">ถูกสุขอนามัย</div>
+                      </div>
+                    </div>
+                    <div style="font-size: calc(15px * var(--font-scale)); color: var(--text-main); font-weight: 600; line-height: 1.45; padding-left: 2px;">
+                      • บ้วนเสมหะลงในกระดาษทิชชูสะอาด<br>
+                      • พับมิดชิดทิ้งถังขยะ และล้างมือทุกครั้ง<br>
+                      • นั่งพัก หายใจผ่อนคลายสบาย ๆ
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Bottom Caution Banner -->
+                <div style="background: var(--warning-light); border: 1.5px solid var(--warning); border-radius: var(--radius-sm); padding: 8px 14px; display: flex; align-items: center; gap: 10px;">
+                  <span style="font-size: 20px;">⚠️</span>
+                  <div style="font-size: calc(13.5px * var(--font-scale)); color: #78350f; font-weight: 600;">
+                    <strong>ข้อควรระวังสำคัญสำหรับผู้สูงอายุ:</strong> ไม่ควรไอติดต่อกันหลาย ๆ ครั้งเพราะอาจทำให้เหนื่อยล้า เวียนศีรษะ หลอดลมหดเกร็ง หรือความดันสูงขึ้น หากเหนื่อยให้หยุดพักทันที
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Huff Cough Diagram Image View -->
+            <div id="slide7HuffWrapper" style="display: none;">
+              <div class="media-card contain-mode" onclick="openLightbox('assets/slide7_huff_cough.jpg', 'ขั้นตอนและหลักการไอแบบฮัฟ (Huff Cough Technique)')">
+                <img src="assets/slide7_huff_cough.jpg" alt="Huff Cough Technique Diagram" style="height: 300px; object-fit: contain;">
+                <div class="zoom-hint">🔍 คลิกเพื่อขยาย</div>
+                <div class="media-caption" style="font-size: calc(14px * var(--font-scale)); font-weight: 700; padding: 6px 12px;">
+                  <span>แผนภาพ: ขั้นตอนการไอแบบฮัฟ (Huff Cough)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 8: การจัดท่านั่งเพื่อลดอาการเหนื่อย พร้อมรูปจริงและรูปวาด -->
+      <section class="slide" data-slide="8" data-notes="การจัดท่านั่งเพื่อลดอาการเหนื่อย การโน้มตัว 15-30 องศาช่วยให้กระบังลมอยู่ในแนวโค้งที่เหมาะสม ลดการทำงานของกล้ามเนื้อช่วยหายใจ">
+        <div class="slide-header">
+          <span class="slide-tag accent">การจัดท่าเพื่อลดอาการเหนื่อยหอบ</span>
+          <h2 class="slide-title">1. การจัดท่านั่งเพื่อลดอาการเหนื่อย</h2>
+          <p class="slide-subtitle">ช่วยให้กระบังลมทำงานมีประสิทธิภาพสูงสุด ลดการใช้พลังงานและกล้ามเนื้อคอ-ไหล่</p>
+        </div>
+
+        <div class="slide-layout-split">
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <div class="feature-card highlight">
+              <div class="card-title" style="color: var(--primary);">📋 ขั้นตอนการจัดท่านั่งเพื่อลดอาการเหนื่อย</div>
+              <ul class="card-list" style="margin-top: 4px;">
+                <li><span>• นั่งบนเก้าอี้ เท้าวางราบกับพื้นอย่างมั่นคง</span></li>
+                <li><span>• <strong>โน้มตัวไปข้างหน้าเล็กน้อย</strong> (ประมาณ 15 – 30 องศา)</span></li>
+                <li><span>• <strong>วางข้อศอกบนต้นขา หรือวางข้อศอกบนโต๊ะข้างหน้า</strong></span></li>
+                <li><span>• ปล่อยหัวไหล่และคอให้ผ่อนคลาย ไม่ยกไหล่เกร็ง</span></li>
+                <li><span>• หายใจแบบเม้มปาก (Pursed-lip) ควบคู่ไปด้วย</span></li>
+              </ul>
+            </div>
+
+            <div class="feature-card accent-card">
+              <div class="card-title" style="color: var(--accent);">✨ ข้อดีของการจัดท่านั่งเพื่อลดอาการเหนื่อย</div>
+              <div style="font-size: calc(14.5px * var(--font-scale)); color: var(--text-muted); line-height: 1.45;">
+                • กระบังลมทำงานและขยายตัวได้อย่างเต็มประสิทธิภาพ<br>
+                • พักกล้ามเนื้อคอและไหล่ ลดการใช้แรงดึงหายใจ<br>
+                • บรรเทาอาการหอบเหนื่อยได้อย่างรวดเร็วและปลอดภัย
+              </div>
+            </div>
+          </div>
+
+          <!-- Images Right (User's 2 Photos) -->
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+            <div class="media-card contain-mode" onclick="openLightbox('assets/posture_tripod_knees.png', 'การจัดท่านั่งลดเหนื่อย: โน้มตัววางมือ/ศอกบนเข่า')">
+              <img src="assets/posture_tripod_knees.png" alt="Sitting Posture with Hands on Knees" style="height: 290px;">
+              <div class="zoom-hint">🔍 ขยาย</div>
+              <div class="media-caption" style="font-size: calc(13px * var(--font-scale));">
+                <span>โน้มตัว: วางมือบนเข่า</span>
+              </div>
+            </div>
+
+            <div class="media-card contain-mode" onclick="openLightbox('assets/posture_table_photo.png', 'การจัดท่านั่งลดเหนื่อย: โน้มตัววางข้อศอกบนโต๊ะ')">
+              <img src="assets/posture_table_photo.png" alt="Sitting Posture with Elbows on Table" style="height: 290px;">
+              <div class="zoom-hint">🔍 ขยาย</div>
+              <div class="media-caption" style="font-size: calc(13px * var(--font-scale));">
+                <span>โน้มตัว: วางศอกบนโต๊ะ</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 9: การจัดท่า 2 & 3: ท่าพิงโต๊ะ และ นั่งพิงพนัก -->
+      <section class="slide" data-slide="9" data-notes="ท่าพิงโต๊ะเหมาะมากสำหรับผู้ป่วยที่เพิ่งเดินมาเหนื่อยๆ หรือเหนื่อยมาก ส่วนท่านั่งพิงพนักเหมาะกับช่วงพักผ่อนสบายๆ">
+        <div class="slide-header">
+          <span class="slide-tag accent">การจัดท่าเพื่อลดอาการเหนื่อยหอบ</span>
+          <h2 class="slide-title">2. นั่งพิงโต๊ะ & 3. นั่งพิงพนักเก้าอี้</h2>
+          <p class="slide-subtitle">การเลือกท่าพักที่เหมาะสมกับระดับความเหนื่อยและสภาพแวดล้อม</p>
+        </div>
+
+        <div class="slide-layout-split">
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <div class="feature-card highlight">
+              <div class="card-title" style="color: var(--primary);">2. นั่งพิงโต๊ะ (Forward Lean Sitting)</div>
+              <div style="font-size: calc(13.5px * var(--font-scale)); color: var(--primary-dark); font-weight: 700; margin-bottom: 2px;">เหมาะสำหรับ: ผู้ป่วยที่เหนื่อยมาก / พักหลังเดิน</div>
+              <div style="font-size: calc(14.5px * var(--font-scale)); color: var(--text-muted); line-height: 1.4;">
+                • นั่งบนเก้าอี้ วางหมอนนุ่ม ๆ บนโต๊ะข้างหน้า<br>
+                • ก้มตัวเล็กน้อย วางแขนและศีรษะพักบนหมอนอย่างสบาย<br>
+                • ผ่อนคลายกล้ามเนื้อคอและหัวไหล่ หายใจเม้มปากช้า ๆ
+              </div>
+            </div>
+
+            <div class="feature-card accent-card">
+              <div class="card-title" style="color: var(--accent);">3. นั่งพิงพนักเก้าอี้ (Supported Back Sitting)</div>
+              <div style="font-size: calc(13.5px * var(--font-scale)); color: var(--accent); font-weight: 700; margin-bottom: 2px;">เหมาะสำหรับ: ผู้ที่เหนื่อยเล็กน้อย / ระหว่างนั่งพักผ่อน</div>
+              <div style="font-size: calc(14.5px * var(--font-scale)); color: var(--text-muted); line-height: 1.4;">
+                • นั่งพิงหลังกับพนักเก้าอี้ประมาณ <strong>60 – 90 องศา</strong><br>
+                • วางแขนบนที่วางแขนหรือหมอนหนุน เท้าวางราบกับพื้น
+              </div>
+            </div>
+          </div>
+
+          <!-- Images Right (User's Illustration + Generated Supported Sitting) -->
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+            <div class="media-card contain-mode" onclick="openLightbox('assets/posture_table_illustration.png', 'ภาพวาด: ท่านั่งพิงโต๊ะ (Forward Lean Sitting)')">
+              <img src="assets/posture_table_illustration.png" alt="Forward Lean Table Illustration" style="height: 290px;">
+              <div class="zoom-hint">🔍 ขยาย</div>
+              <div class="media-caption" style="font-size: calc(13px * var(--font-scale));">
+                <span>2. ท่านั่งพิงโต๊ะ</span>
+              </div>
+            </div>
+
+            <div class="media-card" onclick="openLightbox('assets/slide9_supported_sitting.jpg', 'ท่านั่งพิงพนักเก้าอี้ 60-90 องศา (Supported Back Sitting)')">
+              <img src="assets/slide9_supported_sitting.jpg" alt="Supported Back Sitting Posture" style="height: 290px;">
+              <div class="zoom-hint">🔍 ขยาย</div>
+              <div class="media-caption" style="font-size: calc(13px * var(--font-scale));">
+                <span>3. ท่านั่งพิงพนักเก้าอี้</span>
               </div>
             </div>
           </div>
@@ -1783,79 +1695,45 @@
 
       <!-- SLIDE 10: สิ่งที่ควรทำ VS สิ่งที่ควรหลีกเลี่ยง เมื่อเหนื่อยหอบ -->
       <section class="slide" data-slide="10" data-notes="ข้อห้ามสำคัญที่สุดคือนอนราบขณะหอบ เพราะแรงดันช่องท้องจะดันกระบังลมขึ้น ทำให้หายใจลำบากยิ่งขึ้น">
-        <span class="slide-tag warning">แนวทางปฏิบัติเมื่อเกิดอาการ</span>
-        <h2 class="slide-title">สิ่งที่ควรทำ VS สิ่งที่ควรหลีกเลี่ยง เมื่อเริ่มเหนื่อยหอบ</h2>
-        <p class="slide-subtitle">ขั้นตอนปฏิบัติอย่างเป็นระบบเพื่อรับมือกับภาวะหอบเหนื่อยอย่างปลอดภัย</p>
+        <div class="slide-header">
+          <span class="slide-tag warning">แนวทางปฏิบัติเมื่อเกิดอาการ</span>
+          <h2 class="slide-title">สิ่งที่ควรทำ VS สิ่งที่ควรหลีกเลี่ยง เมื่อเหนื่อยหอบ</h2>
+          <p class="slide-subtitle">ขั้นตอนปฏิบัติอย่างเป็นระบบเพื่อรับมือกับภาวะหอบเหนื่อยอย่างปลอดภัย</p>
+        </div>
 
-        <div class="grid-2">
-          <!-- What to DO -->
-          <div class="feature-card highlight" style="border-top: 4px solid var(--success);">
-            <div class="card-header">
-              <div class="card-icon" style="background: var(--success-light); color: var(--success);">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                </svg>
+        <div class="slide-layout-split">
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <!-- DO's -->
+            <div class="feature-card highlight" style="border-left: 6px solid var(--success);">
+              <div style="font-size: calc(17px * var(--font-scale)); font-weight: 800; color: var(--success); margin-bottom: 4px;">✅ สิ่งที่ควรทำทันที (Do's)</div>
+              <div style="font-size: calc(14.5px * var(--font-scale)); color: var(--text-muted); line-height: 1.45;">
+                1. <strong>หยุดกิจกรรมทันที</strong> ไม่ฝืนทำต่อ<br>
+                2. <strong>จัดท่านั่งโน้มตัวลดเหนื่อย</strong> (วางมือบนเข่า/ศอกบนโต๊ะ)<br>
+                3. <strong>หายใจเข้าทางจมูก</strong> ช้า ๆ (ไม่เกร็งคอ)<br>
+                4. <strong>เม้มปากหายใจออกช้า ๆ</strong> ให้ยาวกว่าเข้า (เข้า 2 วิ : ออก 4 วิ)<br>
+                5. <strong>รอจนหายใจสม่ำเสมอ</strong> จึงค่อยเริ่มกิจกรรมต่อ
               </div>
-              <div class="card-title" style="color: var(--success);">สิ่งที่ควรทำทันที (Do's)</div>
             </div>
 
-            <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 4px;">
-              <div class="step-item">
-                <div class="step-number" style="background: var(--success); width: 22px; height: 22px; font-size: 11px;">1</div>
-                <div class="step-text"><span class="step-title" style="font-size: 14px;">หยุดกิจกรรมทันที</span> <span class="step-desc">ไม่ฝืนทำต่อ</span></div>
-              </div>
-              <div class="step-item">
-                <div class="step-number" style="background: var(--success); width: 22px; height: 22px; font-size: 11px;">2</div>
-                <div class="step-text"><span class="step-title" style="font-size: 14px;">จัดท่า Tripod</span> <span class="step-desc">หรือนั่งโน้มตัวไปข้างหน้า</span></div>
-              </div>
-              <div class="step-item">
-                <div class="step-number" style="background: var(--success); width: 22px; height: 22px; font-size: 11px;">3</div>
-                <div class="step-text"><span class="step-title" style="font-size: 14px;">หายใจเข้าทางจมูก</span> <span class="step-desc">นับ 1.. 2.. (ไม่เกร็งคอ)</span></div>
-              </div>
-              <div class="step-item">
-                <div class="step-number" style="background: var(--success); width: 22px; height: 22px; font-size: 11px;">4</div>
-                <div class="step-text"><span class="step-title" style="font-size: 14px;">เม้มปากหายใจออกช้า ๆ</span> <span class="step-desc">ยาวกว่าเข้า (เข้า 2 วิ : ออก 4 วิ)</span></div>
-              </div>
-              <div class="step-item">
-                <div class="step-number" style="background: var(--success); width: 22px; height: 22px; font-size: 11px;">5</div>
-                <div class="step-text"><span class="step-title" style="font-size: 14px;">รอจนหายใจสม่ำเสมอ</span> <span class="step-desc">จึงค่อยขยับหรือทำกิจกรรมต่อ</span></div>
+            <!-- DONT's -->
+            <div class="feature-card danger-card">
+              <div style="font-size: calc(17px * var(--font-scale)); font-weight: 800; color: var(--danger); margin-bottom: 4px;">❌ สิ่งที่ควรหลีกเลี่ยงเด็ดขาด (Don'ts)</div>
+              <div style="font-size: calc(14.5px * var(--font-scale)); color: var(--text-muted); line-height: 1.45;">
+                • <strong>อย่านอนราบเมื่อเหนื่อยหอบ:</strong> เพราะจะทำให้หายใจลำบากยิ่งขึ้น<br>
+                • <strong>อย่ายกไหล่หรือเกร็งคอ:</strong> ทำให้กล้ามเนื้อช่วยหายใจล้าเร็ว<br>
+                • <strong>อย่ากลั้นหายใจ:</strong> ทำให้ความดันในช่องอกสูงขึ้น<br>
+                • <strong>อย่ารีบเดินหรือฝืนทำต่อ:</strong> เสี่ยงขาดออกซิเจนและหมดสติ
               </div>
             </div>
           </div>
 
-          <!-- What NOT to do -->
-          <div class="feature-card danger-card" style="border-top: 4px solid var(--danger);">
-            <div class="card-header">
-              <div class="card-icon danger">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <line x1="15" y1="9" x2="9" y2="15"></line>
-                  <line x1="9" y1="9" x2="15" y2="15"></line>
-                </svg>
-              </div>
-              <div class="card-title" style="color: var(--danger);">สิ่งที่ควรหลีกเลี่ยง (Don'ts)</div>
-            </div>
-
-            <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 4px;">
-              <div style="background: rgba(239, 68, 68, 0.08); border-radius: var(--radius-sm); padding: 9px 12px; border-left: 3px solid var(--danger);">
-                <div style="font-size: 14px; font-weight: 600; color: var(--danger);">❌ อย่านอนราบเมื่อกำลังเหนื่อยหอบ</div>
-                <div style="font-size: 12.5px; color: var(--text-muted); margin-top: 1px;">เพราะอวัยวะในช่องท้องจะดันกระบังลมขึ้น ทำให้ปอดขยายตัวได้ยากและหายใจลำบากยิ่งขึ้น</div>
-              </div>
-
-              <div style="background: rgba(239, 68, 68, 0.08); border-radius: var(--radius-sm); padding: 9px 12px; border-left: 3px solid var(--danger);">
-                <div style="font-size: 14px; font-weight: 600; color: var(--danger);">❌ อย่ายกไหล่หรือเกร็งคอขณะหายใจ</div>
-                <div style="font-size: 12.5px; color: var(--text-muted); margin-top: 1px;">สิ้นเปลืองพลังงานและทำให้กล้ามเนื้อช่วยหายใจล้าเร็วขึ้น</div>
-              </div>
-
-              <div style="background: rgba(239, 68, 68, 0.08); border-radius: var(--radius-sm); padding: 9px 12px; border-left: 3px solid var(--danger);">
-                <div style="font-size: 14px; font-weight: 600; color: var(--danger);">❌ อย่ากลั้นหายใจระหว่างออกแรง</div>
-                <div style="font-size: 12.5px; color: var(--text-muted); margin-top: 1px;">ทำให้ความดันในช่องอกสูงขึ้นและเหนื่อยกระทันหัน</div>
-              </div>
-
-              <div style="background: rgba(239, 68, 68, 0.08); border-radius: var(--radius-sm); padding: 9px 12px; border-left: 3px solid var(--danger);">
-                <div style="font-size: 14px; font-weight: 600; color: var(--danger);">❌ อย่ารีบเดินหรือทำกิจกรรมต่อทั้งที่ยังหอบ</div>
-                <div style="font-size: 12.5px; color: var(--text-muted); margin-top: 1px;">อาจเสี่ยงต่อภาวะขาดออกซิเจนรุนแรงและหมดสติได้</div>
+          <!-- Image Right -->
+          <div>
+            <div class="media-card" onclick="openLightbox('assets/slide10_dos_donts.jpg', 'อินโฟกราฟิกเปรียบเทียบ สิ่งที่ควรทำ vs สิ่งที่ควรหลีกเลี่ยง เมื่อเหนื่อยหอบ')">
+              <img src="assets/slide10_dos_donts.jpg" alt="COPD Shortness of Breath Dos and Donts" style="height: 320px;">
+              <div class="zoom-hint">🔍 คลิกเพื่อขยาย</div>
+              <div class="media-caption">
+                <span>อินโฟกราฟิก: ข้อควรทำ (ท่านั่งลดเหนื่อย/เม้มปาก) VS ข้อห้าม (อย่านอนราบ)</span>
               </div>
             </div>
           </div>
@@ -1864,140 +1742,143 @@
 
       <!-- SLIDE 11: ข้อควรพบแพทย์ทันที (Red Flags) -->
       <section class="slide" data-slide="11" data-notes="หากพักและจัดท่าแล้วอาการหอบไม่ดีขึ้น หรือพบสัญญาณอันตราย เช่น เจ็บหน้าอก ปากเขียว สับสน พูดไม่ได้ ต้องนำส่ง รพ. หรือเรียกรถพยาบาล 1669 ทันที">
-        <span class="slide-tag danger">ภาวะฉุกเฉินทางการแพทย์</span>
-        <h2 class="slide-title">ข้อควรพบแพทย์ทันที (Medical Emergency Red Flags)</h2>
-        <p class="slide-subtitle">หากอาการหอบ <strong>ไม่ดีขึ้นหลังพักและจัดท่า</strong> หรือมีอาการต่อไปนี้ร่วมด้วย</p>
-
-        <div class="grid-3" style="gap: 16px;">
-          <div class="feature-card danger-card" style="padding: 18px;">
-            <div class="card-icon danger" style="width: 44px; height: 44px; margin-bottom: 10px;">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 7.65l.77.78L12 20.66l7.65-7.65.77-.78a5.4 5.4 0 0 0 0-7.65z"></path>
-              </svg>
-            </div>
-            <div class="card-title" style="color: var(--danger); font-size: 18px;">1. เจ็บแน่นหน้าอก</div>
-            <p style="font-size: 13.5px; color: var(--text-muted); margin-top: 4px;">
-              แน่นหน้าอกเหมือนมีของหนักทับ หรือปวดร้าวไปกราม/แขน บ่งชี้ถึงภาวะขาดเลือดของหัวใจ
-            </p>
-          </div>
-
-          <div class="feature-card danger-card" style="padding: 18px;">
-            <div class="card-icon danger" style="width: 44px; height: 44px; margin-bottom: 10px;">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10"></circle>
-                <line x1="12" y1="8" x2="12" y2="12"></line>
-                <line x1="12" y1="16" x2="12.01" y2="16"></line>
-              </svg>
-            </div>
-            <div class="card-title" style="color: var(--danger); font-size: 18px;">2. ปากหรือปลายนิ้วเขียว</div>
-            <p style="font-size: 13.5px; color: var(--text-muted); margin-top: 4px;">
-              ผิวหนัง ปลายนิ้ว ริมฝีปากเปลี่ยนเป็นสีม่วงคล้ำ บ่งบอกถึงภาวะขาดออกซิเจนเฉียบพลัน
-            </p>
-          </div>
-
-          <div class="feature-card danger-card" style="padding: 18px;">
-            <div class="card-icon danger" style="width: 44px; height: 44px; margin-bottom: 10px;">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
-                <line x1="12" y1="9" x2="12" y2="13"></line>
-                <line x1="12" y1="17" x2="12.01" y2="17"></line>
-              </svg>
-            </div>
-            <div class="card-title" style="color: var(--danger); font-size: 18px;">3. ซึม สับสน ไม่รู้สึกตัว</div>
-            <p style="font-size: 13.5px; color: var(--text-muted); margin-top: 4px;">
-              ตอบสนองช้า มีอาการเพ้อ สับสน อาจเกิดจากคาร์บอนไดออกไซด์คั่งในกระแสเลือดสูง
-            </p>
-          </div>
+        <div class="slide-header">
+          <span class="slide-tag danger">ภาวะฉุกเฉินทางการแพทย์</span>
+          <h2 class="slide-title">ข้อควรพบแพทย์ทันที (Medical Red Flags)</h2>
+          <p class="slide-subtitle">หากอาการหอบ <strong>ไม่ดีขึ้นหลังพักและจัดท่า</strong> หรือมีอาการต่อไปนี้ร่วมด้วย</p>
         </div>
 
-        <div class="grid-2" style="margin-top: 16px;">
-          <div class="feature-card danger-card">
-            <div class="card-header">
-              <div class="card-icon danger">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                </svg>
+        <div class="slide-layout-split">
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <div class="step-item" style="border-left: 5px solid var(--danger);">
+              <div class="step-number danger">1</div>
+              <div class="step-text">
+                <div class="step-title" style="color: var(--danger);">เจ็บแน่นหน้าอก</div>
+                <div class="step-desc">แน่นเหมือนมีของหนักทับ หรือร้าวไปแขน/กราม</div>
               </div>
-              <div>
-                <div class="card-title" style="color: var(--danger);">4. พูดเป็นประโยคไม่ได้เพราะหอบ</div>
-                <p style="font-size: 13px; color: var(--text-muted);">ต้องหยุดพักหายใจทุกๆ 1-2 คำ บ่งชี้ถึงภาวะหายใจล้มเหลวเฉียบพลัน</p>
+            </div>
+
+            <div class="step-item" style="border-left: 5px solid var(--danger);">
+              <div class="step-number danger">2</div>
+              <div class="step-text">
+                <div class="step-title" style="color: var(--danger);">ปากหรือปลายนิ้วเขียวคล้ำ</div>
+                <div class="step-desc">บ่งบอกถึงภาวะขาดออกซิเจนเฉียบพลันในกระแสเลือด</div>
+              </div>
+            </div>
+
+            <div class="step-item" style="border-left: 5px solid var(--danger);">
+              <div class="step-number danger">3</div>
+              <div class="step-text">
+                <div class="step-title" style="color: var(--danger);">ซึม สับสน ไม่รู้สึกตัว</div>
+                <div class="step-desc">ตอบสนองช้า หรือมีคาร์บอนไดออกไซด์คั่งในเลือดสูง</div>
+              </div>
+            </div>
+
+            <div class="step-item" style="border-left: 5px solid var(--danger);">
+              <div class="step-number danger">4</div>
+              <div class="step-text">
+                <div class="step-title" style="color: var(--danger);">พูดเป็นประโยคไม่ได้เพราะหอบ</div>
+                <div class="step-desc">ต้องหยุดหายใจทุก 1-2 คำ บ่งชี้ภาวะหายใจล้มเหลว</div>
+              </div>
+            </div>
+
+            <div class="step-item" style="border-left: 5px solid var(--danger);">
+              <div class="step-number danger">5</div>
+              <div class="step-text">
+                <div class="step-title" style="color: var(--danger);">ค่า SpO₂ ต่ำกว่าระดับที่แพทย์กำหนด</div>
+                <div class="step-desc">แม้จะพักหรือใช้ออกซิเจนตามปกติแล้วก็ตาม</div>
               </div>
             </div>
           </div>
 
-          <div class="feature-card danger-card">
-            <div class="card-header">
-              <div class="card-icon danger">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                </svg>
-              </div>
-              <div>
-                <div class="card-title" style="color: var(--danger);">5. ค่า SpO₂ ต่ำกว่าเกณฑ์ที่แพทย์กำหนด</div>
-                <p style="font-size: 13px; color: var(--text-muted);">แม้จะพักหรือใช้ออกซิเจนตามขนาดปกติแล้ว ค่า SpO₂ ก็ยังไม่ฟื้นตัว</p>
+          <!-- Image Right -->
+          <div>
+            <div class="media-card" onclick="openLightbox('assets/slide11_emergency_red_flags.jpg', 'ภาวะฉุกเฉินทางการแพทย์และการเรียกรถพยาบาลฉุกเฉิน 1669')">
+              <img src="assets/slide11_emergency_red_flags.jpg" alt="Medical Emergency Red Flags" style="height: 320px;">
+              <div class="zoom-hint">🔍 คลิกเพื่อขยาย</div>
+              <div class="media-caption">
+                <span>ภาวะฉุกเฉินทางการแพทย์ & สายด่วนฉุกเฉิน 1669</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- SLIDE 12: สรุปหัวใจสำคัญ (Summary & Key Takeaways) -->
+      <!-- SLIDE 12: สรุปหัวใจสำคัญ (Summary & Healthy Life) -->
       <section class="slide" data-slide="12" data-notes="สรุปหัวใจ 5 เสาหลักของกายภาพบำบัดใน COPD เพื่อคุณภาพชีวิตที่ดีขึ้น">
-        <span class="slide-tag accent">สรุปหัวใจสำคัญ</span>
-        <h2 class="slide-title">บทสรุป: 5 เสาหลักกายภาพบำบัดในผู้ป่วย COPD</h2>
-        <p class="slide-subtitle">การฝึกฝนอย่างสม่ำเสมอและถูกวิธี ช่วยฟื้นฟูสมรรถภาพปอดได้อย่างยั่งยืน</p>
-
-        <div class="grid-4" style="gap: 14px;">
-          <div class="goal-item" style="padding: 16px 12px;">
-            <div class="goal-icon" style="background: var(--primary-light); color: var(--primary); width: 44px; height: 44px;">
-              <span style="font-size: 20px; font-weight: 700;">1</span>
-            </div>
-            <div class="goal-title" style="font-size: 15px;">ฝึกหายใจถูกวิธี</div>
-            <div class="goal-desc">เม้มปาก (2:4 วิ) และหายใจด้วยกระบังลม</div>
-          </div>
-
-          <div class="goal-item" style="padding: 16px 12px;">
-            <div class="goal-icon" style="background: var(--accent-light); color: var(--accent); width: 44px; height: 44px;">
-              <span style="font-size: 20px; font-weight: 700;">2</span>
-            </div>
-            <div class="goal-title" style="font-size: 15px;">ระบายเสมหะปลอดภัย</div>
-            <div class="goal-desc">ใช้ Huff Cough และ ACBT ช่วยให้ปอดโล่ง</div>
-          </div>
-
-          <div class="goal-item" style="padding: 16px 12px;">
-            <div class="goal-icon" style="background: var(--primary-light); color: var(--primary); width: 44px; height: 44px;">
-              <span style="font-size: 20px; font-weight: 700;">3</span>
-            </div>
-            <div class="goal-title" style="font-size: 15px;">ออกกำลังกายสม่ำเสมอ</div>
-            <div class="goal-desc">เดิน/ปั่น 20-30 นาที 3-5 วัน/สัปดาห์</div>
-          </div>
-
-          <div class="goal-item" style="padding: 16px 12px;">
-            <div class="goal-icon" style="background: var(--warning-light); color: var(--warning); width: 44px; height: 44px;">
-              <span style="font-size: 20px; font-weight: 700;">4</span>
-            </div>
-            <div class="goal-title" style="font-size: 15px;">จัดท่าพักลดเหนื่อย</div>
-            <div class="goal-desc">ใช้ท่า Tripod / พิงโต๊ะ เมื่อเริ่มหอบ</div>
-          </div>
+        <div class="slide-header">
+          <span class="slide-tag accent">สรุปหัวใจสำคัญ</span>
+          <h2 class="slide-title">บทสรุป: 5 เสาหลักกายภาพบำบัดในผู้ป่วย COPD</h2>
+          <p class="slide-subtitle">การฝึกฝนอย่างสม่ำเสมอและถูกวิธี ช่วยฟื้นฟูสมรรถภาพปอดได้อย่างยั่งยืน</p>
         </div>
 
-        <div style="margin-top: 18px; background: linear-gradient(135deg, var(--primary-light), var(--accent-light)); border: 1px solid var(--card-border); border-radius: var(--radius-md); padding: 14px 20px; display: flex; align-items: center; justify-content: space-between;">
-          <div style="display: flex; align-items: center; gap: 14px;">
-            <div style="width: 40px; height: 40px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center; color: var(--primary); box-shadow: var(--shadow-sm); flex-shrink: 0;">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-              </svg>
+        <div class="slide-layout-split">
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <div class="step-item">
+              <div class="step-number">1</div>
+              <div class="step-text">
+                <div class="step-title">ฝึกหายใจถูกวิธี</div>
+                <div class="step-desc">เม้มปาก (เข้า 2s : ออก 4s) และหายใจด้วยกระบังลม</div>
+              </div>
             </div>
-            <div>
-              <div style="font-size: 15px; font-weight: 700; color: var(--text-main);">ข้อสังเกตสำคัญ</div>
-              <div style="font-size: 13px; color: var(--text-muted);">หากมีข้อสงสัยหรืออาการผิดปกติ ควรปรึกษาแพทย์หรือนักกายภาพบำบัดประจำตัวเสมอ</div>
+
+            <div class="step-item">
+              <div class="step-number accent">2</div>
+              <div class="step-text">
+                <div class="step-title">ระบายเสมหะปลอดภัย</div>
+                <div class="step-desc">ใช้ Huff Cough และ ACBT ช่วยให้ปอดโล่ง</div>
+              </div>
+            </div>
+
+            <div class="step-item">
+              <div class="step-number">3</div>
+              <div class="step-text">
+                <div class="step-title">ออกกำลังกายสม่ำเสมอ</div>
+                <div class="step-desc">เดิน/ปั่น 20–30 นาที 3–5 วัน/สัปดาห์ + ฝึกกล้ามเนื้อ 2–3 วัน</div>
+              </div>
+            </div>
+
+            <div class="step-item">
+              <div class="step-number warning">4</div>
+              <div class="step-text">
+                <div class="step-title">จัดท่าพักลดเหนื่อย</div>
+                <div class="step-desc">ใช้ท่านั่งโน้มตัวลดเหนื่อย / พิงโต๊ะ ทันทีที่เริ่มหอบ หลีกเลี่ยงนอนราบ</div>
+              </div>
+            </div>
+
+            <div class="step-item" style="border-left: 5px solid var(--danger);">
+              <div class="step-number danger">5</div>
+              <div class="step-text">
+                <div class="step-title">ไวต่อสัญญาณเตือน</div>
+                <div class="step-desc">สังเกต SpO₂ & อาการฉุกเฉิน หากไม่ดีขึ้นพบแพทย์ทันที</div>
+              </div>
+            </div>
+
+            <!-- Author Card Slide 12 -->
+            <div style="margin-top: 6px; background: linear-gradient(135deg, rgba(3, 105, 161, 0.1), rgba(15, 118, 110, 0.1)); border: 1.5px solid var(--primary); border-radius: var(--radius-sm); padding: 8px 14px; display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <div style="width: 38px; height: 38px; border-radius: 50%; background: var(--primary); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; box-shadow: 0 2px 6px rgba(3, 105, 161, 0.3);">👩‍⚕️</div>
+                <div>
+                  <div style="font-size: calc(14.5px * var(--font-scale)); font-weight: 800; color: var(--primary-dark);">จัดทำโดย: นางสาวกานต์ชนิต อินยะบุตร</div>
+                  <div style="font-size: calc(12.5px * var(--font-scale)); color: var(--text-muted); font-weight: 600;">นักกายภาพบำบัดปฏิบัติการ • โรงพยาบาลแม่ทะ</div>
+                </div>
+              </div>
+              <button class="nav-btn" onclick="goToSlide(1)" style="background: var(--primary); color: #fff; border: none; padding: 6px 14px; font-size: calc(13.5px * var(--font-scale)); flex-shrink: 0;">
+                ↺ กลับสไลด์แรก
+              </button>
             </div>
           </div>
 
-          <button class="nav-btn" onclick="goToSlide(1)" style="background: var(--primary); color: #fff; border: none; padding: 8px 18px; font-size: 13.5px;">
-            กลับสู่สไลด์แรก
-          </button>
+          <!-- Image Right -->
+          <div>
+            <div class="media-card" onclick="openLightbox('assets/slide12_healthy_life.jpg', 'การฟื้นฟูสมรรถภาพปอดเพื่อคุณภาพชีวิตที่ดีและสดใส')">
+              <img src="assets/slide12_healthy_life.jpg" alt="Active and Healthy COPD Life" style="height: 320px;">
+              <div class="zoom-hint">🔍 คลิกเพื่อขยาย</div>
+              <div class="media-caption">
+                <span>คุณภาพชีวิตที่ดีและการใช้ชีวิตอย่างมีความสุข</span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -2008,7 +1889,7 @@
   <footer class="deck-footer">
     <div class="footer-left">
       <button class="nav-btn" id="btnPrev" title="สไลด์ก่อนหน้า (← หรือ PageUp)">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <polyline points="15 18 9 12 15 6"></polyline>
         </svg>
         <span>ก่อนหน้า</span>
@@ -2018,7 +1899,7 @@
 
       <button class="nav-btn" id="btnNext" title="สไลด์ถัดไป (→ หรือ Space หรือ PageDown)">
         <span>ถัดไป</span>
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <polyline points="9 18 15 12 9 6"></polyline>
         </svg>
       </button>
@@ -2029,9 +1910,11 @@
     </div>
 
     <div class="footer-right">
-      <span style="font-size: 12px; color: var(--text-light); display: flex; align-items: center; gap: 4px;">
-        <kbd style="padding: 2px 6px; background: var(--card-border); border-radius: 4px; font-size: 11px;">←</kbd>
-        <kbd style="padding: 2px 6px; background: var(--card-border); border-radius: 4px; font-size: 11px;">→</kbd> เลื่อนสไลด์
+      <span style="font-size: 13px; font-weight: 600; color: var(--text-muted); display: flex; align-items: center; gap: 8px;">
+        <span>👩‍⚕️ รพ.แม่ทะ</span>
+        <span style="opacity: 0.4;">|</span>
+        <kbd style="padding: 3px 6px; background: var(--card-border); border-radius: 4px; font-size: 11px; font-weight: 700;">←</kbd>
+        <kbd style="padding: 3px 6px; background: var(--card-border); border-radius: 4px; font-size: 11px; font-weight: 700;">→</kbd>
       </span>
     </div>
   </footer>
@@ -2039,9 +1922,9 @@
   <!-- Slide Overview Modal -->
   <div class="overview-modal" id="overviewModal">
     <div class="overview-header">
-      <h2 style="font-size: 22px; font-weight: 700;">ภาพรวมสไลด์ทั้งหมด (Slide Overview)</h2>
+      <h2 style="font-size: 22px; font-weight: 800;">ภาพรวมสไลด์ทั้งหมด (Slide Overview)</h2>
       <button class="btn-icon" id="btnCloseOverview" style="background: rgba(255,255,255,0.2); color: #fff; border: none;">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <line x1="18" y1="6" x2="6" y2="18"></line>
           <line x1="6" y1="6" x2="18" y2="18"></line>
         </svg>
@@ -2062,7 +1945,7 @@
   <!-- Speaker Notes Drawer -->
   <div class="speaker-notes-drawer" id="speakerNotesDrawer">
     <div class="notes-title">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
       </svg>
       <span>Speaker Notes</span>
@@ -2084,20 +1967,52 @@
     const speakerNotesDrawer = document.getElementById('speakerNotesDrawer');
     const speakerNotesContent = document.getElementById('speakerNotesContent');
 
+    // Font Scaler Buttons
+    const btnFontNormal = document.getElementById('btnFontNormal');
+    const btnFontLarge = document.getElementById('btnFontLarge');
+    const btnFontXLarge = document.getElementById('btnFontXLarge');
+
+    function setFontSize(size) {
+      document.body.classList.remove('font-xl', 'font-xxl');
+      btnFontNormal.style.background = 'none';
+      btnFontNormal.style.color = 'var(--primary)';
+      btnFontLarge.style.background = 'none';
+      btnFontLarge.style.color = 'var(--primary)';
+      btnFontXLarge.style.background = 'none';
+      btnFontXLarge.style.color = 'var(--primary)';
+
+      if (size === 'xl') {
+        document.body.classList.add('font-xl');
+        btnFontLarge.style.background = 'var(--primary)';
+        btnFontLarge.style.color = '#fff';
+      } else if (size === 'xxl') {
+        document.body.classList.add('font-xxl');
+        btnFontXLarge.style.background = 'var(--primary)';
+        btnFontXLarge.style.color = '#fff';
+      } else {
+        btnFontNormal.style.background = 'var(--primary)';
+        btnFontNormal.style.color = '#fff';
+      }
+    }
+
+    btnFontNormal.onclick = () => setFontSize('normal');
+    btnFontLarge.onclick = () => setFontSize('xl');
+    btnFontXLarge.onclick = () => setFontSize('xxl');
+
     // Slide Titles for Overview
     const slideTitles = [
-      "1. หน้าแรก & เป้าหมายหลัก 4 ประการ",
-      "2. การฝึกการหายใจ (Pursed-lip & Diaphragmatic)",
-      "3. การระบายเสมหะ (ACBT, Huff, Postural)",
-      "4. การออกกำลังกายแบบแอโรบิก & ความหนัก",
-      "5. ฝึกกล้ามเนื้อ & การฝึกความทนทาน",
-      "6. สัญญาณเตือนที่ควรหยุดออกกำลังกาย",
-      "7. เทคนิคการไอ (Effective Cough vs Huff)",
-      "8. การจัดท่าลดเหนื่อย: ท่า Tripod",
-      "9. การจัดท่า: นั่งพิงโต๊ะ & นั่งพิงพนัก",
-      "10. ข้อควรทำ VS ข้อควรหลีกเลี่ยง เมื่อเหนื่อยหอบ",
+      "1. หน้าแรก & เป้าหมาย 4 ประการ",
+      "2. 1. การฝึกการหายใจ (Pursed-lip)",
+      "3. 2. การระบายเสมหะ (ACBT, Huff)",
+      "4. 3. การออกกำลังกายแบบแอโรบิก",
+      "5. 4. ฝึกกล้ามเนื้อ & ความทนทาน",
+      "6. สัญญาณเตือนขณะออกกำลังกาย",
+      "7. เทคนิคการไอขับเสมหะ 2 วิธี",
+      "8. การจัดท่านั่งเพื่อลดอาการเหนื่อย",
+      "9. การจัดท่า: 2. พิงโต๊ะ & 3. พิงพนัก",
+      "10. ข้อควรทำ VS ข้อควรหลีกเลี่ยง",
       "11. ข้อควรพบแพทย์ทันที (Red Flags)",
-      "12. สรุป 5 เสาหลักการดูแลตนเอง"
+      "12. บทสรุป: 5 เสาหลักการฟื้นฟูปอด"
     ];
 
     function updateSlide(index) {
@@ -2203,34 +2118,30 @@
     }
 
     // Interactive Breathing Trainer
-    let breathInterval = null;
     let breathRunning = false;
-
     const breathCircle = document.getElementById('breathCircle');
     const breathTimer = document.getElementById('breathTimer');
     const breathText = document.getElementById('breathText');
     const btnToggleBreath = document.getElementById('btnToggleBreath');
     const btnBreathLabel = document.getElementById('btnBreathLabel');
 
-    function playBeep(freq = 440, duration = 0.15) {
+    function playBeep(freq = 440, duration = 0.12) {
       try {
         const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
         const osc = audioCtx.createOscillator();
         const gain = audioCtx.createGain();
         osc.frequency.value = freq;
-        gain.gain.setValueAtTime(0.1, audioCtx.currentTime);
+        gain.gain.setValueAtTime(0.08, audioCtx.currentTime);
         gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + duration);
         osc.connect(gain);
         gain.connect(audioCtx.destination);
         osc.start();
         osc.stop(audioCtx.currentTime + duration);
-      } catch (e) {
-        // AudioContext not allowed before interaction
-      }
+      } catch (e) {}
     }
 
     function runBreathingCycle() {
-      let state = 'inhale'; // 'inhale' (2s) -> 'exhale' (4s)
+      let state = 'inhale';
       let count = 2;
 
       function step() {
@@ -2238,10 +2149,10 @@
 
         if (state === 'inhale') {
           breathCircle.className = 'breath-circle inhale';
-          breathText.textContent = 'หายใจเข้าทางจมูกช้า ๆ (2 วินาที)';
+          breathText.textContent = 'หายใจเข้าทางจมูก (2 วินาที)';
           breathText.style.color = 'var(--primary)';
           breathTimer.textContent = `${count}s`;
-          if (count === 2) playBeep(523, 0.12); // High C
+          if (count === 2) playBeep(523, 0.12);
 
           count--;
           if (count < 0) {
@@ -2252,10 +2163,10 @@
           }
         } else if (state === 'exhale') {
           breathCircle.className = 'breath-circle exhale';
-          breathText.textContent = 'เม้มปากแล้วหายใจออกช้า ๆ (4 วินาที)';
+          breathText.textContent = 'เม้มปากหายใจออกช้า ๆ (4 วินาที)';
           breathText.style.color = 'var(--accent)';
           breathTimer.textContent = `${count}s`;
-          if (count === 4) playBeep(392, 0.15); // G4
+          if (count === 4) playBeep(392, 0.15);
 
           count--;
           if (count < 0) {
@@ -2276,16 +2187,16 @@
         breathRunning = false;
         breathCircle.className = 'breath-circle';
         breathTimer.textContent = 'พร้อม';
-        breathText.textContent = 'กดปุ่มเริ่มเพื่อฝึก';
-        btnBreathLabel.textContent = 'เริ่มฝึกหายใจ (Start)';
+        breathText.textContent = 'กดเริ่มเพื่อฝึก (เข้า 2s : ออก 4s)';
+        btnBreathLabel.textContent = 'เริ่มฝึก (Start)';
       } else {
         breathRunning = true;
-        btnBreathLabel.textContent = 'หยุดการฝึก (Stop)';
+        btnBreathLabel.textContent = 'หยุดฝึก (Stop)';
         runBreathingCycle();
       }
     };
 
-    // Event Listeners for Nav
+    // Nav Controls
     btnPrev.onclick = prevSlide;
     btnNext.onclick = nextSlide;
     document.getElementById('btnOverview').onclick = toggleOverview;
@@ -2313,7 +2224,7 @@
       }
     };
 
-    // Keyboard Navigation
+    // Keyboard Shortcuts
     window.addEventListener('keydown', (e) => {
       if (overviewModal.classList.contains('open')) {
         if (e.key === 'Escape') closeOverview();
@@ -2367,7 +2278,7 @@
       }
     });
 
-    // Touch Swipe Navigation for Tablets / Phones
+    // Touch Swipe
     let touchStartX = 0;
     let touchEndX = 0;
 
@@ -2377,18 +2288,73 @@
 
     window.addEventListener('touchend', (e) => {
       touchEndX = e.changedTouches[0].screenX;
-      handleSwipe();
-    }, { passive: true });
-
-    function handleSwipe() {
       const diff = touchEndX - touchStartX;
       if (Math.abs(diff) > 50) {
         if (diff < 0) nextSlide();
         else prevSlide();
       }
+    }, { passive: true });
+
+    // Switch between Video, Effective Cough SVG (Full Width), and Huff Cough Diagram on Slide 7
+    function switchSlide7Media(type) {
+      const container = document.getElementById('slide7LayoutContainer');
+      const leftCol = document.getElementById('slide7LeftCol');
+      const vidWrapper = document.getElementById('slide7VideoWrapper');
+      const effWrapper = document.getElementById('slide7EffectiveWrapper');
+      const huffWrapper = document.getElementById('slide7HuffWrapper');
+      const btnVid = document.getElementById('btnVidChonburi');
+      const btnEff = document.getElementById('btnShowEffective');
+      const btnHuff = document.getElementById('btnShowHuff');
+
+      // Hide all media first
+      [vidWrapper, effWrapper, huffWrapper].forEach(el => {
+        if (el) el.style.display = 'none';
+      });
+      [btnVid, btnEff, btnHuff].forEach(btn => {
+        if (btn) {
+          btn.style.background = 'var(--card-bg)';
+          btn.style.color = 'var(--text-muted)';
+          btn.style.borderColor = 'var(--card-border)';
+        }
+      });
+
+      if (type === 'effective') {
+        // Full Width Big Presentation Mode
+        if (container) container.style.gridTemplateColumns = '1fr';
+        if (leftCol) leftCol.style.display = 'none';
+        if (effWrapper) effWrapper.style.display = 'block';
+        if (btnEff) {
+          btnEff.style.background = 'var(--primary)';
+          btnEff.style.color = '#fff';
+          btnEff.style.borderColor = 'var(--primary)';
+        }
+      } else {
+        // Standard Split Mode
+        if (container) container.style.gridTemplateColumns = '1.05fr 0.95fr';
+        if (leftCol) leftCol.style.display = 'flex';
+
+        if (type === 'video') {
+          if (vidWrapper) vidWrapper.style.display = 'block';
+          if (btnVid) {
+            btnVid.style.background = 'var(--primary)';
+            btnVid.style.color = '#fff';
+            btnVid.style.borderColor = 'var(--primary)';
+          }
+        } else if (type === 'huff') {
+          if (huffWrapper) huffWrapper.style.display = 'block';
+          if (btnHuff) {
+            btnHuff.style.background = 'var(--primary)';
+            btnHuff.style.color = '#fff';
+            btnHuff.style.borderColor = 'var(--primary)';
+          }
+        }
+      }
     }
 
-    // Initialize
+    // Set Default to Large for Elderly
+    setFontSize('xl');
+
+    // Init
     updateSlide(1);
   </script>
 </body>

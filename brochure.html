@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ภาพสื่อการสอน Infographic แผ่นพับฟื้นฟูปอด COPD (A4 แนวนอน 2 หน้า) - รพ.แม่ทะ</title>
+  
+  <!-- Google Fonts: Prompt & Kanit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500;600;700;800&family=Prompt:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #0284c7;
+      --primary-dark: #0369a1;
+      --accent: #0d9488;
+      --accent-dark: #0f766e;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Prompt', 'Kanit', sans-serif;
+      background: #334155;
+      color: #0f172a;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 24px 10px;
+      gap: 30px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Screen Top Toolbar */
+    .toolbar {
+      position: sticky;
+      top: 14px;
+      z-index: 100;
+      background: #ffffff;
+      padding: 10px 24px;
+      border-radius: 50px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      border: 2px solid #38bdf8;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .toolbar-title {
+      font-weight: 800;
+      color: var(--primary-dark);
+      font-size: 15.5px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-action {
+      background: linear-gradient(135deg, #0284c7, #0369a1);
+      color: #ffffff;
+      border: none;
+      padding: 8px 18px;
+      font-family: 'Prompt', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      border-radius: 30px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.35);
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+
+    .btn-action:hover {
+      background: linear-gradient(135deg, #0369a1, #075985);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 16px rgba(2, 132, 199, 0.45);
+    }
+
+    .btn-action.secondary {
+      background: linear-gradient(135deg, #0d9488, #0f766e);
+      box-shadow: 0 4px 12px rgba(13, 148, 136, 0.35);
+    }
+
+    .btn-action.secondary:hover {
+      background: linear-gradient(135deg, #0f766e, #115e59);
+    }
+
+    /* Infographic Card Wrapper */
+    .infographic-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .page-title-badge {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 6px 20px;
+      border-radius: 20px;
+      font-size: 14.5px;
+      font-weight: 800;
+      color: var(--primary-dark);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* A4 Landscape Infographic Sheet */
+    .a4-sheet {
+      width: 297mm;
+      height: 210mm;
+      background: #ffffff;
+      box-shadow: 0 20px 45px rgba(0,0,0,0.4);
+      position: relative;
+      overflow: hidden;
+      border-radius: 4px;
+      page-break-after: always;
+      page-break-inside: avoid;
+    }
+
+    .a4-sheet svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    /* Print Setup */
+    @media print {
+      body {
+        background: none;
+        padding: 0;
+        margin: 0;
+        gap: 0;
+      }
+
+      .toolbar,
+      .page-title-badge {
+        display: none !important;
+      }
+
+      .infographic-wrapper {
+        margin: 0;
+        padding: 0;
+        gap: 0;
+      }
+
+      .a4-sheet {
+        width: 297mm;
+        height: 210mm;
+        margin: 0;
+        box-shadow: none;
+        border-radius: 0;
+        page-break-after: always;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+
+    @page {
+      size: A4 landscape;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Toolbar -->
+  <div class="toolbar">
+    <div class="toolbar-title">
+      <span>🎨</span> ภาพสื่อการสอน Infographic แผ่นพับฟื้นฟูปอด (A4 แนวนอน 2 หน้า หน้า-หลัง)
+    </div>
+    
+    <button class="btn-action" onclick="window.print()">
+      <span>🖨️</span> พิมพ์แผ่นพับ / บันทึก PDF (A4 แนวนอน)
+    </button>
+
+    <a class="btn-action secondary" href="assets/brochure_outside_infographic.svg" download="แผ่นพับ_หน้าที่1_ด้านนอก_COPD.svg">
+      <span>📥</span> ดาวน์โหลดหน้า 1 (นอก)
+    </a>
+
+    <a class="btn-action secondary" href="assets/brochure_inside_infographic.svg" download="แผ่นพับ_หน้าที่2_ด้านใน_COPD.svg">
+      <span>📥</span> ดาวน์โหลดหน้า 2 (ใน)
+    </a>
+  </div>
+
+  <!-- ========================================================
+       PAGE 1: OUTSIDE PANELS INFOGRAPHIC POSTER
+       ======================================================== -->
+  <div class="infographic-wrapper">
+    <div class="page-title-badge">
+      <span>📄</span> หน้าที่ 1 (แผ่นพับด้านนอก): [สิ่งที่ควรทำ vs ควรเลี่ยง] [สัญญาณอันตราย 1669] [หน้าปกหลัก]
+    </div>
+    <div class="a4-sheet" id="sheetPage1">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2970 2100" width="2970" height="2100">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="coverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0369a1"/>
+      <stop offset="45%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0f766e"/>
+    </linearGradient>
+    <linearGradient id="bgPanel1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+    <linearGradient id="bgPanel2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </linearGradient>
+    <linearGradient id="doGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0fdf4"/>
+      <stop offset="100%" stop-color="#dcfce7"/>
+    </linearGradient>
+    <linearGradient id="dontGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef2f2"/>
+      <stop offset="100%" stop-color="#fee2e2"/>
+    </linearGradient>
+    <linearGradient id="hotlineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#dc2626"/>
+      <stop offset="100%" stop-color="#991b1b"/>
+    </linearGradient>
+    <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+    
+    <!-- Filter Shadows -->
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+    <filter id="coverShadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="12" stdDeviation="20" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <style>
+    
+    text { font-family: 'Prompt', 'Kanit', sans-serif; }
+    .cover-title { font-size: 68px; font-weight: 800; fill: #ffffff; }
+    .cover-subtitle { font-size: 38px; font-weight: 600; fill: #e0f2fe; }
+    .panel-header-title { font-size: 52px; font-weight: 800; }
+    .card-title { font-size: 40px; font-weight: 800; }
+    .body-bold { font-size: 32px; font-weight: 700; }
+    .body-normal { font-size: 30px; font-weight: 500; fill: #334155; }
+    .tag-text { font-size: 26px; font-weight: 800; text-anchor: middle; dominant-baseline: central; }
+  </style>
+
+  <!-- Background Base -->
+  <rect width="2970" height="2100" fill="#e2e8f0"/>
+
+  <!-- ========================================================
+       PANEL 1 (LEFT 0 - 990): สิ่งที่ควรทำ VS สิ่งที่ควรหลีกเลี่ยง (Do's & Don'ts)
+       ======================================================== -->
+  <g transform="translate(0, 0)">
+    <rect width="986" height="2100" fill="url(#bgPanel1)"/>
+    
+    <!-- Top Header Tag -->
+    <rect x="70" y="70" width="420" height="60" rx="30" fill="#fef3c7" stroke="#d97706" stroke-width="3"/>
+    <text x="280" y="103" class="tag-text" fill="#b45309">ข้อปฏิบัติเมื่อเหนื่อยหอบ</text>
+    
+    <!-- Main Title -->
+    <text x="70" y="195" class="panel-header-title" fill="#0f172a">สิ่งที่ควรทำ VS ควรหลีกเลี่ยง</text>
+    <text x="70" y="245" font-size="30" font-weight="600" fill="#64748b">แนวทางปฏิบัติอย่างถูกต้องและปลอดภัยสำหรับผู้ป่วย COPD</text>
+
+    <!-- DO'S CARD (สิ่งที่ควรทำ) -->
+    <g transform="translate(60, 290)">
+      <rect width="866" height="740" rx="28" fill="url(#doGrad)" stroke="#16a34a" stroke-width="4" filter="url(#cardShadow)"/>
+      <rect x="0" y="0" width="866" height="100" rx="28" fill="#16a34a"/>
+      <path d="M 0 60 L 0 100 L 866 100 L 866 60 Z" fill="#16a34a"/>
+      
+      <circle cx="65" cy="50" r="32" fill="#ffffff"/>
+      <text x="65" y="52" font-size="36" text-anchor="middle" dominant-baseline="central">✅</text>
+      <text x="120" y="62" font-size="44" font-weight="800" fill="#ffffff">สิ่งที่ควรทำทันที (Do's)</text>
+
+      <!-- Step 1 -->
+      <g transform="translate(40, 150)">
+        <circle cx="35" cy="30" r="28" fill="#16a34a"/>
+        <text x="35" y="32" font-size="28" font-weight="800" fill="#ffffff" text-anchor="middle" dominant-baseline="central">1</text>
+        <text x="85" y="30" class="body-bold" fill="#14532d">หยุดกิจกรรมทันที</text>
+        <text x="85" y="68" class="body-normal">นั่งพักนิ่ง ๆ ไม่ฝืนเดินหรือทำงานต่อ</text>
+      </g>
+
+      <!-- Step 2 -->
+      <g transform="translate(40, 265)">
+        <circle cx="35" cy="30" r="28" fill="#16a34a"/>
+        <text x="35" y="32" font-size="28" font-weight="800" fill="#ffffff" text-anchor="middle" dominant-baseline="central">2</text>
+        <text x="85" y="30" class="body-bold" fill="#14532d">จัดท่านั่งโน้มตัวลดเหนื่อย</text>
+        <text x="85" y="68" class="body-normal">นั่งเอน 15–30° วางมือบนเข่า หรือวางศอกบนโต๊ะ</text>
+      </g>
+
+      <!-- Step 3 -->
+      <g transform="translate(40, 380)">
+        <circle cx="35" cy="30" r="28" fill="#16a34a"/>
+        <text x="35" y="32" font-size="28" font-weight="800" fill="#ffffff" text-anchor="middle" dominant-baseline="central">3</text>
+        <text x="85" y="30" class="body-bold" fill="#14532d">สูดหายใจเข้าทางจมูกช้า ๆ</text>
+        <text x="85" y="68" class="body-normal">นับ 1–2 (สังเกตท้องป่อง) ไม่เกร็งคอหรือยกไหล่</text>
+      </g>
+
+      <!-- Step 4 -->
+      <g transform="translate(40, 495)">
+        <circle cx="35" cy="30" r="28" fill="#16a34a"/>
+        <text x="35" y="32" font-size="28" font-weight="800" fill="#ffffff" text-anchor="middle" dominant-baseline="central">4</text>
+        <text x="85" y="30" class="body-bold" fill="#14532d">เม้มปากเป่าลมออกช้า ๆ</text>
+        <text x="85" y="68" class="body-normal">ทำปากจู๋เป่าลมออกยาว ๆ นับ 1–2–3–4</text>
+      </g>
+
+      <!-- Step 5 -->
+      <g transform="translate(40, 610)">
+        <circle cx="35" cy="30" r="28" fill="#16a34a"/>
+        <text x="35" y="32" font-size="28" font-weight="800" fill="#ffffff" text-anchor="middle" dominant-baseline="central">5</text>
+        <text x="85" y="30" class="body-bold" fill="#14532d">รอจนหายใจเป็นปกติ</text>
+        <text x="85" y="68" class="body-normal">เมื่ออาการหอบทุเลาลงแล้ว จึงค่อยขยับตัวช้า ๆ</text>
+      </g>
+    </g>
+
+    <!-- DONT'S CARD (สิ่งที่ห้ามทำ) -->
+    <g transform="translate(60, 1070)">
+      <rect width="866" height="580" rx="28" fill="url(#dontGrad)" stroke="#dc2626" stroke-width="4" filter="url(#cardShadow)"/>
+      <rect x="0" y="0" width="866" height="100" rx="28" fill="#dc2626"/>
+      <path d="M 0 60 L 0 100 L 866 100 L 866 60 Z" fill="#dc2626"/>
+
+      <circle cx="65" cy="50" r="32" fill="#ffffff"/>
+      <text x="65" y="52" font-size="36" text-anchor="middle" dominant-baseline="central">❌</text>
+      <text x="120" y="62" font-size="44" font-weight="800" fill="#ffffff">สิ่งที่ควรหลีกเลี่ยงเด็ดขาด (Don'ts)</text>
+
+      <!-- Don't 1 -->
+      <g transform="translate(40, 140)">
+        <text x="15" y="32" font-size="38">🚫</text>
+        <text x="75" y="30" class="body-bold" fill="#991b1b">ห้ามนอนราบขณะมีอาการหอบเหนื่อย</text>
+        <text x="75" y="68" class="body-normal">เพราะกระบังลมจะดันปอด ทำให้หายใจไม่ออกรุนแรงขึ้น</text>
+      </g>
+
+      <!-- Don't 2 -->
+      <g transform="translate(40, 245)">
+        <text x="15" y="32" font-size="38">🚫</text>
+        <text x="75" y="30" class="body-bold" fill="#991b1b">อย่ายกไหล่ เกร็งคอ หรือหายใจถี่กระชั้น</text>
+        <text x="75" y="68" class="body-normal">ทำให้กล้ามเนื้อช่วยหายใจล้าเร็วและสิ้นเปลืองพลังงาน</text>
+      </g>
+
+      <!-- Don't 3 -->
+      <g transform="translate(40, 350)">
+        <text x="15" y="32" font-size="38">🚫</text>
+        <text x="75" y="30" class="body-bold" fill="#991b1b">อย่ากลั้นหายใจ หรือเค้นไอแรงติดต่อกันหลายครั้ง</text>
+        <text x="75" y="68" class="body-normal">เพิ่มแรงดันในช่องอก อาจทำให้หน้ามืดหรือความดันพุ่ง</text>
+      </g>
+
+      <!-- Don't 4 -->
+      <g transform="translate(40, 455)">
+        <text x="15" y="32" font-size="38">🚫</text>
+        <text x="75" y="30" class="body-bold" fill="#991b1b">อย่าฝืนทำกิจกรรมหรือเดินต่อเมื่อเริ่มเหนื่อย</text>
+        <text x="75" y="68" class="body-normal">เสี่ยงต่อภาวะขาดออกซิเจนรุนแรงและหมดสติ</text>
+      </g>
+    </g>
+
+    <!-- Bottom Daily Tips Box -->
+    <g transform="translate(60, 1690)">
+      <rect width="866" height="340" rx="24" fill="#f0f9ff" stroke="#38bdf8" stroke-width="3" filter="url(#cardShadow)"/>
+      <circle cx="65" cy="55" r="30" fill="#0284c7"/>
+      <text x="65" y="57" font-size="32" text-anchor="middle" dominant-baseline="central">💡</text>
+      <text x="115" y="65" font-size="38" font-weight="800" fill="#0369a1">เคล็ดลับเพื่อปอดแข็งแรงทุกวัน</text>
+
+      <text x="40" y="145" class="body-bold" fill="#0f172a">• ดื่มน้ำอุ่นสะอาด 6–8 แก้ว/วัน</text>
+      <text x="60" y="185" class="body-normal">ช่วยละลายเสมหะ ขับเสมหะออกจากหลอดลมได้ง่ายขึ้น</text>
+
+      <text x="40" y="240" class="body-bold" fill="#0f172a">• หลีกเลี่ยงควันบุหรี่ ฝุ่น PM2.5 และสารเคมีกลิ่นฉุน</text>
+      <text x="60" y="280" class="body-normal">สวมหน้ากากอนามัยทุกครั้งเมื่อต้องออกนอกบ้าน</text>
+    </g>
+  </g>
+
+  <!-- Column Divider 1 (Fold Line) -->
+  <line x1="990" y1="0" x2="990" y2="2100" stroke="#cbd5e1" stroke-width="4" stroke-dasharray="16,12"/>
+
+  <!-- ========================================================
+       PANEL 2 (CENTER 990 - 1980): สัญญาณอันตรายพบแพทย์ & สายด่วน 1669
+       ======================================================== -->
+  <g transform="translate(990, 0)">
+    <rect width="986" height="2100" fill="url(#bgPanel2)"/>
+
+    <!-- Top Tag -->
+    <rect x="70" y="70" width="380" height="60" rx="30" fill="#fee2e2" stroke="#ef4444" stroke-width="3"/>
+    <text x="260" y="103" class="tag-text" fill="#dc2626">ภาวะฉุกเฉินทางการแพทย์</text>
+
+    <!-- Main Title -->
+    <text x="70" y="195" class="panel-header-title" fill="#dc2626">ข้อควรพบแพทย์ทันที</text>
+    <text x="70" y="245" font-size="30" font-weight="600" fill="#64748b">สัญญาณอันตราย (Medical Red Flags) ที่ต้องส่งโรงพยาบาล</text>
+
+    <!-- RED FLAGS WARNING CARD -->
+    <g transform="translate(60, 290)">
+      <rect width="866" height="740" rx="28" fill="#fef2f2" stroke="#dc2626" stroke-width="4" filter="url(#cardShadow)"/>
+      <rect x="0" y="0" width="866" height="100" rx="28" fill="#dc2626"/>
+      <path d="M 0 60 L 0 100 L 866 100 L 866 60 Z" fill="#dc2626"/>
+
+      <circle cx="65" cy="50" r="32" fill="#ffffff"/>
+      <text x="65" y="52" font-size="36" text-anchor="middle" dominant-baseline="central">🚨</text>
+      <text x="120" y="62" font-size="42" font-weight="800" fill="#ffffff">หากพักแล้วไม่ดีขึ้น หรือพบอาการดังนี้:</text>
+
+      <!-- Flag 1 -->
+      <g transform="translate(40, 145)">
+        <circle cx="35" cy="35" r="28" fill="#fee2e2" stroke="#ef4444" stroke-width="3"/>
+        <text x="35" y="37" font-size="28" text-anchor="middle" dominant-baseline="central">🫁</text>
+        <text x="85" y="32" class="body-bold" fill="#b91c1c">1. หอบเหนื่อยรุนแรง พูดได้ไม่เป็นประโยค</text>
+        <text x="85" y="70" class="body-normal">หายใจติดขัดมาก ปีกจมูกบาน หน้าอกและซี่โครงบุ๋ม</text>
+      </g>
+
+      <!-- Flag 2 -->
+      <g transform="translate(40, 270)">
+        <circle cx="35" cy="35" r="28" fill="#fee2e2" stroke="#ef4444" stroke-width="3"/>
+        <text x="35" y="37" font-size="28" text-anchor="middle" dominant-baseline="central">🔵</text>
+        <text x="85" y="32" class="body-bold" fill="#b91c1c">2. ริมฝีปาก เล็บมือ ปลายนิ้วเขียวคล้ำ</text>
+        <text x="85" y="70" class="body-normal">ร่างกายขาดออกซิเจนในกระแสเลือดอย่างเฉียบพลัน</text>
+      </g>
+
+      <!-- Flag 3 -->
+      <g transform="translate(40, 395)">
+        <circle cx="35" cy="35" r="28" fill="#fee2e2" stroke="#ef4444" stroke-width="3"/>
+        <text x="35" y="37" font-size="28" text-anchor="middle" dominant-baseline="central">📉</text>
+        <text x="85" y="32" class="body-bold" fill="#b91c1c">3. ค่าออกซิเจนปลายนิ้ว SpO₂ ต่ำกว่า 88%</text>
+        <text x="85" y="70" class="body-normal">หรือค่าออกซิเจนลดต่ำลงอย่างรวดเร็วหลังการพัก</text>
+      </g>
+
+      <!-- Flag 4 -->
+      <g transform="translate(40, 520)">
+        <circle cx="35" cy="35" r="28" fill="#fee2e2" stroke="#ef4444" stroke-width="3"/>
+        <text x="35" y="37" font-size="28" text-anchor="middle" dominant-baseline="central">💔</text>
+        <text x="85" y="32" class="body-bold" fill="#b91c1c">4. เจ็บแน่นหน้าอก เหงื่อแตก สับสน ซึมลง</text>
+        <text x="85" y="70" class="body-normal">มีอาการเวียนศีรษะรุนแรง ชีพจรเต้นผิดปกติ หรือหมดสติ</text>
+      </g>
+
+      <!-- Warning Bottom Bar -->
+      <rect x="25" y="640" width="816" height="75" rx="16" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+      <text x="433" y="688" font-size="28" font-weight="800" fill="#b45309" text-anchor="middle">⚠️ ต้องนำส่งโรงพยาบาลทันที อย่ารอให้อาการทรุดตัว!</text>
+    </g>
+
+    <!-- EMERGENCY HOTLINE BANNER -->
+    <g transform="translate(60, 1070)">
+      <rect width="866" height="340" rx="28" fill="url(#hotlineGrad)" stroke="#991b1b" stroke-width="4" filter="url(#coverShadow)"/>
+      <circle cx="85" cy="170" r="55" fill="rgba(255,255,255,0.2)"/>
+      <text x="85" y="175" font-size="56" text-anchor="middle" dominant-baseline="central">🚑</text>
+      
+      <text x="170" y="85" font-size="34" font-weight="700" fill="#fee2e2">สายด่วนอุบัติเหตุและเจ็บป่วยฉุกเฉิน ฟรี 24 ชม.</text>
+      <text x="170" y="170" font-size="80" font-weight="800" fill="#ffffff" letter-spacing="4px">📞 โทร. 1669</text>
+      <text x="170" y="235" font-size="30" font-weight="600" fill="#fef08a">แจ้งอาการ: ผู้ป่วยโรคปอด COPD หอบเหนื่อยรุนแรง</text>
+      <text x="170" y="280" font-size="26" font-weight="500" fill="#ffffff">พร้อมแจ้งตำแหน่งที่อยู่และเบอร์โทรติดต่อกลับ</text>
+    </g>
+
+    <!-- PATIENT & APPOINTMENT CARD -->
+    <g transform="translate(60, 1450)">
+      <rect width="866" height="580" rx="28" fill="#ffffff" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12,8" filter="url(#cardShadow)"/>
+      
+      <rect x="0" y="0" width="866" height="85" rx="28" fill="#f1f5f9"/>
+      <path d="M 0 50 L 0 85 L 866 85 L 866 50 Z" fill="#f1f5f9"/>
+      
+      <circle cx="65" cy="42" r="26" fill="#0284c7"/>
+      <text x="65" y="44" font-size="28" text-anchor="middle" dominant-baseline="central">📝</text>
+      <text x="110" y="54" font-size="36" font-weight="800" fill="#0369a1">บันทึกข้อมูลผู้ป่วย &amp; ใบนัดหมาย</text>
+      <text x="790" y="54" font-size="28" font-weight="800" fill="#64748b" text-anchor="end">รพ.แม่ทะ</text>
+
+      <!-- Input Lines -->
+      <g transform="translate(45, 125)">
+        <text x="0" y="40" class="body-bold" fill="#334155">ชื่อ - นามสกุล ผู้ป่วย:</text>
+        <line x1="280" y1="45" x2="780" y2="45" stroke="#94a3b8" stroke-width="2" stroke-dasharray="8,6"/>
+      </g>
+
+      <g transform="translate(45, 205)">
+        <text x="0" y="40" class="body-bold" fill="#334155">เบอร์โทรศัพท์ติดต่อญาติ:</text>
+        <line x1="310" y1="45" x2="780" y2="45" stroke="#94a3b8" stroke-width="2" stroke-dasharray="8,6"/>
+      </g>
+
+      <g transform="translate(45, 285)">
+        <text x="0" y="40" class="body-bold" fill="#334155">วันนัดตรวจครั้งถัดไป:</text>
+        <line x1="280" y1="45" x2="780" y2="45" stroke="#94a3b8" stroke-width="2" stroke-dasharray="8,6"/>
+      </g>
+
+      <g transform="translate(45, 365)">
+        <text x="0" y="40" class="body-bold" fill="#334155">ยาพ่นประจำตัว / หมายเหตุ:</text>
+        <line x1="340" y1="45" x2="780" y2="45" stroke="#94a3b8" stroke-width="2" stroke-dasharray="8,6"/>
+      </g>
+
+      <!-- Hospital Footer Info -->
+      <rect x="30" y="460" width="806" height="90" rx="16" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+      <text x="433" y="498" font-size="26" font-weight="800" fill="#0f766e" text-anchor="middle">กลุ่มงานเวชศาสตร์ฟื้นฟู โรงพยาบาลแม่ทะ จ.ลำปาง</text>
+      <text x="433" y="534" font-size="24" font-weight="600" fill="#64748b" text-anchor="middle">โทรศัพท์: 054-281-111 • ให้บริการกายภาพบำบัดฟื้นฟูสมรรถภาพปอด</text>
+    </g>
+  </g>
+
+  <!-- Column Divider 2 (Fold Line) -->
+  <line x1="1980" y1="0" x2="1980" y2="2100" stroke="#cbd5e1" stroke-width="4" stroke-dasharray="16,12"/>
+
+  <!-- ========================================================
+       PANEL 3 (RIGHT 1980 - 2970): FRONT COVER (หน้าปกแผ่นพับ)
+       ======================================================== -->
+  <g transform="translate(1980, 0)">
+    <rect width="990" height="2100" fill="url(#coverGrad)"/>
+
+    <!-- Decorative Circles Background -->
+    <circle cx="850" cy="150" r="280" fill="rgba(255,255,255,0.06)"/>
+    <circle cx="150" cy="1850" r="320" fill="rgba(255,255,255,0.04)"/>
+    <circle cx="900" cy="1200" r="200" fill="rgba(255,255,255,0.05)"/>
+
+    <!-- Cover Top Badge -->
+    <g transform="translate(495, 110)">
+      <rect x="-240" y="-35" width="480" height="70" rx="35" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.5)" stroke-width="3"/>
+      <text x="0" y="5" font-size="30" font-weight="800" fill="#ffffff" text-anchor="middle" dominant-baseline="central">คู่มือสุขภาพสำหรับผู้สูงอายุ</text>
+    </g>
+
+    <!-- Main Cover Title -->
+    <g transform="translate(495, 270)">
+      <text x="0" y="0" class="cover-title" text-anchor="middle">การฟื้นฟูปอด</text>
+      <text x="0" y="80" class="cover-title" text-anchor="middle">&amp; การดูแลตนเอง</text>
+      <text x="0" y="160" class="cover-subtitle" text-anchor="middle">สำหรับผู้ป่วยโรคปอดอุดกั้นเรื้อรัง (COPD)</text>
+    </g>
+
+    <!-- Center Hero Illustration (Glowing Lungs & Airway) -->
+    <g transform="translate(495, 780)">
+      <!-- Outer Glow Ring -->
+      <circle cx="0" cy="0" r="260" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.3)" stroke-width="4" filter="url(#coverShadow)"/>
+      <circle cx="0" cy="0" r="210" fill="rgba(255,255,255,0.18)"/>
+
+      <!-- Vector Lung Art -->
+      <g transform="translate(0, -10) scale(3.4)">
+        <!-- Trachea -->
+        <path d="M 0 -45 L 0 -10 M 0 -25 L -16 -5 M 0 -25 L 16 -5" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round"/>
+        <!-- Left Lung -->
+        <path d="M -8 -10 C -25 -10 -42 0 -38 28 C -35 44 -15 46 -6 34 C -3 28 -3 0 -8 -10 Z" fill="#38bdf8" stroke="#ffffff" stroke-width="2.5"/>
+        <!-- Right Lung -->
+        <path d="M 8 -10 C 25 -10 42 0 38 28 C 35 44 15 46 6 34 C 3 28 3 0 8 -10 Z" fill="#2dd4bf" stroke="#ffffff" stroke-width="2.5"/>
+        <!-- Heart / Energy Glow -->
+        <circle cx="0" cy="8" r="8" fill="#fef08a" opacity="0.9"/>
+      </g>
+
+      <!-- Slogan Badge -->
+      <rect x="-320" y="300" width="640" height="76" rx="38" fill="#ffffff" filter="url(#cardShadow)"/>
+      <text x="0" y="342" font-size="34" font-weight="800" fill="#0369a1" text-anchor="middle" dominant-baseline="central">" หายใจโล่ง โปร่งสบาย ไร้กังวล "</text>
+    </g>
+
+    <!-- Key Topics Highlights Box -->
+    <g transform="translate(65, 1260)">
+      <rect width="860" height="460" rx="28" fill="rgba(0, 0, 0, 0.22)" stroke="rgba(255,255,255,0.35)" stroke-width="3"/>
+      
+      <text x="45" y="65" font-size="36" font-weight="800" fill="#fef08a">✨ 5 หัวใจสำคัญภายในเล่ม:</text>
+
+      <g transform="translate(45, 125)">
+        <circle cx="25" cy="0" r="18" fill="#38bdf8"/>
+        <text x="25" y="2" font-size="22" font-weight="800" fill="#ffffff" text-anchor="middle" dominant-baseline="central">1</text>
+        <text x="60" y="8" font-size="32" font-weight="700" fill="#ffffff">การฝึกหายใจแบบเม้มปาก (เข้า 2 : ออก 4)</text>
+      </g>
+
+      <g transform="translate(45, 190)">
+        <circle cx="25" cy="0" r="18" fill="#38bdf8"/>
+        <text x="25" y="2" font-size="22" font-weight="800" fill="#ffffff" text-anchor="middle" dominant-baseline="central">2</text>
+        <text x="60" y="8" font-size="32" font-weight="700" fill="#ffffff">การจัดท่านั่งเพื่อลดอาการเหนื่อย</text>
+      </g>
+
+      <g transform="translate(45, 255)">
+        <circle cx="25" cy="0" r="18" fill="#38bdf8"/>
+        <text x="25" y="2" font-size="22" font-weight="800" fill="#ffffff" text-anchor="middle" dominant-baseline="central">3</text>
+        <text x="60" y="8" font-size="32" font-weight="700" fill="#ffffff">เทคนิคการไอขับเสมหะ 6 ขั้นตอน</text>
+      </g>
+
+      <g transform="translate(45, 320)">
+        <circle cx="25" cy="0" r="18" fill="#38bdf8"/>
+        <text x="25" y="2" font-size="22" font-weight="800" fill="#ffffff" text-anchor="middle" dominant-baseline="central">4</text>
+        <text x="60" y="8" font-size="32" font-weight="700" fill="#ffffff">การออกกำลังกายฟื้นฟูปอดอย่างปลอดภัย</text>
+      </g>
+
+      <g transform="translate(45, 385)">
+        <circle cx="25" cy="0" r="18" fill="#38bdf8"/>
+        <text x="25" y="2" font-size="22" font-weight="800" fill="#ffffff" text-anchor="middle" dominant-baseline="central">5</text>
+        <text x="60" y="8" font-size="32" font-weight="700" fill="#ffffff">สัญญาณอันตรายที่ต้องรีบพบแพทย์</text>
+      </g>
+    </g>
+
+    <!-- Author & Organization Footer -->
+    <g transform="translate(495, 1820)">
+      <line x1="-380" y1="0" x2="380" y2="0" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+      
+      <circle cx="-160" cy="110" r="50" fill="rgba(255,255,255,0.2)" stroke="#ffffff" stroke-width="3"/>
+      <text x="-160" y="115" font-size="44" text-anchor="middle" dominant-baseline="central">👩‍⚕️</text>
+
+      <text x="-80" y="70" font-size="26" font-weight="600" fill="#e0f2fe">จัดทำโดย:</text>
+      <text x="-80" y="115" font-size="36" font-weight="800" fill="#ffffff">นางสาวกานต์ชนิต อินยะบุตร</text>
+      <text x="-80" y="155" font-size="30" font-weight="600" fill="#fef08a">นักกายภาพบำบัดปฏิบัติการ • โรงพยาบาลแม่ทะ</text>
+    </g>
+  </g>
+</svg>
+
+    </div>
+  </div>
+
+  <!-- ========================================================
+       PAGE 2: INSIDE PANELS INFOGRAPHIC POSTER
+       ======================================================== -->
+  <div class="infographic-wrapper">
+    <div class="page-title-badge">
+      <span>📄</span> หน้าที่ 2 (แผ่นพับด้านใน): [1. ฝึกหายใจ & 2. จัดท่านั่ง] [3. ไอขับเสมหะ 6 ขั้นตอน & Huff] [4. ออกกำลังกาย & 5. สัญญาณเตือน]
+    </div>
+    <div class="a4-sheet" id="sheetPage2">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2970 2100" width="2970" height="2100">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgInside" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </linearGradient>
+    <linearGradient id="cardGradPrimary" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0f9ff"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="cardGradAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0fdf4"/>
+      <stop offset="100%" stop-color="#ccfbf1"/>
+    </linearGradient>
+    <linearGradient id="cardGradWarn" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fffbeb"/>
+      <stop offset="100%" stop-color="#fef3c7"/>
+    </linearGradient>
+    <linearGradient id="cardGradPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#faf5ff"/>
+      <stop offset="100%" stop-color="#f3e8ff"/>
+    </linearGradient>
+    <linearGradient id="cardGradDanger" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef2f2"/>
+      <stop offset="100%" stop-color="#fee2e2"/>
+    </linearGradient>
+    
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0f172a" flood-opacity="0.07"/>
+    </filter>
+  </defs>
+
+  <style>
+    
+    text { font-family: 'Prompt', 'Kanit', sans-serif; }
+    .panel-header-title { font-size: 52px; font-weight: 800; }
+    .card-title { font-size: 38px; font-weight: 800; }
+    .body-bold { font-size: 32px; font-weight: 700; }
+    .body-normal { font-size: 29px; font-weight: 500; fill: #334155; }
+    .tag-text { font-size: 26px; font-weight: 800; text-anchor: middle; dominant-baseline: central; }
+  </style>
+
+  <!-- Background Base -->
+  <rect width="2970" height="2100" fill="#e2e8f0"/>
+
+  <!-- ========================================================
+       PANEL 1 (LEFT 0 - 990): ฝึกหายใจ & การจัดท่านั่งลดเหนื่อย
+       ======================================================== -->
+  <g transform="translate(0, 0)">
+    <rect width="986" height="2100" fill="url(#bgInside)"/>
+
+    <!-- Top Tag -->
+    <rect x="70" y="70" width="340" height="60" rx="30" fill="#e0f2fe" stroke="#0284c7" stroke-width="3"/>
+    <text x="240" y="103" class="tag-text" fill="#0369a1">หัวข้อที่ 1 และ 2</text>
+
+    <!-- Main Title -->
+    <text x="70" y="195" class="panel-header-title" fill="#0369a1">ฝึกหายใจ &amp; จัดท่านั่ง</text>
+    <text x="70" y="245" font-size="30" font-weight="600" fill="#64748b">เพิ่มออกซิเจน ลดการทำงานของกล้ามเนื้อช่วยหายใจ</text>
+
+    <!-- CARD 1: Pursed-Lip Breathing -->
+    <g transform="translate(60, 290)">
+      <rect width="866" height="800" rx="28" fill="url(#cardGradPrimary)" stroke="#38bdf8" stroke-width="4" filter="url(#cardShadow)"/>
+      
+      <!-- Card Header -->
+      <rect x="0" y="0" width="866" height="95" rx="28" fill="#0284c7"/>
+      <path d="M 0 55 L 0 95 L 866 95 L 866 55 Z" fill="#0284c7"/>
+      <circle cx="65" cy="48" r="30" fill="#ffffff"/>
+      <text x="65" y="50" font-size="30" font-weight="800" fill="#0284c7" text-anchor="middle" dominant-baseline="central">1</text>
+      <text x="120" y="60" class="card-title" fill="#ffffff">การฝึกหายใจแบบเม้มปาก (Pursed-Lip)</text>
+
+      <!-- Key Formula Banner -->
+      <rect x="40" y="125" width="786" height="80" rx="20" fill="#ffffff" stroke="#0284c7" stroke-width="3"/>
+      <text x="433" y="176" font-size="34" font-weight="800" fill="#0369a1" text-anchor="middle">สูตรจำง่าย: " สูดเข้า 2 วิ ➔ เป่าออก 4 วิ "</text>
+
+      <!-- Inhale Action -->
+      <g transform="translate(45, 235)">
+        <circle cx="45" cy="55" r="40" fill="#dbeafe" stroke="#0284c7" stroke-width="3"/>
+        <text x="45" y="58" font-size="38" text-anchor="middle" dominant-baseline="central">👃</text>
+        <text x="110" y="45" class="body-bold" fill="#0369a1">ขั้นที่ 1: สูดเข้าทางจมูกช้า ๆ (นับ 1–2)</text>
+        <text x="110" y="85" class="body-normal">สูดลมเข้าลึกพอดี สังเกตหน้าท้องป่องขยาย ไม่เกร็งคอ</text>
+      </g>
+
+      <!-- Exhale Action -->
+      <g transform="translate(45, 370)">
+        <circle cx="45" cy="55" r="40" fill="#dbeafe" stroke="#0284c7" stroke-width="3"/>
+        <text x="45" y="58" font-size="38" text-anchor="middle" dominant-baseline="central">👄</text>
+        <text x="110" y="45" class="body-bold" fill="#0369a1">ขั้นที่ 2: ห่อปากเป่าลมออกช้า ๆ (นับ 1–2–3–4)</text>
+        <text x="110" y="85" class="body-normal">ทำปากจู๋เหมือนเป่าเทียน เป่าลมออกยาวเป็น 2 เท่าของเวลาเข้า</text>
+      </g>
+
+      <!-- Senior Benefits -->
+      <rect x="40" y="515" width="786" height="245" rx="20" fill="#ffffff" stroke="#7dd3fc" stroke-width="2"/>
+      <text x="65" y="565" font-size="30" font-weight="800" fill="#0f766e">✨ ข้อดีสำหรับการฟื้นฟูปอด:</text>
+      <text x="65" y="615" class="body-normal">• ป้องกันไม่ให้หลอดลมยุบหรือตีบแฟบขณะหายใจออก</text>
+      <text x="65" y="665" class="body-normal">• ช่วยขับก๊าซคาร์บอนไดออกไซด์และลมค้างออกจากปอด</text>
+      <text x="65" y="715" class="body-normal">• ลดความเหนื่อยล้า ชะลออัตราการหายใจให้สงบลง</text>
+    </g>
+
+    <!-- CARD 2: การจัดท่านั่งเพื่อลดอาการเหนื่อย -->
+    <g transform="translate(60, 1130)">
+      <rect width="866" height="900" rx="28" fill="url(#cardGradAccent)" stroke="#0d9488" stroke-width="4" filter="url(#cardShadow)"/>
+      
+      <!-- Card Header -->
+      <rect x="0" y="0" width="866" height="95" rx="28" fill="#0d9488"/>
+      <path d="M 0 55 L 0 95 L 866 95 L 866 55 Z" fill="#0d9488"/>
+      <circle cx="65" cy="48" r="30" fill="#ffffff"/>
+      <text x="65" y="50" font-size="30" font-weight="800" fill="#0d9488" text-anchor="middle" dominant-baseline="central">2</text>
+      <text x="120" y="60" class="card-title" fill="#ffffff">การจัดท่านั่งเพื่อลดอาการเหนื่อย</text>
+
+      <!-- Posture 1 & 2 Visual Columns -->
+      <g transform="translate(45, 125)">
+        <!-- Posture A: Knees -->
+        <rect x="0" y="0" width="375" height="420" rx="20" fill="#ffffff" stroke="#14b8a6" stroke-width="3"/>
+        <rect x="0" y="0" width="375" height="60" rx="20" fill="#ccfbf1"/>
+        <path d="M 0 35 L 0 60 L 375 60 L 375 35 Z" fill="#ccfbf1"/>
+        <text x="187" y="40" font-size="28" font-weight="800" fill="#0f766e" text-anchor="middle">ท่าที่ 1: วางมือบนเข่า</text>
+        
+        <!-- Figure A -->
+        <g transform="translate(187, 180) scale(1.4)">
+          <circle cx="0" cy="-35" r="18" fill="#fed7aa"/>
+          <path d="M -12 -15 L 12 -15 L 8 25 L -8 25 Z" fill="#2dd4bf"/>
+          <line x1="-8" y1="25" x2="-8" y2="60" stroke="#0f766e" stroke-width="6" stroke-linecap="round"/>
+          <line x1="8" y1="25" x2="18" y2="60" stroke="#0f766e" stroke-width="6" stroke-linecap="round"/>
+          <path d="M -10 -8 L -20 20 L -8 24" fill="none" stroke="#0f766e" stroke-width="5" stroke-linecap="round"/>
+        </g>
+        <text x="187" y="325" font-size="24" font-weight="700" fill="#0f766e" text-anchor="middle">• นั่งโน้มตัว 15–30 องศา</text>
+        <text x="187" y="365" font-size="24" font-weight="700" fill="#0f766e" text-anchor="middle">• วางมือ/ข้อศอกบนหัวเข่า</text>
+        <text x="187" y="395" font-size="22" font-weight="500" fill="#64748b" text-anchor="middle">ผ่อนคลายคอและหัวไหล่</text>
+      </g>
+
+      <g transform="translate(445, 125)">
+        <!-- Posture B: Table -->
+        <rect x="0" y="0" width="375" height="420" rx="20" fill="#ffffff" stroke="#14b8a6" stroke-width="3"/>
+        <rect x="0" y="0" width="375" height="60" rx="20" fill="#ccfbf1"/>
+        <path d="M 0 35 L 0 60 L 375 60 L 375 35 Z" fill="#ccfbf1"/>
+        <text x="187" y="40" font-size="28" font-weight="800" fill="#0f766e" text-anchor="middle">ท่าที่ 2: วางศอกบนโต๊ะ</text>
+
+        <!-- Figure B -->
+        <g transform="translate(187, 180) scale(1.4)">
+          <circle cx="-15" cy="-35" r="18" fill="#fed7aa"/>
+          <path d="M -24 -15 L 0 -15 L 0 25 L -20 25 Z" fill="#2dd4bf"/>
+          <line x1="12" y1="-5" x2="45" y2="-5" stroke="#94a3b8" stroke-width="6" stroke-linecap="round"/>
+          <line x1="38" y1="-5" x2="38" y2="60" stroke="#94a3b8" stroke-width="5" stroke-linecap="round"/>
+          <path d="M -18 -8 L 18 -10 L 22 2" fill="none" stroke="#0f766e" stroke-width="5" stroke-linecap="round"/>
+        </g>
+        <text x="187" y="325" font-size="24" font-weight="700" fill="#0f766e" text-anchor="middle">• นั่งโน้มตัวเข้าหาโต๊ะ</text>
+        <text x="187" y="365" font-size="24" font-weight="700" fill="#0f766e" text-anchor="middle">• วางข้อศอก/แขนบนหมอน</text>
+        <text x="187" y="395" font-size="22" font-weight="500" fill="#64748b" text-anchor="middle">ก้มศีรษะพักสบาย ๆ</text>
+      </g>
+
+      <!-- Posture Rules Summary -->
+      <g transform="translate(45, 575)">
+        <rect width="775" height="285" rx="20" fill="#ffffff" stroke="#99f6e4" stroke-width="2"/>
+        <text x="35" y="55" font-size="30" font-weight="800" fill="#0f766e">📋 4 กฎเหล็กของการจัดท่านั่งลดเหนื่อย:</text>
+        <text x="35" y="110" class="body-normal">1. นั่งบนเก้าอี้ที่มั่นคง เท้าวางราบแตะพื้น ไม่นั่งลอย</text>
+        <text x="35" y="160" class="body-normal">2. โน้มตัวไปข้างหน้าเล็กน้อย ช่วยให้กระบังลมอยู่ในแนวโค้งที่ดีที่สุด</text>
+        <text x="35" y="210" class="body-normal">3. ผ่อนคลายกล้ามเนื้อบ่า คอ และไหล่ ไม่เกร็งยกไหล่</text>
+        <text x="35" y="260" class="body-normal">4. ฝึกหายใจแบบเม้มปากควบคู่ไปด้วยจนกว่าอาการจะสงบ</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Column Divider 1 (Fold Line) -->
+  <line x1="990" y1="0" x2="990" y2="2100" stroke="#cbd5e1" stroke-width="4" stroke-dasharray="16,12"/>
+
+  <!-- ========================================================
+       PANEL 2 (CENTER 990 - 1980): เทคนิคการไอขับเสมหะ (6 ขั้นตอน & Huff)
+       ======================================================== -->
+  <g transform="translate(990, 0)">
+    <rect width="986" height="2100" fill="url(#bgInside)"/>
+
+    <!-- Top Tag -->
+    <rect x="70" y="70" width="300" height="60" rx="30" fill="#ffedd5" stroke="#ea580c" stroke-width="3"/>
+    <text x="220" y="103" class="tag-text" fill="#c2410c">หัวข้อที่ 3</text>
+
+    <!-- Main Title -->
+    <text x="70" y="195" class="panel-header-title" fill="#c2410c">เทคนิคการไอขับเสมหะ</text>
+    <text x="70" y="245" font-size="30" font-weight="600" fill="#64748b">ขับเสมหะออกจากปอดอย่างถูกวิธี ไม่เหนื่อยเค้นไอ</text>
+
+    <!-- EFFECTIVE COUGH 6-STEPS CARD -->
+    <g transform="translate(60, 290)">
+      <rect width="866" height="1180" rx="28" fill="url(#cardGradWarn)" stroke="#f97316" stroke-width="4" filter="url(#cardShadow)"/>
+      
+      <!-- Card Header -->
+      <rect x="0" y="0" width="866" height="95" rx="28" fill="#ea580c"/>
+      <path d="M 0 55 L 0 95 L 866 95 L 866 55 Z" fill="#ea580c"/>
+      <circle cx="65" cy="48" r="30" fill="#ffffff"/>
+      <text x="65" y="50" font-size="30" font-weight="800" fill="#ea580c" text-anchor="middle" dominant-baseline="central">3</text>
+      <text x="120" y="60" class="card-title" fill="#ffffff">การไออย่างมีประสิทธิภาพ (Effective Cough)</text>
+
+      <!-- Subtitle -->
+      <text x="40" y="140" font-size="28" font-weight="700" fill="#9a3412">6 ขั้นตอนสำคัญ (สำหรับผู้ป่วยที่มีแรงไอเพียงพอ):</text>
+
+      <!-- 6 Grid Cards (3 Rows x 2 Cols) -->
+      
+      <!-- Step 1 -->
+      <g transform="translate(40, 165)">
+        <rect width="380" height="235" rx="18" fill="#ffffff" stroke="#fdba74" stroke-width="2.5"/>
+        <circle cx="36" cy="36" r="22" fill="#ea580c"/>
+        <text x="36" y="38" font-size="22" font-weight="800" fill="#ffffff" text-anchor="middle" dominant-baseline="central">1</text>
+        <text x="72" y="44" font-size="26" font-weight="800" fill="#9a3412">จัดท่านั่งตัวตรง</text>
+        <text x="25" y="100" class="body-normal">• นั่งตัวตรงบนเก้าอี้ เท้าแตะพื้น</text>
+        <text x="25" y="145" class="body-normal">• หรือเอนพนัก 60–90 องศา</text>
+        <text x="25" y="190" class="body-normal">• เพื่อให้ปอดขยายตัวเต็มที่</text>
+      </g>
+
+      <!-- Step 2 -->
+      <g transform="translate(445, 165)">
+        <rect width="380" height="235" rx="18" fill="#ffffff" stroke="#fdba74" stroke-width="2.5"/>
+        <circle cx="36" cy="36" r="22" fill="#ea580c"/>
+        <text x="36" y="38" font-size="22" font-weight="800" fill="#ffffff" text-anchor="middle" dominant-baseline="central">2</text>
+        <text x="72" y="44" font-size="26" font-weight="800" fill="#9a3412">สูดหายใจเข้าลึก</text>
+        <text x="25" y="100" class="body-normal">• สูดลมเข้าทางจมูกช้า ๆ</text>
+        <text x="25" y="145" class="body-normal">• สังเกตหน้าท้องป่องขยาย</text>
+        <text x="25" y="190" class="body-normal">• ให้อากาศอยู่หลังเสมหะ</text>
+      </g>
+
+      <!-- Step 3 -->
+      <g transform="translate(40, 420)">
+        <rect width="380" height="235" rx="18" fill="#ffffff" stroke="#fdba74" stroke-width="2.5"/>
+        <circle cx="36" cy="36" r="22" fill="#ea580c"/>
+        <text x="36" y="38" font-size="22" font-weight="800" fill="#ffffff" text-anchor="middle" dominant-baseline="central">3</text>
+        <text x="72" y="44" font-size="26" font-weight="800" fill="#9a3412">กลั้นหายใจ 2–3 วิ</text>
+        <text x="25" y="100" class="body-normal">• กลั้นนิ่งไว้ 2 ถึง 3 วินาที</text>
+        <text x="25" y="145" class="body-normal">• ให้อากาศกระจายทั่วถุงลม</text>
+        <text x="25" y="190" class="body-normal">• สร้างแรงดันในอกเตรียมไอ</text>
+      </g>
+
+      <!-- Step 4 -->
+      <g transform="translate(445, 420)">
+        <rect width="380" height="235" rx="18" fill="#ffffff" stroke="#fdba74" stroke-width="2.5"/>
+        <circle cx="36" cy="36" r="22" fill="#ea580c"/>
+        <text x="36" y="38" font-size="22" font-weight="800" fill="#ffffff" text-anchor="middle" dominant-baseline="central">4</text>
+        <text x="72" y="44" font-size="26" font-weight="800" fill="#9a3412">เกร็งหน้าท้อง</text>
+        <text x="25" y="100" class="body-normal">• เกร็งกล้ามเนื้อหน้าท้องแน่น</text>
+        <text x="25" y="145" class="body-normal">• ใช้มือกดประคองหน้าท้อง</text>
+        <text x="25" y="190" class="body-normal">• เพิ่มแรงผลักดันเสมหะ</text>
+      </g>
+
+      <!-- Step 5 (Full Width Accent) -->
+      <g transform="translate(40, 675)">
+        <rect width="786" height="240" rx="20" fill="#fee2e2" stroke="#ef4444" stroke-width="3"/>
+        <circle cx="45" cy="40" r="26" fill="#dc2626"/>
+        <text x="45" y="42" font-size="26" font-weight="800" fill="#ffffff" text-anchor="middle" dominant-baseline="central">5</text>
+        <text x="85" y="50" font-size="32" font-weight="800" fill="#b91c1c">ไอแรง 2 ครั้งติดกัน (Double Cough)</text>
+        <text x="40" y="115" class="body-bold" fill="#991b1b">• ครั้งที่ 1: ไอแรง ๆ เพื่อดันให้เสมหะหลุดออกจากผนังหลอดลม</text>
+        <text x="40" y="165" class="body-bold" fill="#15803d">• ครั้งที่ 2: ไอซ้ำทันทีเพื่อขับเสมหะพุ่งขึ้นสู่ลำคอ</text>
+        <text x="40" y="210" class="body-normal">ขับเสมหะได้หมดจดในครั้งเดียว ไม่ต้องเค้นไอซ้ำจนเหนื่อย</text>
+      </g>
+
+      <!-- Step 6 -->
+      <g transform="translate(40, 935)">
+        <rect width="786" height="200" rx="20" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+        <circle cx="45" cy="40" r="26" fill="#16a34a"/>
+        <text x="45" y="42" font-size="26" font-weight="800" fill="#ffffff" text-anchor="middle" dominant-baseline="central">6</text>
+        <text x="85" y="50" font-size="30" font-weight="800" fill="#15803d">บ้วนเสมหะลงทิชชูสะอาด &amp; ล้างมือ</text>
+        <text x="40" y="115" class="body-normal">• บ้วนเสมหะลงในกระดาษทิชชู พับมิดชิดทิ้งลงถังขยะ</text>
+        <text x="40" y="165" class="body-normal">• ล้างมือให้สะอาด นั่งพักผ่อนคลาย หายใจสบาย ๆ</text>
+      </g>
+    </g>
+
+    <!-- HUFF COUGH CARD -->
+    <g transform="translate(60, 1500)">
+      <rect width="866" height="530" rx="28" fill="#f0fdf4" stroke="#10b981" stroke-width="4" filter="url(#cardShadow)"/>
+      <rect x="0" y="0" width="866" height="85" rx="28" fill="#059669"/>
+      <path d="M 0 50 L 0 85 L 866 85 L 866 50 Z" fill="#059669"/>
+      
+      <circle cx="65" cy="42" r="26" fill="#ffffff"/>
+      <text x="65" y="44" font-size="28" text-anchor="middle" dominant-baseline="central">⭐</text>
+      <text x="110" y="54" class="card-title" fill="#ffffff">การไอแบบฮัฟ (Huff Cough - แนะนำสำหรับ COPD)</text>
+
+      <text x="40" y="140" class="body-bold" fill="#065f46">เทคนิคใช้แรงน้อย เหมาะสำหรับผู้สูงอายุที่เหนื่อยง่าย:</text>
+      <text x="40" y="195" class="body-normal">1. นั่งตัวตรง สูดหายใจเข้าลึกปานกลางทางจมูก</text>
+      <text x="40" y="245" class="body-normal">2. อ้าปากเป็นรูปวงกลม (คล้ายเตรียมเป่าลมใส่กระจกให้เกิดฝ้า)</text>
+      <text x="40" y="295" class="body-bold" fill="#047857">3. พ่นลมหายใจออกแรง ๆ สั้น ๆ พร้อมออกเสียง "ฮัฟ" 1–2 ครั้ง</text>
+      <text x="40" y="345" class="body-normal">4. เมื่อเสมหะเคลื่อนขึ้นมาที่คอหอย ให้ไอออกเบา ๆ</text>
+
+      <rect x="35" y="400" width="796" height="100" rx="16" fill="#d1fae5" stroke="#059669" stroke-width="2"/>
+      <text x="433" y="445" font-size="26" font-weight="800" fill="#065f46" text-anchor="middle">✨ ข้อดีเด่น: หลอดลมไม่ตีบแฟบ ประหยัดพลังงาน</text>
+      <text x="433" y="480" font-size="24" font-weight="600" fill="#047857" text-anchor="middle">ช่วยไล่เสมหะที่อยู่ส่วนลึกของปอดขึ้นมาได้อย่างมีประสิทธิภาพ</text>
+    </g>
+  </g>
+
+  <!-- Column Divider 2 (Fold Line) -->
+  <line x1="1980" y1="0" x2="1980" y2="2100" stroke="#cbd5e1" stroke-width="4" stroke-dasharray="16,12"/>
+
+  <!-- ========================================================
+       PANEL 3 (RIGHT 1980 - 2970): ออกกำลังกายฟื้นฟูปอด & สัญญาณเตือน
+       ======================================================== -->
+  <g transform="translate(1980, 0)">
+    <rect width="990" height="2100" fill="url(#bgInside)"/>
+
+    <!-- Top Tag -->
+    <rect x="70" y="70" width="340" height="60" rx="30" fill="#f3e8ff" stroke="#7c3aed" stroke-width="3"/>
+    <text x="240" y="103" class="tag-text" fill="#6d28d9">หัวข้อที่ 4 และ 5</text>
+
+    <!-- Main Title -->
+    <text x="70" y="195" class="panel-header-title" fill="#6d28d9">ออกกำลังกายฟื้นฟูปอด</text>
+    <text x="70" y="245" font-size="30" font-weight="600" fill="#64748b">เพิ่มความแข็งแรงของหัวใจ กล้ามเนื้อ และความจุของปอด</text>
+
+    <!-- CARD 4: PULMONARY EXERCISE PROGRAM -->
+    <g transform="translate(60, 290)">
+      <rect width="866" height="880" rx="28" fill="url(#cardGradPurple)" stroke="#a855f7" stroke-width="4" filter="url(#cardShadow)"/>
+      
+      <!-- Card Header -->
+      <rect x="0" y="0" width="866" height="95" rx="28" fill="#7c3aed"/>
+      <path d="M 0 55 L 0 95 L 866 95 L 866 55 Z" fill="#7c3aed"/>
+      <circle cx="65" cy="48" r="30" fill="#ffffff"/>
+      <text x="65" y="50" font-size="30" font-weight="800" fill="#7c3aed" text-anchor="middle" dominant-baseline="central">4</text>
+      <text x="120" y="60" class="card-title" fill="#ffffff">โปรแกรมการออกกำลังกายฟื้นฟูปอด</text>
+
+      <!-- Exercise 1: Aerobic -->
+      <g transform="translate(45, 130)">
+        <rect width="775" height="320" rx="20" fill="#ffffff" stroke="#c084fc" stroke-width="3"/>
+        <circle cx="60" cy="55" r="38" fill="#f3e8ff"/>
+        <text x="60" y="60" font-size="40" text-anchor="middle" dominant-baseline="central">🚶</text>
+        <text x="120" y="50" font-size="34" font-weight="800" fill="#581c87">1. การออกกำลังกายแบบแอโรบิก</text>
+        <text x="120" y="90" font-size="28" font-weight="700" fill="#7c3aed">เดินเร็วต่อเนื่อง / ปั่นจักรยานอยู่กับที่</text>
+
+        <text x="40" y="160" class="body-bold" fill="#3b0764">• ความถี่: 3 – 5 วัน ต่อสัปดาห์</text>
+        <text x="40" y="210" class="body-bold" fill="#3b0764">• ระยะเวลา: วันละ 20 – 30 นาที (พักเป็นช่วงได้ครั้งละ 10 นาที)</text>
+        <text x="40" y="260" class="body-normal">• ความเหนื่อย: ระดับปานกลาง (ยังพอพูดคุยเป็นประโยคสั้นได้)</text>
+      </g>
+
+      <!-- Exercise 2: Strength -->
+      <g transform="translate(45, 480)">
+        <rect width="775" height="350" rx="20" fill="#ffffff" stroke="#c084fc" stroke-width="3"/>
+        <circle cx="60" cy="55" r="38" fill="#f3e8ff"/>
+        <text x="60" y="60" font-size="40" text-anchor="middle" dominant-baseline="central">🏋️</text>
+        <text x="120" y="50" font-size="34" font-weight="800" fill="#581c87">2. การฝึกความแข็งแรงของกล้ามเนื้อ</text>
+        <text x="120" y="90" font-size="28" font-weight="700" fill="#7c3aed">กล้ามเนื้อแขน ไหล่ ขา และหลัง</text>
+
+        <text x="40" y="160" class="body-bold" fill="#3b0764">• ท่าฝึกแขน: ยกลูกตุ้มน้ำหนักเบา 0.5–1 กก. หรือขวดน้ำ</text>
+        <text x="40" y="210" class="body-bold" fill="#3b0764">• ท่าฝึกขา: นั่งแล้วลุกขึ้นยืนจากเก้าอี้ / ยืนเขย่งปลายเท้า</text>
+        <text x="40" y="260" class="body-bold" fill="#3b0764">• ความถี่: 2 – 3 วัน ต่อสัปดาห์ (ทำ 10–15 ครั้ง / 2–3 เซต)</text>
+        <text x="40" y="305" class="body-normal">• หายใจออกขณะออกแรง ห้ามกลั้นหายใจเด็ดขาด</text>
+      </g>
+    </g>
+
+    <!-- CARD 5: SAFETY WARNING SIGNS -->
+    <g transform="translate(60, 1200)">
+      <rect width="866" height="830" rx="28" fill="url(#cardGradDanger)" stroke="#ef4444" stroke-width="4" filter="url(#cardShadow)"/>
+      
+      <!-- Card Header -->
+      <rect x="0" y="0" width="866" height="95" rx="28" fill="#dc2626"/>
+      <path d="M 0 55 L 0 95 L 866 95 L 866 55 Z" fill="#dc2626"/>
+      <circle cx="65" cy="48" r="30" fill="#ffffff"/>
+      <text x="65" y="50" font-size="30" font-weight="800" fill="#dc2626" text-anchor="middle" dominant-baseline="central">5</text>
+      <text x="120" y="60" class="card-title" fill="#ffffff">สัญญาณเตือนที่ต้องหยุดพักทันที!</text>
+
+      <text x="40" y="150" font-size="30" font-weight="800" fill="#991b1b">⚠️ หากพบอาการเหล่านี้ขณะออกกำลังกาย ให้หยุดพักทันที:</text>
+
+      <g transform="translate(45, 180)">
+        <rect width="775" height="490" rx="20" fill="#ffffff" stroke="#fca5a5" stroke-width="2.5"/>
+
+        <!-- Warning Item 1 -->
+        <g transform="translate(30, 45)">
+          <text x="0" y="30" font-size="32">📉</text>
+          <text x="50" y="28" class="body-bold" fill="#b91c1c">ค่าออกซิเจน SpO₂ ลดต่ำกว่า 88 – 90%</text>
+          <text x="50" y="65" class="body-normal">ให้หยุดพักและวัดซ้ำทันที</text>
+        </g>
+
+        <!-- Warning Item 2 -->
+        <g transform="translate(30, 145)">
+          <text x="0" y="30" font-size="32">🥵</text>
+          <text x="50" y="28" class="body-bold" fill="#b91c1c">รู้สึกเหนื่อยหอบรุนแรง พูดไม่เป็นประโยค</text>
+          <text x="50" y="65" class="body-normal">หรืออัตราการหายใจเร็วเกินกว่าปกติมาก</text>
+        </g>
+
+        <!-- Warning Item 3 -->
+        <g transform="translate(30, 245)">
+          <text x="0" y="30" font-size="32">💫</text>
+          <text x="50" y="28" class="body-bold" fill="#b91c1c">มีอาการเวียนศีรษะ หน้ามืด คลื่นไส้ ใจสั่น</text>
+          <text x="50" y="65" class="body-normal">รู้สึกตาลาย ทรงตัวไม่อยู่</text>
+        </g>
+
+        <!-- Warning Item 4 -->
+        <g transform="translate(30, 345)">
+          <text x="0" y="30" font-size="32">💔</text>
+          <text x="50" y="28" class="body-bold" fill="#b91c1c">เจ็บหรือแน่นหน้าอก หรือปวดข้อรุนแรง</text>
+          <text x="50" y="65" class="body-normal">เจ็บแปลบหรือร้าวไปที่แขนและกราม</text>
+        </g>
+      </g>
+
+      <!-- Action Box -->
+      <rect x="45" y="700" width="775" height="95" rx="18" fill="#dc2626"/>
+      <text x="433" y="742" font-size="30" font-weight="800" fill="#ffffff" text-anchor="middle">🛑 ให้หยุดนั่งพักใน "ท่านั่งลดเหนื่อย" ทันที</text>
+      <text x="433" y="776" font-size="24" font-weight="600" fill="#fef08a" text-anchor="middle">หากพัก 10–15 นาทีแล้วอาการไม่ดีขึ้น ให้รีบพบแพทย์</text>
+    </g>
+  </g>
+</svg>
+
+    </div>
+  </div>
+
+</body>
+</html>
